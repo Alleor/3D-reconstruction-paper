@@ -26,6 +26,14 @@ the weekly workflow may otherwise restore their source metadata. The upstream
 heading is retained in `source_category` for provenance, while `category`
 always follows this repository's mutually exclusive taxonomy.
 
+## Add or correct a paper honor
+
+Edit `data/honors.json` and use the paper's exact title from
+`data/papers.json`. Keep the label concise and link to a stable source from the
+conference, journal, award body, or paper authors. Awards, honorable mentions,
+and official highlight selections are included; a regular oral presentation by
+itself is not treated as an honor.
+
 ## Automated entries
 
 Records with `"curated": false` were found automatically. If one is irrelevant, remove it and open an issue explaining the false positive so the discovery filters can be improved.

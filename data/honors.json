@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Efficiently Reconstructing Dynamic Scenes One D4RT at a Time",
+    "label": "CVPR 2026 Best Paper",
+    "url": "https://cvpr.thecvf.com/Conferences/2026/News/Best_Papers"
+  },
+  {
+    "title": "VGGT: Visual Geometry Grounded Transformer",
+    "label": "CVPR 2025 Best Paper",
+    "url": "https://cvpr.thecvf.com/Conferences/2025/News/Awards_Press"
+  },
+  {
+    "title": "MegaSaM: Accurate, Fast, and Robust Structure and Motion from Casual Dynamic Videos",
+    "label": "CVPR 2025 Best Paper Honorable Mention",
+    "url": "https://cvpr.thecvf.com/Conferences/2025/News/Awards_Press"
+  },
+  {
+    "title": "pixelSplat: 3D Gaussian Splats from Image Pairs for Scalable Generalizable 3D Reconstruction",
+    "label": "CVPR 2024 Best Paper Honorable Mention",
+    "url": "https://tc.computer.org/tcpami/awards/cvpr-paper-awards/"
+  },
+  {
+    "title": "FlowR: Flowing from Sparse to Dense 3D Reconstructions",
+    "label": "ICCV 2025 Highlight",
+    "url": "https://iccv.thecvf.com/virtual/2025/poster/759"
+  },
+  {
+    "title": "Geo4D: Leveraging Video Generators for Geometric 4D Scene Reconstruction",
+    "label": "ICCV 2025 Highlight",
+    "url": "https://iccv.thecvf.com/virtual/2025/poster/2494"
+  },
+  {
+    "title": "NICER-SLAM: Neural Implicit Scene Encoding for RGB SLAM",
+    "label": "3DV 2024 Best Paper Honorable Mention",
+    "url": "https://nicer-slam.github.io/"
+  },
+  {
+    "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+    "label": "SIGGRAPH 2023 Best Paper",
+    "url": "https://blog.siggraph.org/2025/03/a-path-to-smarter-more-effective-designs.html/"
+  },
+  {
+    "title": "Kimera-Multi: Robust, Distributed, Dense Metric-Semantic SLAM for Multi-Robot Systems",
+    "label": "IEEE T-RO King-Sun Fu Memorial Best Paper Award",
+    "url": "https://www.ieee-ras.org/awards-recognition/publications-awards/ieee-transactions-on-robotics-king-sun-fu-memorial-best-paper-award/"
+  }
+]

@@ -1,3 +1,4 @@
+import datetime as dt
 import importlib.util
 import json
 import sys
@@ -28,6 +29,7 @@ class PaperListTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.papers = json.loads((ROOT / "data" / "papers.json").read_text())
+        cls.honors = json.loads((ROOT / "data" / "honors.json").read_text())
         cls.config = json.loads((ROOT / "config.json").read_text())
 
     def test_unique_titles(self):
@@ -47,9 +49,47 @@ class PaperListTests(unittest.TestCase):
         represented = {paper["venue"] for paper in self.papers}
         self.assertTrue(set(self.config["venues"]) <= represented)
 
+    def test_coverage_starts_in_2021(self):
+        self.assertEqual(self.config["start_year"], 2021)
+        self.assertTrue(all(paper["year"] >= 2021 for paper in self.papers))
+
+    def test_pruning_uses_a_fixed_2021_boundary(self):
+        sample = [
+            {"title": "Old by year", "year": 2020},
+            {"title": "Boundary by year", "year": 2021},
+            {
+                "title": "Old by date",
+                "year": 2021,
+                "publication_date": "2020-12-31",
+            },
+            {
+                "title": "Boundary by date",
+                "year": 2021,
+                "publication_date": "2021-01-01",
+            },
+        ]
+        kept = MODULE.prune_before_start(sample, dt.date(2021, 1, 1))
+        self.assertEqual(
+            {paper["title"] for paper in kept},
+            {"Boundary by year", "Boundary by date"},
+        )
+
     def test_readme_is_reproducible(self):
         expected = MODULE.render_readme(self.papers, self.config)
         self.assertEqual((ROOT / "README.md").read_text(), expected)
+
+    def test_honors_are_valid_and_rendered(self):
+        paper_titles = {MODULE.title_key(paper["title"]) for paper in self.papers}
+        honor_keys = set()
+        readme = (ROOT / "README.md").read_text()
+        for honor in self.honors:
+            self.assertEqual(set(honor), {"title", "label", "url"})
+            self.assertIn(MODULE.title_key(honor["title"]), paper_titles)
+            self.assertTrue(honor["url"].startswith("https://"))
+            key = (MODULE.title_key(honor["title"]), honor["label"])
+            self.assertNotIn(key, honor_keys)
+            honor_keys.add(key)
+            self.assertIn(f"[{honor['label']}]({honor['url']})", readme)
 
     def test_all_taxonomy_categories_are_represented(self):
         represented = {paper["category"] for paper in self.papers}

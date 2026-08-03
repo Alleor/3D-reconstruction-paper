@@ -1,7 +1,7 @@
 {
   "owner": "Alleor",
   "repository": "Alleor/3D-reconstruction-paper",
-  "rolling_years": 5,
+  "start_year": 2021,
   "max_new_papers_per_run": 30,
   "venues": [
     "CVPR", "ICCV", "ECCV", "TPAMI", "IROS", "ICRA",

@@ -34,6 +34,7 @@ from taxonomy import (
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILE = ROOT / "data" / "papers.json"
+HONORS_FILE = ROOT / "data" / "honors.json"
 CONFIG_FILE = ROOT / "config.json"
 README_FILE = ROOT / "README.md"
 
@@ -271,7 +272,15 @@ def github_search_url(title: str) -> str:
     return f"https://github.com/search?q={query}&type=repositories"
 
 
-def render_readme(papers: list[dict[str, Any]], config: dict[str, Any]) -> str:
+def render_readme(
+    papers: list[dict[str, Any]],
+    config: dict[str, Any],
+    honors: list[dict[str, str]] | None = None,
+) -> str:
+    honors = honors if honors is not None else load_json(HONORS_FILE)
+    honors_by_title: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for honor in honors:
+        honors_by_title[title_key(honor["title"])].append(honor)
     papers = sorted(papers, key=lambda item: (-int(item["year"]), item["title"].lower()))
     by_category: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for paper in papers:
@@ -284,6 +293,7 @@ def render_readme(papers: list[dict[str, Any]], config: dict[str, Any]) -> str:
         for paper in papers
     )
     repository = config.get("repository", "Alleor/3D-reconstruction-paper")
+    start_year = int(config.get("start_year", 2021))
     workflow_url = f"https://github.com/{repository}/actions/workflows/update-papers.yml"
     lines = [
         "# Awesome 3D Reconstruction Papers",
@@ -293,23 +303,24 @@ def render_readme(papers: list[dict[str, Any]], config: dict[str, Any]) -> str:
         "![Papers](https://img.shields.io/badge/papers-{}-blue)".format(len(papers)),
         "",
         "A curated, automatically updated list of recent papers on 3D reconstruction.",
-        "收录近五年三维重建论文，并自动发现新论文及其开源代码。",
+        f"收录 {start_year} 年至今的三维重建论文，并自动发现新论文及其开源代码。",
         "",
-        f"> Coverage: {min(years) if years else '—'}–{max(years) if years else '—'} · Last content update: {last_added} · Maintainer: [@Alleor](https://github.com/Alleor)",
+        f"> Coverage: {start_year}–Present · Last content update: {last_added} · Maintainer: [@Alleor](https://github.com/Alleor)",
         "",
         "## About / 项目简介",
         "",
-        "这是一个面向三维视觉研究者和开发者的开源论文库，持续整理近五年来三维重建领域的重要工作。仓库覆盖主流会议、期刊与 arXiv，提供论文和官方代码链接，并通过 GitHub Actions 每周自动发现、筛选、去重、分类和更新最新文献。",
+        f"这是一个面向三维视觉研究者和开发者的开源论文库，持续整理 {start_year} 年至今三维重建领域的重要工作。仓库覆盖主流会议、期刊与 arXiv，提供论文、官方代码和荣誉链接，并通过 GitHub Actions 每周自动发现、筛选、去重、分类和更新最新文献。",
         "",
-        "An open-source paper collection for 3D vision researchers and developers, continuously tracking important 3D reconstruction work from the most recent five years. It covers major conferences, journals, and arXiv, provides paper and official-code links, and uses GitHub Actions to discover, filter, deduplicate, classify, and update the collection every week.",
+        f"An open-source paper collection for 3D vision researchers and developers, continuously tracking important 3D reconstruction work published since {start_year}. It covers major conferences, journals, and arXiv, provides paper, official-code, and honor links, and uses GitHub Actions to discover, filter, deduplicate, classify, and update the collection every week.",
         "",
         "### Highlights / 项目亮点",
         "",
         "- 📚 Mutually exclusive task categories / 清晰且互不重叠的任务分类",
         "- 📄 Paper and official-code links / 论文与官方代码链接",
+        "- 🏆 Verified paper awards and distinctions / 经官方来源核实的论文奖项与荣誉",
         "- 🔄 Automatic weekly updates / 每周自动更新",
         "- 🔍 Automatic discovery, filtering, and deduplication / 自动发现、筛选与去重",
-        "- 📅 Rolling five-year coverage / 持续覆盖近五年研究成果",
+        f"- 📅 Coverage since {start_year} / 持续覆盖 {start_year} 年至今的研究成果",
         "",
         "### Research Areas / 研究分类",
         "",
@@ -326,7 +337,7 @@ def render_readme(papers: list[dict[str, Any]], config: dict[str, Any]) -> str:
         "",
         "## Scope",
         "",
-        "Primary discovery venues: " + ", ".join(config["venues"]) + ". The rolling five-year window is based on publication date. The complete reference list is also mirrored, so its additional venues are preserved. Papers without a confidently matched official implementation are marked **Code pending**.",
+        "Primary discovery venues: " + ", ".join(config["venues"]) + f". Coverage starts on January 1, {start_year} and continues to the present. The complete reference list is also mirrored, so its additional venues are preserved. Papers without a confidently matched official implementation are marked **Code pending**. Honors are manually verified against official conference, journal, or author sources.",
         "",
         "## Contents",
         "",
@@ -355,6 +366,27 @@ def render_readme(papers: list[dict[str, Any]], config: dict[str, Any]) -> str:
     for venue in venue_order:
         if venues.get(venue):
             lines.append(f"| {venue} | {venues[venue]} |")
+    paper_by_title = {title_key(paper["title"]): paper for paper in papers}
+    lines.extend([
+        "",
+        "## Honors / 论文荣誉",
+        "",
+        "Verified paper awards and official highlight selections. Click an honor to open its source.",
+        "",
+        "| Paper | Honor |",
+        "|:--|:--|",
+    ])
+    for honor in sorted(
+        honors,
+        key=lambda item: (
+            -int(paper_by_title[title_key(item["title"])]["year"]),
+            item["title"].lower(),
+            item["label"].lower(),
+        ),
+    ):
+        lines.append(
+            f"| {honor['title']} | 🏆 [{honor['label']}]({honor['url']}) |"
+        )
     for category in CATEGORY_ORDER:
         entries = by_category.get(category, [])
         if not entries:
@@ -366,15 +398,18 @@ def render_readme(papers: list[dict[str, Any]], config: dict[str, Any]) -> str:
                 code = f"[Code]({paper['code_url']})"
             else:
                 code = f"**Code pending** ([search]({github_search_url(paper['title'])}))"
-            lines.append(
-                f"- **{paper['title']}** — *{paper['venue']} {paper['year']}* "
-                f"{paper_link} · {code}"
+            details = [f"*{paper['venue']} {paper['year']}*"]
+            details.extend(
+                f"🏆 [{honor['label']}]({honor['url']})"
+                for honor in honors_by_title.get(title_key(paper["title"]), [])
             )
+            details.extend((paper_link, code))
+            lines.append(f"- **{paper['title']}** — " + " · ".join(details))
     lines.extend([
         "",
         "## Automatic updates",
         "",
-        "A scheduled GitHub Action runs every Monday. It first synchronizes the reference repository, then queries OpenAlex for additional papers, applies the rolling five-year filter, deduplicates records, searches GitHub for likely official implementations, and regenerates this README. The workflow can also be run manually from the Actions tab.",
+        f"A scheduled GitHub Action runs every Monday. It first synchronizes the reference repository, then queries OpenAlex for additional papers published since {start_year}, deduplicates records, searches GitHub for likely official implementations, applies the taxonomy, preserves curated honors, and regenerates this README. The workflow can also be run manually from the Actions tab.",
         "",
         "To run locally:",
         "",
@@ -430,9 +465,9 @@ def merge_discovered(
     return papers + selected, len(selected)
 
 
-def prune_rolling_window(papers: list[dict[str, Any]], since: dt.date) -> list[dict[str, Any]]:
-    # Curated boundary-year records are retained because venue metadata often has
-    # only year precision; discovered records use their publication year.
+def prune_before_start(papers: list[dict[str, Any]], since: dt.date) -> list[dict[str, Any]]:
+    # Boundary-year records are retained because curated venue metadata often
+    # has only year precision.
     kept = []
     for paper in papers:
         published = paper.get("publication_date")
@@ -459,9 +494,8 @@ def main() -> int:
     args = parse_args()
     config = load_json(CONFIG_FILE)
     papers = load_json(DATA_FILE)
-    today = dt.date.today()
-    since = today - dt.timedelta(days=365 * int(config.get("rolling_years", 5)))
-    papers = prune_rolling_window(papers, since)
+    since = dt.date(int(config.get("start_year", 2021)), 1, 1)
+    papers = prune_before_start(papers, since)
     added = 0
     if not args.render_only:
         works = discover_openalex(config, since)
