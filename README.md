@@ -1,7 +1,7 @@
 # Awesome 3D Reconstruction Papers
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[![Auto Update](https://github.com/Alleor/Awesome-3D-Reconstruction-Papers/actions/workflows/update-papers.yml/badge.svg)](https://github.com/Alleor/Awesome-3D-Reconstruction-Papers/actions/workflows/update-papers.yml)
+[![Auto Update](https://github.com/Alleor/3D-reconstruction-paper/actions/workflows/update-papers.yml/badge.svg)](https://github.com/Alleor/3D-reconstruction-paper/actions/workflows/update-papers.yml)
 ![Papers](https://img.shields.io/badge/papers-49-blue)
 
 A curated, automatically updated list of recent papers on 3D reconstruction.

@@ -301,11 +301,13 @@ def render_readme(papers: list[dict[str, Any]], config: dict[str, Any]) -> str:
     venues = Counter(paper["venue"] for paper in papers)
     years = sorted({int(paper["year"]) for paper in papers})
     last_added = max((paper.get("added_at", "") for paper in papers), default="") or "2026-08-03"
+    repository = config.get("repository", "Alleor/3D-reconstruction-paper")
+    workflow_url = f"https://github.com/{repository}/actions/workflows/update-papers.yml"
     lines = [
         "# Awesome 3D Reconstruction Papers",
         "",
         "[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)",
-        "[![Auto Update](https://github.com/Alleor/Awesome-3D-Reconstruction-Papers/actions/workflows/update-papers.yml/badge.svg)](https://github.com/Alleor/Awesome-3D-Reconstruction-Papers/actions/workflows/update-papers.yml)",
+        f"[![Auto Update]({workflow_url}/badge.svg)]({workflow_url})",
         "![Papers](https://img.shields.io/badge/papers-{}-blue)".format(len(papers)),
         "",
         "A curated, automatically updated list of recent papers on 3D reconstruction.",
