@@ -30,6 +30,13 @@ CONFIG_FILE = ROOT / "config.json"
 README_FILE = ROOT / "README.md"
 
 CATEGORY_ORDER = [
+    "3D Reconstruction",
+    "Scalable",
+    "Self-Supervised",
+    "Semantic",
+    "Dynamic",
+    "Generation",
+    "Novel View Synthesis",
     "Feed-forward and General Reconstruction",
     "Neural Implicit Surfaces",
     "Neural Rendering and Novel View Synthesis",
@@ -301,6 +308,10 @@ def render_readme(papers: list[dict[str, Any]], config: dict[str, Any]) -> str:
     venues = Counter(paper["venue"] for paper in papers)
     years = sorted({int(paper["year"]) for paper in papers})
     last_added = max((paper.get("added_at", "") for paper in papers), default="") or "2026-08-03"
+    reference_count = sum(
+        paper.get("source_repo") == "chicleee/End-to-End-3D-Reconstruction-Paper-List"
+        for paper in papers
+    )
     repository = config.get("repository", "Alleor/3D-reconstruction-paper")
     workflow_url = f"https://github.com/{repository}/actions/workflows/update-papers.yml"
     lines = [
@@ -317,7 +328,7 @@ def render_readme(papers: list[dict[str, Any]], config: dict[str, Any]) -> str:
         "",
         "## Scope",
         "",
-        "Target venues: " + ", ".join(config["venues"]) + ". The rolling five-year window is based on publication date. Papers without a confidently matched official implementation are marked **Code pending**.",
+        "Primary discovery venues: " + ", ".join(config["venues"]) + ". The rolling five-year window is based on publication date. The complete reference list is also mirrored, so its additional venues are preserved. Papers without a confidently matched official implementation are marked **Code pending**.",
         "",
         "## Contents",
         "",
@@ -350,7 +361,7 @@ def render_readme(papers: list[dict[str, Any]], config: dict[str, Any]) -> str:
         "",
         "## Automatic updates",
         "",
-        "A scheduled GitHub Action runs every Monday. It queries OpenAlex, keeps only relevant computer-vision/robotics papers from the target venues and rolling five-year window, deduplicates records, searches GitHub for likely official implementations, and regenerates this README. The workflow can also be run manually from the Actions tab.",
+        "A scheduled GitHub Action runs every Monday. It first synchronizes the reference repository, then queries OpenAlex for additional papers, applies the rolling five-year filter, deduplicates records, searches GitHub for likely official implementations, and regenerates this README. The workflow can also be run manually from the Actions tab.",
         "",
         "To run locally:",
         "",
@@ -368,7 +379,7 @@ def render_readme(papers: list[dict[str, Any]], config: dict[str, Any]) -> str:
         "",
         "## Acknowledgements",
         "",
-        "The presentation is inspired by [End-to-End-3D-Reconstruction-Paper-List](https://github.com/chicleee/End-to-End-3D-Reconstruction-Paper-List). Metadata discovery uses [OpenAlex](https://openalex.org/).",
+        f"This repository mirrors {reference_count} entries and their original categories from [End-to-End-3D-Reconstruction-Paper-List](https://github.com/chicleee/End-to-End-3D-Reconstruction-Paper-List). Metadata discovery for additional papers uses [OpenAlex](https://openalex.org/).",
         "",
         "## License",
         "",
