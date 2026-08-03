@@ -1,0 +1,18 @@
+{
+  "owner": "Alleor",
+  "rolling_years": 5,
+  "max_new_papers_per_run": 30,
+  "venues": [
+    "CVPR", "ICCV", "ECCV", "TPAMI", "IROS", "ICRA",
+    "TRO", "RA-L", "ICLR", "3DV", "arXiv"
+  ],
+  "queries": [
+    "3D reconstruction",
+    "neural scene reconstruction",
+    "surface reconstruction computer vision",
+    "novel view synthesis",
+    "Gaussian splatting reconstruction",
+    "dense SLAM reconstruction"
+  ]
+}
+

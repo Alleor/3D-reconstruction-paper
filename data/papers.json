@@ -1,0 +1,451 @@
+[
+  {
+    "title": "GrainGS: Gradient-Decoupled Gaussian Splatting for Efficient Dynamic Novel View Synthesis",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "Dynamic and 4D Reconstruction",
+    "paper_url": "https://doi.org/10.48550/arxiv.2607.21448",
+    "code_url": null,
+    "openalex_id": "https://openalex.org/W7170638490",
+    "added_at": "2026-08-03",
+    "curated": false
+  },
+  {
+    "title": "MAGiSt3R: Multi-Agent Feed-forward 3D Reconstruction from Monocular RGB Videos",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "Feed-forward and General Reconstruction",
+    "paper_url": "https://arxiv.org/pdf/2607.15211",
+    "code_url": null,
+    "openalex_id": "https://openalex.org/W7169688533",
+    "added_at": "2026-08-03",
+    "curated": false
+  },
+  {
+    "title": "PanoLess: Environment Reconstruction from Partial Reflective Views",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://doi.org/10.48550/arxiv.2607.25362",
+    "code_url": null,
+    "openalex_id": "https://openalex.org/W7171718439",
+    "added_at": "2026-08-03",
+    "curated": false
+  },
+  {
+    "title": "S-Avatar: Diffusion-Guided Gaussian Head Avatars from a Single Image",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "Dynamic and 4D Reconstruction",
+    "paper_url": "https://doi.org/10.48550/arxiv.2607.28164",
+    "code_url": null,
+    "openalex_id": "https://openalex.org/W7171972367",
+    "added_at": "2026-08-03",
+    "curated": false
+  },
+  {
+    "title": "3D Reconstruction with Spatial Memory",
+    "year": 2025,
+    "venue": "3DV",
+    "category": "Feed-forward and General Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2408.16061",
+    "code_url": "https://github.com/HengyiWang/spann3r",
+    "curated": true
+  },
+  {
+    "title": "Fast3R: Towards 3D Reconstruction of 1000+ Images in One Forward Pass",
+    "year": 2025,
+    "venue": "CVPR",
+    "category": "Feed-forward and General Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2501.13928",
+    "code_url": "https://github.com/facebookresearch/fast3r",
+    "curated": true
+  },
+  {
+    "title": "Gamba: Marry Gaussian Splatting With Mamba for Single-View 3D Reconstruction",
+    "year": 2025,
+    "venue": "TPAMI",
+    "category": "Object and Human Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2403.18795",
+    "code_url": "https://github.com/SkyworkAI/Gamba",
+    "curated": true
+  },
+  {
+    "title": "LVSM: A Large View Synthesis Model with Minimal 3D Inductive Bias",
+    "year": 2025,
+    "venue": "ICLR",
+    "category": "Neural Rendering and Novel View Synthesis",
+    "paper_url": "https://arxiv.org/abs/2410.17242",
+    "code_url": "https://github.com/haian-jin/LVSM",
+    "curated": true
+  },
+  {
+    "title": "MonST3R: A Simple Approach for Estimating Geometry in the Presence of Motion",
+    "year": 2025,
+    "venue": "ICLR",
+    "category": "Dynamic and 4D Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2410.03825",
+    "code_url": "https://github.com/Junyi42/monst3r",
+    "curated": true
+  },
+  {
+    "title": "No Pose, No Problem: Surprisingly Simple 3D Gaussian Splats from Sparse Unposed Images",
+    "year": 2025,
+    "venue": "ICLR",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2410.24207",
+    "code_url": "https://github.com/cvg/NoPoSplat",
+    "curated": true
+  },
+  {
+    "title": "SLAM3R: Real-Time Dense Scene Reconstruction from Monocular RGB Videos",
+    "year": 2025,
+    "venue": "CVPR",
+    "category": "Feed-forward and General Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2412.09401",
+    "code_url": "https://github.com/PKU-VCL-3DV/SLAM3R",
+    "curated": true
+  },
+  {
+    "title": "VGGT: Visual Geometry Grounded Transformer",
+    "year": 2025,
+    "venue": "CVPR",
+    "category": "Feed-forward and General Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2503.11651",
+    "code_url": "https://github.com/facebookresearch/vggt",
+    "curated": true
+  },
+  {
+    "title": "4D Gaussian Splatting for Real-Time Dynamic Scene Rendering",
+    "year": 2024,
+    "venue": "CVPR",
+    "category": "Dynamic and 4D Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2310.08528",
+    "code_url": "https://github.com/hustvl/4DGaussians",
+    "curated": true
+  },
+  {
+    "title": "DUSt3R: Geometric 3D Vision Made Easy",
+    "year": 2024,
+    "venue": "CVPR",
+    "category": "Feed-forward and General Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2312.14132",
+    "code_url": "https://github.com/naver/dust3r",
+    "curated": true
+  },
+  {
+    "title": "Gaussian-SLAM: Photo-realistic Dense SLAM with Gaussian Splatting",
+    "year": 2024,
+    "venue": "CVPR",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2312.10070",
+    "code_url": "https://github.com/VladimirYugay/Gaussian-SLAM",
+    "curated": true
+  },
+  {
+    "title": "Grounding Image Matching in 3D with MASt3R",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "Feed-forward and General Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2406.09756",
+    "code_url": "https://github.com/naver/mast3r",
+    "curated": true
+  },
+  {
+    "title": "MoD-SLAM: Monocular Dense Mapping for Unbounded 3D Scene Reconstruction",
+    "year": 2024,
+    "venue": "RA-L",
+    "category": "Robotic Mapping and Large-scale Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2402.03762",
+    "code_url": null,
+    "curated": true
+  },
+  {
+    "title": "MonoGS: Gaussian Splatting SLAM from Monocular Videos",
+    "year": 2024,
+    "venue": "CVPR",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2312.06741",
+    "code_url": "https://github.com/muskie82/MonoGS",
+    "curated": true
+  },
+  {
+    "title": "MonoPlane: Exploiting Monocular Geometric Cues for Generalizable 3D Plane Reconstruction",
+    "year": 2024,
+    "venue": "IROS",
+    "category": "Feed-forward and General Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2411.01226",
+    "code_url": "https://github.com/thuzhaowang/MonoPlane",
+    "curated": true
+  },
+  {
+    "title": "MVSplat: Efficient 3D Gaussian Splatting from Sparse Multi-View Images",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2403.14627",
+    "code_url": "https://github.com/donydchen/mvsplat",
+    "curated": true
+  },
+  {
+    "title": "NICER-SLAM: Neural Implicit Scene Encoding for RGB SLAM",
+    "year": 2024,
+    "venue": "3DV",
+    "category": "Robotic Mapping and Large-scale Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2302.03594",
+    "code_url": "https://github.com/cvg/nicer-slam",
+    "curated": true
+  },
+  {
+    "title": "pixelSplat: 3D Gaussian Splats from Image Pairs for Scalable Generalizable 3D Reconstruction",
+    "year": 2024,
+    "venue": "CVPR",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2312.12337",
+    "code_url": "https://github.com/dcharatan/pixelsplat",
+    "curated": true
+  },
+  {
+    "title": "SplaTAM: Splat Track & Map 3D Gaussians for Dense RGB-D SLAM",
+    "year": 2024,
+    "venue": "CVPR",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2312.02126",
+    "code_url": "https://github.com/spla-tam/SplaTAM",
+    "curated": true
+  },
+  {
+    "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+    "year": 2023,
+    "venue": "arXiv",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2308.04079",
+    "code_url": "https://github.com/graphdeco-inria/gaussian-splatting",
+    "curated": true
+  },
+  {
+    "title": "A Multirobot System for 3-D Surface Reconstruction With Centralized and Distributed Architectures",
+    "year": 2023,
+    "venue": "TRO",
+    "category": "Robotic Mapping and Large-scale Reconstruction",
+    "paper_url": "https://doi.org/10.1109/TRO.2023.3258641",
+    "code_url": null,
+    "curated": true
+  },
+  {
+    "title": "BundleSDF: Neural 6-DoF Tracking and 3D Reconstruction of Unknown Objects",
+    "year": 2023,
+    "venue": "CVPR",
+    "category": "Object and Human Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2303.14158",
+    "code_url": "https://github.com/NVlabs/BundleSDF",
+    "curated": true
+  },
+  {
+    "title": "ECON: Explicit Clothed Humans Optimized via Normal Integration",
+    "year": 2023,
+    "venue": "CVPR",
+    "category": "Object and Human Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2212.07422",
+    "code_url": "https://github.com/YuliangXiu/ECON",
+    "curated": true
+  },
+  {
+    "title": "FineRecon: Depth-aware Feed-forward Network for Detailed 3D Reconstruction",
+    "year": 2023,
+    "venue": "ICCV",
+    "category": "Feed-forward and General Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2304.01480",
+    "code_url": "https://github.com/apple/ml-finerecon",
+    "curated": true
+  },
+  {
+    "title": "GO-SLAM: Global Optimization for Consistent 3D Instant Reconstruction",
+    "year": 2023,
+    "venue": "ICCV",
+    "category": "Robotic Mapping and Large-scale Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2309.02436",
+    "code_url": "https://github.com/youmi-zym/GO-SLAM",
+    "curated": true
+  },
+  {
+    "title": "K-Planes: Explicit Radiance Fields in Space, Time, and Appearance",
+    "year": 2023,
+    "venue": "CVPR",
+    "category": "Dynamic and 4D Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2301.10241",
+    "code_url": "https://github.com/sarafridov/K-Planes",
+    "curated": true
+  },
+  {
+    "title": "Multiview Compressive Coding for 3D Reconstruction",
+    "year": 2023,
+    "venue": "CVPR",
+    "category": "Object and Human Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2301.08247",
+    "code_url": "https://github.com/facebookresearch/MCC",
+    "curated": true
+  },
+  {
+    "title": "Neuralangelo: High-Fidelity Neural Surface Reconstruction",
+    "year": 2023,
+    "venue": "CVPR",
+    "category": "Neural Implicit Surfaces",
+    "paper_url": "https://arxiv.org/abs/2306.03092",
+    "code_url": "https://github.com/NVlabs/neuralangelo",
+    "curated": true
+  },
+  {
+    "title": "NeurAR: Neural Uncertainty for Autonomous 3D Reconstruction With Implicit Neural Representations",
+    "year": 2023,
+    "venue": "RA-L",
+    "category": "Robotic Mapping and Large-scale Reconstruction",
+    "paper_url": "https://doi.org/10.1109/LRA.2023.3235686",
+    "code_url": null,
+    "curated": true
+  },
+  {
+    "title": "NOPE-SAC: Neural One-Plane RANSAC for Sparse-View Planar 3D Reconstruction",
+    "year": 2023,
+    "venue": "TPAMI",
+    "category": "Feed-forward and General Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2211.16799",
+    "code_url": "https://github.com/IceTTTb/NopeSAC",
+    "curated": true
+  },
+  {
+    "title": "SHINE-Mapping: Large-Scale 3D Mapping Using Sparse Hierarchical Implicit Neural Representations",
+    "year": 2023,
+    "venue": "ICRA",
+    "category": "Robotic Mapping and Large-scale Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2210.02299",
+    "code_url": "https://github.com/PRBonn/SHINE_mapping",
+    "curated": true
+  },
+  {
+    "title": "SparseFusion: Distilling View-Conditioned Diffusion for 3D Reconstruction",
+    "year": 2023,
+    "venue": "CVPR",
+    "category": "Object and Human Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2212.00792",
+    "code_url": "https://github.com/zhizdev/sparsefusion",
+    "curated": true
+  },
+  {
+    "title": "ICON: Implicit Clothed humans Obtained from Normals",
+    "year": 2022,
+    "venue": "CVPR",
+    "category": "Object and Human Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2112.09127",
+    "code_url": "https://github.com/YuliangXiu/ICON",
+    "curated": true
+  },
+  {
+    "title": "Kimera-Multi: Robust, Distributed, Dense Metric-Semantic SLAM for Multi-Robot Systems",
+    "year": 2022,
+    "venue": "TRO",
+    "category": "Robotic Mapping and Large-scale Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2106.14386",
+    "code_url": "https://github.com/MIT-SPARK/Kimera-Multi",
+    "curated": true
+  },
+  {
+    "title": "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields",
+    "year": 2022,
+    "venue": "CVPR",
+    "category": "Neural Rendering and Novel View Synthesis",
+    "paper_url": "https://arxiv.org/abs/2111.12077",
+    "code_url": "https://github.com/google-research/multinerf",
+    "curated": true
+  },
+  {
+    "title": "NeuralWarp: Time-Warping for Neural Surface Reconstruction",
+    "year": 2022,
+    "venue": "CVPR",
+    "category": "Neural Implicit Surfaces",
+    "paper_url": "https://arxiv.org/abs/2202.03848",
+    "code_url": "https://github.com/fdarmon/NeuralWarp",
+    "curated": true
+  },
+  {
+    "title": "TensoRF: Tensorial Radiance Fields",
+    "year": 2022,
+    "venue": "ECCV",
+    "category": "Neural Rendering and Novel View Synthesis",
+    "paper_url": "https://arxiv.org/abs/2203.09517",
+    "code_url": "https://github.com/apchenstu/TensoRF",
+    "curated": true
+  },
+  {
+    "title": "D-NeRF: Neural Radiance Fields for Dynamic Scenes",
+    "year": 2021,
+    "venue": "CVPR",
+    "category": "Dynamic and 4D Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2011.13961",
+    "code_url": "https://github.com/albertpumarola/D-NeRF",
+    "curated": true
+  },
+  {
+    "title": "GigaMVS: A Benchmark for Ultra-Large-Scale Gigapixel-Level 3D Reconstruction",
+    "year": 2021,
+    "venue": "TPAMI",
+    "category": "Robotic Mapping and Large-scale Reconstruction",
+    "paper_url": "https://doi.org/10.1109/TPAMI.2021.3115028",
+    "code_url": null,
+    "curated": true
+  },
+  {
+    "title": "IBRNet: Learning Multi-View Image-Based Rendering",
+    "year": 2021,
+    "venue": "CVPR",
+    "category": "Neural Rendering and Novel View Synthesis",
+    "paper_url": "https://arxiv.org/abs/2102.13090",
+    "code_url": "https://github.com/googleinterns/IBRNet",
+    "curated": true
+  },
+  {
+    "title": "MVSNeRF: Fast Generalizable Radiance Field Reconstruction from Multi-View Stereo",
+    "year": 2021,
+    "venue": "ICCV",
+    "category": "Neural Rendering and Novel View Synthesis",
+    "paper_url": "https://arxiv.org/abs/2103.15595",
+    "code_url": "https://github.com/apchenstu/mvsnerf",
+    "curated": true
+  },
+  {
+    "title": "Neural Scene Flow Fields for Space-Time View Synthesis of Dynamic Scenes",
+    "year": 2021,
+    "venue": "CVPR",
+    "category": "Dynamic and 4D Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2011.13084",
+    "code_url": "https://github.com/zhengqili/Neural-Scene-Flow-Fields",
+    "curated": true
+  },
+  {
+    "title": "NeuralRecon: Real-Time Coherent 3D Reconstruction from Monocular Video",
+    "year": 2021,
+    "venue": "CVPR",
+    "category": "Feed-forward and General Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2104.00681",
+    "code_url": "https://github.com/zju3dv/NeuralRecon",
+    "curated": true
+  },
+  {
+    "title": "pixelNeRF: Neural Radiance Fields from One or Few Images",
+    "year": 2021,
+    "venue": "CVPR",
+    "category": "Neural Rendering and Novel View Synthesis",
+    "paper_url": "https://arxiv.org/abs/2012.02190",
+    "code_url": "https://github.com/sxyu/pixel-nerf",
+    "curated": true
+  },
+  {
+    "title": "Poisson Surface Reconstruction for LiDAR Odometry and Mapping",
+    "year": 2021,
+    "venue": "ICRA",
+    "category": "Robotic Mapping and Large-scale Reconstruction",
+    "paper_url": "https://doi.org/10.1109/ICRA48506.2021.9562069",
+    "code_url": null,
+    "curated": true
+  }
+]

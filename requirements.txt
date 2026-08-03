@@ -1,0 +1,2 @@
+# The updater intentionally uses only Python's standard library.
+
