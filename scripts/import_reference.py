@@ -15,6 +15,8 @@ import urllib.request
 from pathlib import Path
 from typing import Any
 
+from taxonomy import classify_paper, reclassify_papers
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILE = ROOT / "data" / "papers.json"
@@ -83,7 +85,7 @@ def parse_reference(markdown: str) -> list[dict[str, Any]]:
                 "title": title,
                 "year": int(year),
                 "venue": venue.strip(),
-                "category": category,
+                "category": classify_paper(title),
                 "paper_url": canonical_url(paper_url),
                 "code_url": canonical_url(code_url),
                 "curated": True,
@@ -146,6 +148,7 @@ def merge_papers(
         if changed:
             current["reference_synced_at"] = sync_date
             updated += 1
+    updated += reclassify_papers(existing)
     existing.sort(key=lambda item: (-int(item["year"]), item["title"].lower()))
     return existing, added, updated
 
