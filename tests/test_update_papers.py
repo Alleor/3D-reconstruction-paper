@@ -3,6 +3,7 @@ import importlib.util
 import json
 import sys
 import unittest
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 
@@ -23,6 +24,14 @@ IMPORT_MODULE = importlib.util.module_from_spec(IMPORT_SPEC)
 assert IMPORT_SPEC.loader
 sys.modules[IMPORT_SPEC.name] = IMPORT_MODULE
 IMPORT_SPEC.loader.exec_module(IMPORT_MODULE)
+
+TIMELINE_SPEC = importlib.util.spec_from_file_location(
+    "generate_timeline", ROOT / "scripts" / "generate_timeline.py"
+)
+TIMELINE_MODULE = importlib.util.module_from_spec(TIMELINE_SPEC)
+assert TIMELINE_SPEC.loader
+sys.modules[TIMELINE_SPEC.name] = TIMELINE_MODULE
+TIMELINE_SPEC.loader.exec_module(TIMELINE_MODULE)
 
 
 class PaperListTests(unittest.TestCase):
@@ -77,6 +86,22 @@ class PaperListTests(unittest.TestCase):
     def test_readme_is_reproducible(self):
         expected = MODULE.render_readme(self.papers, self.config)
         self.assertEqual((ROOT / "README.md").read_text(), expected)
+
+    def test_timeline_is_reproducible_and_contains_every_paper(self):
+        expected_svg = TIMELINE_MODULE.render_timeline_svg(self.papers, self.honors)
+        expected_markdown = TIMELINE_MODULE.render_timeline_markdown(
+            self.papers, self.config
+        )
+        self.assertEqual((ROOT / "assets" / "timeline.svg").read_text(), expected_svg)
+        self.assertEqual((ROOT / "TIMELINE.md").read_text(), expected_markdown)
+
+        root = ET.fromstring(expected_svg)
+        rendered_titles = {
+            node.attrib["data-title"]
+            for node in root.findall(".//{http://www.w3.org/2000/svg}g")
+            if node.attrib.get("class") == "paper"
+        }
+        self.assertEqual(rendered_titles, {paper["title"] for paper in self.papers})
 
     def test_honors_are_valid_and_rendered(self):
         paper_titles = {MODULE.title_key(paper["title"]) for paper in self.papers}

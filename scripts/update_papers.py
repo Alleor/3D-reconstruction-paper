@@ -30,6 +30,7 @@ from taxonomy import (
     classify_paper,
     reclassify_papers,
 )
+from generate_timeline import render_timeline_markdown, render_timeline_svg
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -37,6 +38,8 @@ DATA_FILE = ROOT / "data" / "papers.json"
 HONORS_FILE = ROOT / "data" / "honors.json"
 CONFIG_FILE = ROOT / "config.json"
 README_FILE = ROOT / "README.md"
+TIMELINE_FILE = ROOT / "TIMELINE.md"
+TIMELINE_SVG_FILE = ROOT / "assets" / "timeline.svg"
 
 VENUE_PATTERNS = [
     ("CVPR", r"computer vision and pattern recognition|\bcvpr\b"),
@@ -318,6 +321,7 @@ def render_readme(
         "- 📚 Mutually exclusive task categories / 清晰且互不重叠的任务分类",
         "- 📄 Paper and official-code links / 论文与官方代码链接",
         "- 🏆 Verified paper awards and distinctions / 经官方来源核实的论文奖项与荣誉",
+        "- 📈 Visual development timeline / 可视化三维重建发展时间线",
         "- 🔄 Automatic weekly updates / 每周自动更新",
         "- 🔍 Automatic discovery, filtering, and deduplication / 自动发现、筛选与去重",
         f"- 📅 Coverage since {start_year} / 持续覆盖 {start_year} 年至今的研究成果",
@@ -338,6 +342,14 @@ def render_readme(
         "## Scope",
         "",
         "Primary discovery venues: " + ", ".join(config["venues"]) + f". Coverage starts on January 1, {start_year} and continues to the present. The complete reference list is also mirrored, so its additional venues are preserved. Papers without a confidently matched official implementation are marked **Code pending**. Honors are manually verified against official conference, journal, or author sources.",
+        "",
+        "## Development Timeline / 发展时间线",
+        "",
+        "Follow every paper along a central 2021–Present timeline, with papers alternating on both sides and colors showing the evolution of each research direction.",
+        "",
+        "沿一条 2021 年至今的主线浏览全部论文；论文交替排列在两侧，并通过分类颜色观察不同研究方向的发展趋势。",
+        "",
+        "### [Explore the full visual timeline → / 查看完整可视化时间线 →](TIMELINE.md)",
         "",
         "## Contents",
         "",
@@ -409,7 +421,7 @@ def render_readme(
         "",
         "## Automatic updates",
         "",
-        f"A scheduled GitHub Action runs every Monday. It first synchronizes the reference repository, then queries OpenAlex for additional papers published since {start_year}, deduplicates records, searches GitHub for likely official implementations, applies the taxonomy, preserves curated honors, and regenerates this README. The workflow can also be run manually from the Actions tab.",
+        f"A scheduled GitHub Action runs every Monday. It first synchronizes the reference repository, then queries OpenAlex for additional papers published since {start_year}, deduplicates records, searches GitHub for likely official implementations, applies the taxonomy, preserves curated honors, and regenerates this README and the visual timeline. The workflow can also be run manually from the Actions tab.",
         "",
         "To run locally:",
         "",
@@ -505,12 +517,21 @@ def main() -> int:
     reclassify_papers(papers)
     papers.sort(key=lambda item: (-int(item["year"]), item["title"].lower()))
     readme = render_readme(papers, config)
+    honors = load_json(HONORS_FILE)
+    timeline = render_timeline_markdown(papers, config)
+    timeline_svg = render_timeline_svg(papers, honors)
     if args.dry_run:
         print(f"Would keep {len(papers)} papers and add {added} new papers.")
         return 0
     DATA_FILE.write_text(json.dumps(papers, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     README_FILE.write_text(readme, encoding="utf-8")
-    print(f"Kept {len(papers)} papers; added {added}; rendered {README_FILE.name}.")
+    TIMELINE_FILE.write_text(timeline, encoding="utf-8")
+    TIMELINE_SVG_FILE.parent.mkdir(parents=True, exist_ok=True)
+    TIMELINE_SVG_FILE.write_text(timeline_svg, encoding="utf-8")
+    print(
+        f"Kept {len(papers)} papers; added {added}; rendered "
+        f"{README_FILE.name}, {TIMELINE_FILE.name}, and {TIMELINE_SVG_FILE.relative_to(ROOT)}."
+    )
     return 0
 
 

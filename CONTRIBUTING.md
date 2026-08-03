@@ -11,6 +11,9 @@ python scripts/update_papers.py --render-only
 python -m unittest discover -s tests -v
 ```
 
+The same render command also regenerates `TIMELINE.md` and
+`assets/timeline.svg`; do not edit those generated files by hand.
+
 Every record needs a title, publication year, venue, category, and stable paper URL. Add `code_url` only when the repository is an official implementation or is explicitly linked by the authors. Use `null` when no official code is known.
 
 The accepted categories and precedence rules are defined in

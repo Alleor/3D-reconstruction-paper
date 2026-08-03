@@ -20,6 +20,7 @@ An open-source paper collection for 3D vision researchers and developers, contin
 - 📚 Mutually exclusive task categories / 清晰且互不重叠的任务分类
 - 📄 Paper and official-code links / 论文与官方代码链接
 - 🏆 Verified paper awards and distinctions / 经官方来源核实的论文奖项与荣誉
+- 📈 Visual development timeline / 可视化三维重建发展时间线
 - 🔄 Automatic weekly updates / 每周自动更新
 - 🔍 Automatic discovery, filtering, and deduplication / 自动发现、筛选与去重
 - 📅 Coverage since 2021 / 持续覆盖 2021 年至今的研究成果
@@ -44,6 +45,14 @@ If this repository helps your research, literature review, or project developmen
 ## Scope
 
 Primary discovery venues: CVPR, ICCV, ECCV, TPAMI, IROS, ICRA, TRO, RA-L, ICLR, 3DV, arXiv. Coverage starts on January 1, 2021 and continues to the present. The complete reference list is also mirrored, so its additional venues are preserved. Papers without a confidently matched official implementation are marked **Code pending**. Honors are manually verified against official conference, journal, or author sources.
+
+## Development Timeline / 发展时间线
+
+Follow every paper along a central 2021–Present timeline, with papers alternating on both sides and colors showing the evolution of each research direction.
+
+沿一条 2021 年至今的主线浏览全部论文；论文交替排列在两侧，并通过分类颜色观察不同研究方向的发展趋势。
+
+### [Explore the full visual timeline → / 查看完整可视化时间线 →](TIMELINE.md)
 
 ## Contents
 
@@ -265,7 +274,7 @@ Verified paper awards and official highlight selections. Click an honor to open 
 
 ## Automatic updates
 
-A scheduled GitHub Action runs every Monday. It first synchronizes the reference repository, then queries OpenAlex for additional papers published since 2021, deduplicates records, searches GitHub for likely official implementations, applies the taxonomy, preserves curated honors, and regenerates this README. The workflow can also be run manually from the Actions tab.
+A scheduled GitHub Action runs every Monday. It first synchronizes the reference repository, then queries OpenAlex for additional papers published since 2021, deduplicates records, searches GitHub for likely official implementations, applies the taxonomy, preserves curated honors, and regenerates this README and the visual timeline. The workflow can also be run manually from the Actions tab.
 
 To run locally:
 
