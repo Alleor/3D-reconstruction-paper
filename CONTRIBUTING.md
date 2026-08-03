@@ -15,7 +15,10 @@ Every record needs a title, publication year, venue, category, and stable paper 
 
 The accepted categories are defined in `scripts/update_papers.py`. The preferred venues are CVPR, ICCV, ECCV, TPAMI, IROS, ICRA, TRO, RA-L, ICLR, 3DV, and arXiv.
 
+Entries from `chicleee/End-to-End-3D-Reconstruction-Paper-List` are synchronized
+by `scripts/import_reference.py`. Correct those records upstream when possible;
+the weekly workflow may otherwise restore their source metadata.
+
 ## Automated entries
 
 Records with `"curated": false` were found automatically. If one is irrelevant, remove it and open an issue explaining the false positive so the discovery filters can be improved.
-
