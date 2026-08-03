@@ -9,6 +9,37 @@ A curated, automatically updated list of recent papers on 3D reconstruction.
 
 > Coverage: 2021–2026 · Last content update: 2026-08-03 · Maintainer: [@Alleor](https://github.com/Alleor)
 
+## About / 项目简介
+
+这是一个面向三维视觉研究者和开发者的开源论文库，持续整理近五年来三维重建领域的重要工作。仓库覆盖主流会议、期刊与 arXiv，提供论文和官方代码链接，并通过 GitHub Actions 每周自动发现、筛选、去重、分类和更新最新文献。
+
+An open-source paper collection for 3D vision researchers and developers, continuously tracking important 3D reconstruction work from the most recent five years. It covers major conferences, journals, and arXiv, provides paper and official-code links, and uses GitHub Actions to discover, filter, deduplicate, classify, and update the collection every week.
+
+### Highlights / 项目亮点
+
+- 📚 Mutually exclusive task categories / 清晰且互不重叠的任务分类
+- 📄 Paper and official-code links / 论文与官方代码链接
+- 🔄 Automatic weekly updates / 每周自动更新
+- 🔍 Automatic discovery, filtering, and deduplication / 自动发现、筛选与去重
+- 📅 Rolling five-year coverage / 持续覆盖近五年研究成果
+
+### Research Areas / 研究分类
+
+| # | 中文分类 | English Category |
+|--:|:--|:--|
+| 1 | 前馈几何与基础模型 | Feed-Forward Geometry & Foundation Models |
+| 2 | 稠密深度、表面与网格重建 | Dense Depth, Surface & Mesh Reconstruction |
+| 3 | NeRF 与新视角合成 | NeRF & Novel View Synthesis |
+| 4 | Gaussian Splatting | Gaussian Splatting |
+| 5 | 动态与 4D 重建 | Dynamic & 4D Reconstruction |
+| 6 | 对象、人体与 3D 生成 | Object, Human & 3D Generation |
+| 7 | 语义三维重建 | Semantic 3D Reconstruction |
+| 8 | SLAM、机器人与建图 | SLAM, Robotics & Mapping |
+
+If this repository helps your research, literature review, or project development, please consider giving it a ⭐ **Star**. Issues and pull requests are always welcome!
+
+如果这个仓库对你的科研、文献调研或项目开发有所帮助，欢迎点一个 ⭐ **Star**，也欢迎通过 Issue 或 Pull Request 推荐论文、补充代码和修正信息！
+
 ## Scope
 
 Primary discovery venues: CVPR, ICCV, ECCV, TPAMI, IROS, ICRA, TRO, RA-L, ICLR, 3DV, arXiv. The rolling five-year window is based on publication date. The complete reference list is also mirrored, so its additional venues are preserved. Papers without a confidently matched official implementation are marked **Code pending**.

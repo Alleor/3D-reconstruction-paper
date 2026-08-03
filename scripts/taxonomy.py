@@ -18,6 +18,17 @@ CATEGORY_ORDER = [
     "SLAM, Robotics & Mapping",
 ]
 
+CATEGORY_NAMES_ZH = {
+    "Feed-Forward Geometry & Foundation Models": "前馈几何与基础模型",
+    "Dense Depth, Surface & Mesh Reconstruction": "稠密深度、表面与网格重建",
+    "NeRF & Novel View Synthesis": "NeRF 与新视角合成",
+    "Gaussian Splatting": "Gaussian Splatting",
+    "Dynamic & 4D Reconstruction": "动态与 4D 重建",
+    "Object, Human & 3D Generation": "对象、人体与 3D 生成",
+    "Semantic 3D Reconstruction": "语义三维重建",
+    "SLAM, Robotics & Mapping": "SLAM、机器人与建图",
+}
+
 CATEGORY_DESCRIPTIONS = {
     "Feed-Forward Geometry & Foundation Models": (
         "General-purpose visual geometry, camera/point prediction, SfM, and "

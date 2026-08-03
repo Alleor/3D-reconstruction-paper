@@ -25,6 +25,7 @@ from typing import Any, Iterable
 
 from taxonomy import (
     CATEGORY_DESCRIPTIONS,
+    CATEGORY_NAMES_ZH,
     CATEGORY_ORDER,
     classify_paper,
     reclassify_papers,
@@ -296,13 +297,40 @@ def render_readme(papers: list[dict[str, Any]], config: dict[str, Any]) -> str:
         "",
         f"> Coverage: {min(years) if years else '—'}–{max(years) if years else '—'} · Last content update: {last_added} · Maintainer: [@Alleor](https://github.com/Alleor)",
         "",
+        "## About / 项目简介",
+        "",
+        "这是一个面向三维视觉研究者和开发者的开源论文库，持续整理近五年来三维重建领域的重要工作。仓库覆盖主流会议、期刊与 arXiv，提供论文和官方代码链接，并通过 GitHub Actions 每周自动发现、筛选、去重、分类和更新最新文献。",
+        "",
+        "An open-source paper collection for 3D vision researchers and developers, continuously tracking important 3D reconstruction work from the most recent five years. It covers major conferences, journals, and arXiv, provides paper and official-code links, and uses GitHub Actions to discover, filter, deduplicate, classify, and update the collection every week.",
+        "",
+        "### Highlights / 项目亮点",
+        "",
+        "- 📚 Mutually exclusive task categories / 清晰且互不重叠的任务分类",
+        "- 📄 Paper and official-code links / 论文与官方代码链接",
+        "- 🔄 Automatic weekly updates / 每周自动更新",
+        "- 🔍 Automatic discovery, filtering, and deduplication / 自动发现、筛选与去重",
+        "- 📅 Rolling five-year coverage / 持续覆盖近五年研究成果",
+        "",
+        "### Research Areas / 研究分类",
+        "",
+        "| # | 中文分类 | English Category |",
+        "|--:|:--|:--|",
+    ]
+    for index, category in enumerate(CATEGORY_ORDER, start=1):
+        lines.append(f"| {index} | {CATEGORY_NAMES_ZH[category]} | {category} |")
+    lines.extend([
+        "",
+        "If this repository helps your research, literature review, or project development, please consider giving it a ⭐ **Star**. Issues and pull requests are always welcome!",
+        "",
+        "如果这个仓库对你的科研、文献调研或项目开发有所帮助，欢迎点一个 ⭐ **Star**，也欢迎通过 Issue 或 Pull Request 推荐论文、补充代码和修正信息！",
+        "",
         "## Scope",
         "",
         "Primary discovery venues: " + ", ".join(config["venues"]) + ". The rolling five-year window is based on publication date. The complete reference list is also mirrored, so its additional venues are preserved. Papers without a confidently matched official implementation are marked **Code pending**.",
         "",
         "## Contents",
         "",
-    ]
+    ])
     for category in CATEGORY_ORDER:
         if by_category.get(category):
             anchor = re.sub(r"[^a-z0-9 -]", "", category.lower()).replace(" ", "-")
