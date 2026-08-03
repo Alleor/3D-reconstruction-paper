@@ -6,6 +6,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
 SPEC = importlib.util.spec_from_file_location(
     "update_papers", ROOT / "scripts" / "update_papers.py"
 )
@@ -50,9 +51,16 @@ class PaperListTests(unittest.TestCase):
         expected = MODULE.render_readme(self.papers, self.config)
         self.assertEqual((ROOT / "README.md").read_text(), expected)
 
-    def test_reference_categories_are_represented(self):
+    def test_all_taxonomy_categories_are_represented(self):
         represented = {paper["category"] for paper in self.papers}
-        self.assertTrue(set(IMPORT_MODULE.REFERENCE_CATEGORIES) <= represented)
+        self.assertEqual(represented, set(MODULE.CATEGORY_ORDER))
+
+    def test_category_counts_cover_every_paper_once(self):
+        counts = {
+            category: sum(paper["category"] == category for paper in self.papers)
+            for category in MODULE.CATEGORY_ORDER
+        }
+        self.assertEqual(sum(counts.values()), len(self.papers))
 
     def test_reference_entries_have_provenance(self):
         imported = [
@@ -61,6 +69,8 @@ class PaperListTests(unittest.TestCase):
         ]
         self.assertEqual(len(imported), 90)
         self.assertTrue(all(paper.get("source_category") for paper in imported))
+        source_categories = {paper["source_category"] for paper in imported}
+        self.assertEqual(source_categories, set(IMPORT_MODULE.REFERENCE_CATEGORIES))
 
     def test_reference_parser(self):
         sample = """## Dynamic
@@ -68,8 +78,26 @@ class PaperListTests(unittest.TestCase):
 """
         parsed = IMPORT_MODULE.parse_reference(sample)
         self.assertEqual(len(parsed), 1)
-        self.assertEqual(parsed[0]["category"], "Dynamic")
+        self.assertEqual(parsed[0]["category"], "Dynamic & 4D Reconstruction")
+        self.assertEqual(parsed[0]["source_category"], "Dynamic")
         self.assertEqual(parsed[0]["paper_url"], "https://arxiv.org/abs/2601.12345")
+
+    def test_taxonomy_resolves_overlapping_signals_by_primary_task(self):
+        cases = {
+            "Semantic Gaussian Splatting for Panoptic Reconstruction": "Semantic 3D Reconstruction",
+            "Dynamic 4D Gaussian Splatting": "Dynamic & 4D Reconstruction",
+            "Gaussian-SLAM for Online Mapping": "SLAM, Robotics & Mapping",
+            "Gaussian Head Avatars from One Image": "Object, Human & 3D Generation",
+            "Static 3D Gaussian Splatting": "Gaussian Splatting",
+            "Neural Radiance Fields for Novel View Synthesis": "NeRF & Novel View Synthesis",
+            "High-Fidelity Neural Surface Reconstruction": "Dense Depth, Surface & Mesh Reconstruction",
+            "Scalable Long-Context Feed-Forward 3D Reconstruction": "Feed-Forward Geometry & Foundation Models",
+            "Streaming 4D Visual Geometry Transformer": "Dynamic & 4D Reconstruction",
+            "Visual Geometry Grounded Transformer": "Feed-Forward Geometry & Foundation Models",
+        }
+        for title, expected in cases.items():
+            with self.subTest(title=title):
+                self.assertEqual(MODULE.classify_paper(title), expected)
 
     def test_false_positive_filters(self):
         base = {

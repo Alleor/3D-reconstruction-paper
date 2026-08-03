@@ -23,28 +23,18 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any, Iterable
 
+from taxonomy import (
+    CATEGORY_DESCRIPTIONS,
+    CATEGORY_ORDER,
+    classify_paper,
+    reclassify_papers,
+)
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILE = ROOT / "data" / "papers.json"
 CONFIG_FILE = ROOT / "config.json"
 README_FILE = ROOT / "README.md"
-
-CATEGORY_ORDER = [
-    "3D Reconstruction",
-    "Scalable",
-    "Self-Supervised",
-    "Semantic",
-    "Dynamic",
-    "Generation",
-    "Novel View Synthesis",
-    "Feed-forward and General Reconstruction",
-    "Neural Implicit Surfaces",
-    "Neural Rendering and Novel View Synthesis",
-    "Gaussian Splatting",
-    "Dynamic and 4D Reconstruction",
-    "Object and Human Reconstruction",
-    "Robotic Mapping and Large-scale Reconstruction",
-]
 
 VENUE_PATTERNS = [
     ("CVPR", r"computer vision and pattern recognition|\bcvpr\b"),
@@ -178,25 +168,6 @@ def is_relevant(work: dict[str, Any]) -> bool:
     return explicit or (cv_topic and contextual and title_signal)
 
 
-def categorize(title: str, abstract: str = "") -> str:
-    normalized_title = normalize(title)
-    if any(term in normalized_title for term in ("human", "avatar", "face", "hand", "body")):
-        return "Object and Human Reconstruction"
-    text = normalize(f"{title} {abstract}")
-    rules = [
-        ("Dynamic and 4D Reconstruction", ("dynamic", "4d", "scene flow", "motion")),
-        ("Robotic Mapping and Large-scale Reconstruction", ("slam", "mapping", "lidar", "robot", "large scale", "odometry")),
-        ("Gaussian Splatting", ("gaussian", "splat")),
-        ("Object and Human Reconstruction", ("human", "avatar", "face", "hand", "body", "object", "single view")),
-        ("Neural Implicit Surfaces", ("implicit surface", "signed distance", "sdf", "surface reconstruction")),
-        ("Neural Rendering and Novel View Synthesis", ("radiance field", "nerf", "novel view", "view synthesis", "rendering")),
-    ]
-    for category, terms in rules:
-        if any(term in text for term in terms):
-            return category
-    return CATEGORY_ORDER[0]
-
-
 def best_paper_url(work: dict[str, Any]) -> str:
     ids = work.get("ids") or {}
     if ids.get("arxiv"):
@@ -280,13 +251,12 @@ def discover_code(title: str, github_token: str | None) -> str | None:
 
 def make_record(work: dict[str, Any], venue: str, github_token: str | None) -> dict[str, Any]:
     title = work.get("display_name") or work.get("title") or "Untitled"
-    abstract = reconstruct_abstract(work.get("abstract_inverted_index"))
     return {
         "title": title.strip(),
         "year": int(work["publication_year"]),
         "publication_date": work.get("publication_date"),
         "venue": venue,
-        "category": categorize(title, abstract),
+        "category": classify_paper(title),
         "paper_url": best_paper_url(work),
         "code_url": discover_code(title, github_token),
         "openalex_id": work.get("id"),
@@ -337,6 +307,21 @@ def render_readme(papers: list[dict[str, Any]], config: dict[str, Any]) -> str:
         if by_category.get(category):
             anchor = re.sub(r"[^a-z0-9 -]", "", category.lower()).replace(" ", "-")
             lines.append(f"- [{category}](#{anchor})")
+    lines.extend([
+        "",
+        "## Taxonomy",
+        "",
+        "Categories are mutually exclusive and follow each paper's primary task. Method properties such as self-supervision, efficiency, or scalability do not create duplicate categories.",
+        "",
+        "| Category | Scope | Papers |",
+        "|:--|:--|--:|",
+    ])
+    for category in CATEGORY_ORDER:
+        anchor = re.sub(r"[^a-z0-9 -]", "", category.lower()).replace(" ", "-")
+        lines.append(
+            f"| [{category}](#{anchor}) | {CATEGORY_DESCRIPTIONS[category]} | "
+            f"{len(by_category.get(category, []))} |"
+        )
     lines.extend(["", "## Venue coverage", "", "| Venue | Papers |", "|:--|--:|"])
     venue_order = config["venues"] + sorted(set(venues) - set(config["venues"]))
     for venue in venue_order:
@@ -455,6 +440,7 @@ def main() -> int:
         papers, added = merge_discovered(
             papers, works, config, os.getenv("GITHUB_TOKEN")
         )
+    reclassify_papers(papers)
     papers.sort(key=lambda item: (-int(item["year"]), item["title"].lower()))
     readme = render_readme(papers, config)
     if args.dry_run:
