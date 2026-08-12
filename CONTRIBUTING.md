@@ -40,3 +40,11 @@ itself is not treated as an honor.
 ## Automated entries
 
 Records with `"curated": false` were found automatically. If one is irrelevant, remove it and open an issue explaining the false positive so the discovery filters can be improved.
+
+The weekly job queries recent arXiv submissions directly before using OpenAlex
+to backfill conference, journal, and delayed metadata. The overlap is removed by
+source ID and normalized title.
+
+When `GITHUB_TOKEN` is available, the job also revisits a bounded number of the
+newest `Code pending` entries and adds a repository only when the title-match
+score passes the conservative official-code threshold.

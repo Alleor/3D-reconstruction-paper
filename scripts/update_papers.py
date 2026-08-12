@@ -19,6 +19,7 @@ import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
+import xml.etree.ElementTree as ET
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any, Iterable
@@ -58,18 +59,26 @@ EXCLUDE_TERMS = {
     "tomography", "magnetic resonance", "mri", "computed tomography",
     "electron microscopy", "microscopy", "cardiac", "dental", "molecule",
     "catalyst", "protein", "chromosome", "ultrasound image reconstruction",
+    "medical imaging", "nanomaterial", "crystallographic", "natural discharge",
+    "surface temperature", "intraoperative", "multipath", "alloy",
 }
 
 PURE_TASK_TERMS = {
     "segmentation", "compression", "quality assessment", "scene quality",
     "action manipulation", "text to 3d generation", "text to 4dgs generation",
+    "camera pose estimation", "visual localization", "camera calibration",
+    "label transfer", "language gaussian", "mobile manipulation", "reasoning",
+    "restoration", "distillation", "primitive merging",
+    "exploratory study", "autonomous driving testing", "object selection",
+    "beamforming", "rainfall synthesis",
+    "world model", "world models", "latent action", "latent actions",
 }
 
 RELEVANCE_TERMS = {
     "3d reconstruction", "surface reconstruction", "scene reconstruction",
     "shape reconstruction", "dense mapping", "neural rendering",
     "novel view synthesis", "radiance field", "gaussian splatting",
-    "multi-view stereo", "multiview stereo", "neural implicit surface",
+    "multi-view stereo", "multiview stereo", "view synthesis", "neural implicit surface",
     "dense slam", "visual geometry", "structure from motion",
 }
 
@@ -88,6 +97,11 @@ def load_json(path: Path) -> Any:
 def normalize(text: str) -> str:
     text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode()
     return re.sub(r"[^a-z0-9]+", " ", text.lower()).strip()
+
+
+def contains_phrase(text: str, terms: Iterable[str]) -> bool:
+    padded = f" {normalize(text)} "
+    return any(f" {normalize(term)} " in padded for term in terms)
 
 
 def title_key(title: str) -> str:
@@ -155,22 +169,28 @@ def detect_venue(work: dict[str, Any]) -> str | None:
 
 def is_relevant(work: dict[str, Any]) -> bool:
     abstract = reconstruct_abstract(work.get("abstract_inverted_index"))
-    text = normalize(f"{work.get('title', '')} {abstract}")
-    if any(term in text for term in EXCLUDE_TERMS):
+    work_title = work.get("display_name") or work.get("title") or ""
+    text = normalize(f"{work_title} {abstract}")
+    if contains_phrase(text, EXCLUDE_TERMS):
         return False
-    title = normalize(work.get("title", ""))
-    if any(term in title for term in PURE_TASK_TERMS) and "reconstruct" not in title:
+    title = normalize(work_title)
+    if contains_phrase(title, PURE_TASK_TERMS) and "reconstruct" not in title:
         return False
-    explicit = any(term in title for term in RELEVANCE_TERMS)
+    explicit = contains_phrase(title, RELEVANCE_TERMS)
     topic = work.get("primary_topic") or {}
     subfield = normalize((topic.get("subfield") or {}).get("display_name", ""))
     cv_topic = "computer vision" in subfield
-    contextual = any(term in text for term in RELEVANCE_TERMS)
-    title_signal = any(
-        term in title
-        for term in ("3d", "4d", "geometry", "splat", "radiance", "novel view", "surface", "scene", "avatar")
+    contextual = contains_phrase(text, RELEVANCE_TERMS)
+    title_signal = contains_phrase(
+        title,
+        (
+            "3d", "4d", "gs", "geometry", "geometric", "gaussian", "radiance",
+            "novel view", "view synthesis", "surface", "scene", "mesh", "avatar",
+            "object", "slam",
+        ),
     )
-    return explicit or (cv_topic and contextual and title_signal)
+    reconstruction_signal = "reconstruct" in title and title_signal
+    return explicit or (cv_topic and title_signal and (contextual or reconstruction_signal))
 
 
 def best_paper_url(work: dict[str, Any]) -> str:
@@ -212,6 +232,92 @@ def discover_openalex(config: dict[str, Any], since: dt.date) -> Iterable[dict[s
         payload = request_json(url)
         yield from payload.get("results", [])
         time.sleep(0.15)
+
+
+def abstract_index(text: str) -> dict[str, list[int]]:
+    index: dict[str, list[int]] = defaultdict(list)
+    for position, word in enumerate(text.split()):
+        index[word].append(position)
+    return dict(index)
+
+
+def author_link_from_abstract(abstract: str) -> str | None:
+    urls = [
+        url.rstrip(".,;:!?)\\]}>'\"")
+        for url in re.findall(r"https?://[^\s<]+", abstract)
+    ]
+    external = [url for url in urls if "arxiv.org" not in url.lower()]
+    github = next((url for url in external if "github.com" in url.lower()), None)
+    return github or (external[0] if external else None)
+
+
+def parse_arxiv_feed(xml_text: str) -> list[dict[str, Any]]:
+    namespace = {"atom": "http://www.w3.org/2005/Atom"}
+    root = ET.fromstring(xml_text)
+    works: list[dict[str, Any]] = []
+    for entry in root.findall("atom:entry", namespace):
+        title = " ".join((entry.findtext("atom:title", "", namespace)).split())
+        abstract = " ".join((entry.findtext("atom:summary", "", namespace)).split())
+        published = entry.findtext("atom:published", "", namespace)[:10]
+        raw_id = entry.findtext("atom:id", "", namespace)
+        arxiv_match = re.search(r"/abs/([^v]+)(?:v\d+)?$", raw_id)
+        if not title or not published or not arxiv_match:
+            continue
+        arxiv_id = arxiv_match.group(1)
+        works.append(
+            {
+                "id": f"https://arxiv.org/abs/{arxiv_id}",
+                "display_name": title,
+                "publication_year": int(published[:4]),
+                "publication_date": published,
+                "type": "preprint",
+                "ids": {"arxiv": f"https://arxiv.org/abs/{arxiv_id}"},
+                "locations": [{"raw_source_name": "arXiv"}],
+                "primary_topic": {
+                    "subfield": {"display_name": "Computer Vision and Pattern Recognition"}
+                },
+                "abstract_inverted_index": abstract_index(abstract),
+                "code_url": author_link_from_abstract(abstract),
+                "discovery_source": "arXiv API",
+            }
+        )
+    return works
+
+
+def discover_arxiv(config: dict[str, Any], today: dt.date) -> list[dict[str, Any]]:
+    lookback_days = int(config.get("arxiv_lookback_days", 8))
+    start = today - dt.timedelta(days=lookback_days)
+    terms = (
+        'all:"3D reconstruction" OR all:"novel view synthesis" OR '
+        'all:"Gaussian splatting" OR all:"surface reconstruction" OR '
+        'all:"dense SLAM"'
+    )
+    query = (
+        f"cat:cs.CV AND submittedDate:[{start:%Y%m%d}0000 TO {today:%Y%m%d}2359] "
+        f"AND ({terms})"
+    )
+    params = urllib.parse.urlencode(
+        {
+            "search_query": query,
+            "start": "0",
+            "max_results": "100",
+            "sortBy": "submittedDate",
+            "sortOrder": "descending",
+        }
+    )
+    request = urllib.request.Request(
+        f"https://export.arxiv.org/api/query?{params}",
+        headers={"User-Agent": "Alleor-3D-reconstruction-paper/1.0"},
+    )
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(request, timeout=60) as response:
+                return parse_arxiv_feed(response.read().decode("utf-8"))
+        except (urllib.error.URLError, TimeoutError, UnicodeDecodeError, ET.ParseError) as exc:
+            if attempt == 2:
+                raise RuntimeError(f"arXiv discovery failed: {exc}") from exc
+            time.sleep(2**attempt)
+    raise AssertionError("unreachable")
 
 
 def score_code_repo(title: str, repo: dict[str, Any]) -> float:
@@ -256,18 +362,25 @@ def discover_code(title: str, github_token: str | None) -> str | None:
 
 def make_record(work: dict[str, Any], venue: str, github_token: str | None) -> dict[str, Any]:
     title = work.get("display_name") or work.get("title") or "Untitled"
-    return {
+    record = {
         "title": title.strip(),
         "year": int(work["publication_year"]),
         "publication_date": work.get("publication_date"),
         "venue": venue,
         "category": classify_paper(title),
         "paper_url": best_paper_url(work),
-        "code_url": discover_code(title, github_token),
-        "openalex_id": work.get("id"),
+        "code_url": work.get("code_url") or discover_code(title, github_token),
         "added_at": dt.date.today().isoformat(),
         "curated": False,
     }
+    work_id = work.get("id", "")
+    if "openalex.org" in work_id:
+        record["openalex_id"] = work_id
+    elif "arxiv.org" in work_id:
+        record["arxiv_id"] = work_id
+    if work.get("discovery_source"):
+        record["discovery_source"] = work["discovery_source"]
+    return record
 
 
 def github_search_url(title: str) -> str:
@@ -290,7 +403,13 @@ def render_readme(
         by_category[paper["category"]].append(paper)
     venues = Counter(paper["venue"] for paper in papers)
     years = sorted({int(paper["year"]) for paper in papers})
-    last_added = max((paper.get("added_at", "") for paper in papers), default="") or "2026-08-03"
+    last_added = max(
+        (
+            max(paper.get("added_at", ""), paper.get("reference_synced_at", ""))
+            for paper in papers
+        ),
+        default="",
+    ) or "2026-08-03"
     reference_count = sum(
         paper.get("source_repo") == "chicleee/End-to-End-3D-Reconstruction-Paper-List"
         for paper in papers
@@ -421,7 +540,7 @@ def render_readme(
         "",
         "## Automatic updates",
         "",
-        f"A scheduled GitHub Action runs every Monday. It first synchronizes the reference repository, then queries OpenAlex for additional papers published since {start_year}, deduplicates records, searches GitHub for likely official implementations, applies the taxonomy, preserves curated honors, and regenerates this README and the visual timeline. The workflow can also be run manually from the Actions tab.",
+        f"A scheduled GitHub Action runs every Monday. It first synchronizes the reference repository, checks the latest arXiv submissions directly, then queries OpenAlex for additional papers published since {start_year}, deduplicates records, searches GitHub for likely official implementations, applies the taxonomy, preserves curated honors, and regenerates this README and the visual timeline. The workflow can also be run manually from the Actions tab.",
         "",
         "To run locally:",
         "",
@@ -439,7 +558,7 @@ def render_readme(
         "",
         "## Acknowledgements",
         "",
-        f"This repository mirrors {reference_count} entries and their original categories from [End-to-End-3D-Reconstruction-Paper-List](https://github.com/chicleee/End-to-End-3D-Reconstruction-Paper-List). Metadata discovery for additional papers uses [OpenAlex](https://openalex.org/).",
+        f"This repository mirrors {reference_count} entries and their original categories from [End-to-End-3D-Reconstruction-Paper-List](https://github.com/chicleee/End-to-End-3D-Reconstruction-Paper-List). Metadata discovery for additional papers uses the [arXiv API](https://info.arxiv.org/help/api/) and [OpenAlex](https://openalex.org/).",
         "",
         "## License",
         "",
@@ -456,7 +575,12 @@ def merge_discovered(
     github_token: str | None,
 ) -> tuple[list[dict[str, Any]], int]:
     known_titles = {title_key(paper["title"]) for paper in papers}
-    known_ids = {paper.get("openalex_id") for paper in papers if paper.get("openalex_id")}
+    known_ids = {
+        paper[source_id]
+        for paper in papers
+        for source_id in ("openalex_id", "arxiv_id")
+        if paper.get(source_id)
+    }
     allowed_venues = set(config["venues"])
     candidates: list[dict[str, Any]] = []
     seen_work_ids: set[str] = set()
@@ -471,10 +595,58 @@ def merge_discovered(
             continue
         candidates.append(make_record(work, venue, github_token))
         known_titles.add(title_key(title))
-    candidates.sort(key=lambda item: (-item["year"], item["title"].lower()))
+    candidates.sort(
+        key=lambda item: (
+            item.get("publication_date") or f"{int(item['year']):04d}-01-01",
+            item["title"].casefold(),
+        ),
+        reverse=True,
+    )
     limit = int(config.get("max_new_papers_per_run", 30))
     selected = candidates[:limit]
     return papers + selected, len(selected)
+
+
+def enrich_missing_codes(
+    papers: list[dict[str, Any]],
+    config: dict[str, Any],
+    github_token: str | None,
+) -> int:
+    if not github_token:
+        return 0
+    candidates = sorted(
+        (paper for paper in papers if not paper.get("code_url")),
+        key=lambda item: (
+            item.get("added_at") or item.get("reference_synced_at") or "",
+            item.get("publication_date") or f"{int(item['year']):04d}-01-01",
+        ),
+        reverse=True,
+    )
+    updated = 0
+    for paper in candidates[: int(config.get("max_code_searches_per_run", 20))]:
+        code_url = discover_code(paper["title"], github_token)
+        if code_url:
+            paper["code_url"] = code_url
+            updated += 1
+    return updated
+
+
+def prune_automatic_false_positives(
+    papers: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], int]:
+    kept: list[dict[str, Any]] = []
+    removed = 0
+    for paper in papers:
+        title = paper.get("title", "")
+        excluded_task = (
+            contains_phrase(title, PURE_TASK_TERMS)
+            and "reconstruct" not in normalize(title)
+        )
+        if paper.get("curated") is False and excluded_task:
+            removed += 1
+            continue
+        kept.append(paper)
+    return kept, removed
 
 
 def prune_before_start(papers: list[dict[str, Any]], since: dt.date) -> list[dict[str, Any]]:
@@ -508,11 +680,18 @@ def main() -> int:
     papers = load_json(DATA_FILE)
     since = dt.date(int(config.get("start_year", 2021)), 1, 1)
     papers = prune_before_start(papers, since)
+    papers, removed = prune_automatic_false_positives(papers)
     added = 0
+    codes_added = 0
     if not args.render_only:
-        works = discover_openalex(config, since)
+        github_token = os.getenv("GITHUB_TOKEN")
+        codes_added = enrich_missing_codes(papers, config, github_token)
+        works = [
+            *discover_arxiv(config, dt.date.today()),
+            *discover_openalex(config, since),
+        ]
         papers, added = merge_discovered(
-            papers, works, config, os.getenv("GITHUB_TOKEN")
+            papers, works, config, github_token
         )
     reclassify_papers(papers)
     papers.sort(key=lambda item: (-int(item["year"]), item["title"].lower()))
@@ -521,7 +700,10 @@ def main() -> int:
     timeline = render_timeline_markdown(papers, config)
     timeline_svg = render_timeline_svg(papers, honors)
     if args.dry_run:
-        print(f"Would keep {len(papers)} papers and add {added} new papers.")
+        print(
+            f"Would keep {len(papers)} papers, add {added} new papers, "
+            f"add {codes_added} code links, and remove {removed} automatic false positives."
+        )
         return 0
     DATA_FILE.write_text(json.dumps(papers, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     README_FILE.write_text(readme, encoding="utf-8")
@@ -529,7 +711,8 @@ def main() -> int:
     TIMELINE_SVG_FILE.parent.mkdir(parents=True, exist_ok=True)
     TIMELINE_SVG_FILE.write_text(timeline_svg, encoding="utf-8")
     print(
-        f"Kept {len(papers)} papers; added {added}; rendered "
+        f"Kept {len(papers)} papers; added {added}; added {codes_added} code links; "
+        f"removed {removed} automatic false positives; rendered "
         f"{README_FILE.name}, {TIMELINE_FILE.name}, and {TIMELINE_SVG_FILE.relative_to(ROOT)}."
     )
     return 0

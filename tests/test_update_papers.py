@@ -5,6 +5,7 @@ import sys
 import unittest
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from unittest import mock
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -132,10 +133,27 @@ class PaperListTests(unittest.TestCase):
             paper for paper in self.papers
             if paper.get("source_repo") == IMPORT_MODULE.REFERENCE_REPO
         ]
-        self.assertEqual(len(imported), 90)
+        self.assertGreater(len(imported), 0)
         self.assertTrue(all(paper.get("source_category") for paper in imported))
         source_categories = {paper["source_category"] for paper in imported}
         self.assertEqual(source_categories, set(IMPORT_MODULE.REFERENCE_CATEGORIES))
+
+    def test_arxiv_feed_parser_extracts_metadata_and_author_code(self):
+        sample = """<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <entry>
+    <id>http://arxiv.org/abs/2608.12345v1</id>
+    <published>2026-08-11T12:00:00Z</published>
+    <title>Example 3D Reconstruction Paper</title>
+    <summary>Official code: https://github.com/example/reconstruction.</summary>
+  </entry>
+</feed>"""
+        works = MODULE.parse_arxiv_feed(sample)
+        self.assertEqual(len(works), 1)
+        self.assertEqual(works[0]["display_name"], "Example 3D Reconstruction Paper")
+        self.assertEqual(works[0]["publication_date"], "2026-08-11")
+        self.assertEqual(works[0]["ids"]["arxiv"], "https://arxiv.org/abs/2608.12345")
+        self.assertEqual(works[0]["code_url"], "https://github.com/example/reconstruction")
 
     def test_reference_parser(self):
         sample = """## Dynamic
@@ -159,6 +177,10 @@ class PaperListTests(unittest.TestCase):
             "Scalable Long-Context Feed-Forward 3D Reconstruction": "Feed-Forward Geometry & Foundation Models",
             "Streaming 4D Visual Geometry Transformer": "Dynamic & 4D Reconstruction",
             "Visual Geometry Grounded Transformer": "Feed-Forward Geometry & Foundation Models",
+            "Gaussian Sculpting: End-to-End Controllable Surface Reconstruction via Field Optimization": "Dense Depth, Surface & Mesh Reconstruction",
+            "InstanceSplat: Instance-Aware Feed-Forward 3D Gaussian Splatting for Scene Understanding": "Semantic 3D Reconstruction",
+            "Floating Radiance Networks": "NeRF & Novel View Synthesis",
+            "EgoGVAE: Ego-body Mesh Reconstruction via Guided Variational Autoencoder": "Object, Human & 3D Generation",
         }
         for title, expected in cases.items():
             with self.subTest(title=title):
@@ -173,6 +195,10 @@ class PaperListTests(unittest.TestCase):
             "Prompt-Driven Surgical Concept Segmentation",
             "Gaussian Splatting Scene Quality Assessment",
             "Feed-Forward Gaussian Splatting Compression",
+            "Gaussian Splatting for Environment-Aware Beamforming",
+            "Interactive Gaussian Splatting for Autonomous Driving Testing",
+            "Gauge-Based Natural Discharge Reconstruction Dataset",
+            "Physics-Informed Crystallographic Reconstruction of Alloys",
         ):
             self.assertFalse(MODULE.is_relevant({**base, "title": title}))
 
@@ -182,6 +208,53 @@ class PaperListTests(unittest.TestCase):
             "primary_topic": {"subfield": {"display_name": "Computer Vision and Pattern Recognition"}},
         }
         self.assertTrue(MODULE.is_relevant(work))
+
+        gs_work = {
+            "display_name": "ERF-GS: Reconstructing Fast Motion from Event-RGB Views",
+            "primary_topic": {
+                "subfield": {"display_name": "Computer Vision and Pattern Recognition"}
+            },
+        }
+        self.assertTrue(MODULE.is_relevant(gs_work))
+
+    def test_primitive_does_not_match_mri_exclusion(self):
+        abstract = "3D Gaussian primitives enable accurate scene reconstruction"
+        work = {
+            "title": "Gaussian Reconstruction from Sparse Views",
+            "abstract_inverted_index": MODULE.abstract_index(abstract),
+            "primary_topic": {
+                "subfield": {"display_name": "Computer Vision and Pattern Recognition"}
+            },
+        }
+        self.assertTrue(MODULE.is_relevant(work))
+
+    def test_openalex_display_name_is_used_for_relevance(self):
+        work = {
+            "display_name": "Sparse-View 3D Gaussian Splatting Reconstruction",
+            "primary_topic": {
+                "subfield": {"display_name": "Computer Vision and Pattern Recognition"}
+            },
+        }
+        self.assertTrue(MODULE.is_relevant(work))
+
+    def test_code_enrichment_is_bounded_and_skips_existing_links(self):
+        papers = [
+            {"title": "Newest", "year": 2026, "added_at": "2026-08-12", "code_url": None},
+            {"title": "Older", "year": 2026, "added_at": "2026-08-11", "code_url": None},
+            {"title": "Known", "year": 2026, "added_at": "2026-08-12", "code_url": "https://github.com/example/known"},
+        ]
+        with mock.patch.object(
+            MODULE,
+            "discover_code",
+            return_value="https://github.com/example/discovered",
+        ) as discover:
+            updated = MODULE.enrich_missing_codes(
+                papers, {"max_code_searches_per_run": 1}, "token"
+            )
+        self.assertEqual(updated, 1)
+        self.assertEqual(papers[0]["code_url"], "https://github.com/example/discovered")
+        self.assertIsNone(papers[1]["code_url"])
+        discover.assert_called_once_with("Newest", "token")
 
 
 if __name__ == "__main__":

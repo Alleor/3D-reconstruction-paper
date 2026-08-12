@@ -2,7 +2,9 @@
   "owner": "Alleor",
   "repository": "Alleor/3D-reconstruction-paper",
   "start_year": 2021,
+  "arxiv_lookback_days": 8,
   "max_new_papers_per_run": 30,
+  "max_code_searches_per_run": 20,
   "venues": [
     "CVPR", "ICCV", "ECCV", "TPAMI", "IROS", "ICRA",
     "TRO", "RA-L", "ICLR", "3DV", "arXiv"
