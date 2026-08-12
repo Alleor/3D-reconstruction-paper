@@ -281,7 +281,7 @@ Verified paper awards and official highlight selections. Click an honor to open 
 
 - **EPS3D : End-to-End Feed-Forward 3D Panoptic Segmentation** — *ICML 2026* · [Paper](https://arxiv.org/abs/2606.08980) · [Code](https://github.com/Runsong123/EPS3D)
 - **IGGT: Instance-Grounded Geometry Transformer for Semantic 3D Reconstruction** — *ICLR 2026* · [Paper](https://arxiv.org/abs/2510.22706) · [Code](https://github.com/lifuguan/IGGT_official)
-- **InstanceSplat: Instance-Aware Feed-Forward 3D Gaussian Splatting for Scene Understanding** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.07144) · **Code pending** ([search](https://github.com/search?q=%22InstanceSplat%3A%20Instance-Aware%20Feed-Forward%203D%20Gaussian%20Splatting%20for%20Scene%20Understanding%22&type=repositories))
+- **InstanceSplat: Instance-Aware Feed-Forward 3D Gaussian Splatting for Scene Understanding** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.07144) · [Code](https://github.com/JamChaos/InsSplat)
 - **SegVGGT: Joint 3D Reconstruction and InstanceSegmentation from Multi-View Images** — *ECCV 2026* · [Paper](https://arxiv.org/abs/2603.19926) · [Code](https://github.com/IDEA-Research/SegVGGT)
 - **Uni3R: Unified 3D Reconstruction and Semantic Understanding via Generalizable Gaussian Splatting from Unposed Multi-View Images** — *CVPR 2026* · [Paper](https://arxiv.org/abs/2508.03643) · [Code](https://github.com/HorizonRobotics/Uni3R)
 - **VGGT-Segmentor: Geometry-Enhanced Cross-View Segmentation** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2604.13596) · **Code pending** ([search](https://github.com/search?q=%22VGGT-Segmentor%3A%20Geometry-Enhanced%20Cross-View%20Segmentation%22&type=repositories))
@@ -289,9 +289,9 @@ Verified paper awards and official highlight selections. Click an honor to open 
 
 ## SLAM, Robotics & Mapping
 
-- **EndoMD-SLAM: Endoscopic Gaussian Splatting SLAM under Optical Degradation with Memory and Static-Transient Decomposition** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.08949) · **Code pending** ([search](https://github.com/search?q=%22EndoMD-SLAM%3A%20Endoscopic%20Gaussian%20Splatting%20SLAM%20under%20Optical%20Degradation%20with%20Memory%20and%20Static-Transient%20Decomposition%22&type=repositories))
+- **EndoMD-SLAM: Endoscopic Gaussian Splatting SLAM under Optical Degradation with Memory and Static-Transient Decomposition** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.08949) · [Code](https://github.com/phai-lab/EndoMD-SLAM)
 - **LingBot-Map: Geometric Context Transformer for Streaming 3D Reconstruction** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2604.14141) · [Code](https://github.com/robbyant/lingbot-map)
-- **SLAMFormer-$\infty$: Infinite SLAM Transformer for Unbounded Frontend and Backend Processing** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.03429) · **Code pending** ([search](https://github.com/search?q=%22SLAMFormer-%24%5Cinfty%24%3A%20Infinite%20SLAM%20Transformer%20for%20Unbounded%20Frontend%20and%20Backend%20Processing%22&type=repositories))
+- **SLAMFormer-$\infty$: Infinite SLAM Transformer for Unbounded Frontend and Backend Processing** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.03429) · [Code](https://github.com/Tsinghua-MARS-Lab/SLAMFormer-Infinity)
 - **ZipMap: Linear-Time Stateful 3D Reconstruction via Test-Time Training** — *CVPR 2026* · [Paper](https://arxiv.org/abs/2603.04385) · [Code](https://github.com/Haian-Jin/ZipMap)
 - **SLAM3R: Real-Time Dense Scene Reconstruction from Monocular RGB Videos** — *CVPR 2025* · [Paper](https://arxiv.org/abs/2412.09401) · [Code](https://github.com/PKU-VCL-3DV/SLAM3R)
 - **Gaussian-SLAM: Photo-realistic Dense SLAM with Gaussian Splatting** — *CVPR 2024* · [Paper](https://arxiv.org/abs/2312.10070) · [Code](https://github.com/VladimirYugay/Gaussian-SLAM)

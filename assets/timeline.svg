@@ -2094,7 +2094,7 @@ text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSyst
 <text x="98" y="22418" class="title">Unbounded Frontend and Backend Processing</text>
 </a>
 <a href="https://arxiv.org/abs/2608.03429" target="_blank"><text x="98" y="22441" class="link">PAPER ↗</text></a>
-<text x="192" y="22441" class="muted">CODE PENDING</text>
+<a href="https://github.com/Tsinghua-MARS-Lab/SLAMFormer-Infinity" target="_blank"><text x="192" y="22441" class="link">CODE ↗</text></a>
 </g>
 <g class="paper" data-title="ACA-GS: Adaptive-Capacity Anchored Gaussian Splatting for Compact Dynamic Radiance Fields">
 <line x1="1030" y1="22551.0" x2="900" y2="22551.0" class="connector"/>
@@ -2177,7 +2177,7 @@ text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSyst
 <text x="98" y="23284" class="title">Splatting for Scene Understanding</text>
 </a>
 <a href="https://arxiv.org/abs/2608.07144" target="_blank"><text x="98" y="23307" class="link">PAPER ↗</text></a>
-<text x="192" y="23307" class="muted">CODE PENDING</text>
+<a href="https://github.com/JamChaos/InsSplat" target="_blank"><text x="192" y="23307" class="link">CODE ↗</text></a>
 </g>
 <g class="paper" data-title="FlexSplat: Flexible Feed-Forward 3D Gaussian Splatting without Point Cloud Correspondence">
 <line x1="1030" y1="23417.0" x2="900" y2="23417.0" class="connector"/>
@@ -2220,7 +2220,7 @@ text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSyst
 <text x="1058" y="23750" class="title">Decomposition</text>
 </a>
 <a href="https://arxiv.org/abs/2608.08949" target="_blank"><text x="1058" y="23773" class="link">PAPER ↗</text></a>
-<text x="1152" y="23773" class="muted">CODE PENDING</text>
+<a href="https://github.com/phai-lab/EndoMD-SLAM" target="_blank"><text x="1152" y="23773" class="link">CODE ↗</text></a>
 </g>
 <g class="paper" data-title="ERF-GS: Reconstructing Fast Motion from Disjoint Event-RGB Viewpoints">
 <line x1="770" y1="23883.0" x2="900" y2="23883.0" class="connector"/>
