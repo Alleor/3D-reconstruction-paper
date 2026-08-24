@@ -2,12 +2,12 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Auto Update](https://github.com/Alleor/3D-reconstruction-paper/actions/workflows/update-papers.yml/badge.svg)](https://github.com/Alleor/3D-reconstruction-paper/actions/workflows/update-papers.yml)
-![Papers](https://img.shields.io/badge/papers-184-blue)
+![Papers](https://img.shields.io/badge/papers-213-blue)
 
 A curated, automatically updated list of recent papers on 3D reconstruction.
 收录 2021 年至今的三维重建论文，并自动发现新论文及其开源代码。
 
-> Coverage: 2021–Present · Last content update: 2026-08-17 · Maintainer: [@Alleor](https://github.com/Alleor)
+> Coverage: 2021–Present · Last content update: 2026-08-24 · Maintainer: [@Alleor](https://github.com/Alleor)
 
 ## About / 项目简介
 
@@ -71,14 +71,14 @@ Categories are mutually exclusive and follow each paper's primary task. Method p
 
 | Category | Scope | Papers |
 |:--|:--|--:|
-| [Feed-Forward Geometry & Foundation Models](#feed-forward-geometry--foundation-models) | General-purpose visual geometry, camera/point prediction, SfM, and feed-forward reconstruction foundation models. | 50 |
+| [Feed-Forward Geometry & Foundation Models](#feed-forward-geometry--foundation-models) | General-purpose visual geometry, camera/point prediction, SfM, and feed-forward reconstruction foundation models. | 55 |
 | [Dense Depth, Surface & Mesh Reconstruction](#dense-depth-surface--mesh-reconstruction) | Methods whose primary output is dense depth, a mesh, TSDF/SDF, planes, or multi-view-stereo surface geometry. | 10 |
 | [NeRF & Novel View Synthesis](#nerf--novel-view-synthesis) | Neural radiance fields and non-Gaussian novel/free-view synthesis. | 21 |
-| [Gaussian Splatting](#gaussian-splatting) | Static-scene or generalizable reconstruction whose primary representation is Gaussian splatting. | 38 |
-| [Dynamic & 4D Reconstruction](#dynamic--4d-reconstruction) | Time-varying scenes, motion-aware geometry, scene flow, and 4D rendering. | 21 |
-| [Object, Human & 3D Generation](#object-human--3d-generation) | Object-centric reconstruction, humans/avatars, and explicit 3D or scene generation. | 18 |
-| [Semantic 3D Reconstruction](#semantic-3d-reconstruction) | Joint geometry with semantic, instance, or panoptic understanding. | 8 |
-| [SLAM, Robotics & Mapping](#slam-robotics--mapping) | SLAM, odometry, robotic reconstruction, and local or large-scale mapping. | 18 |
+| [Gaussian Splatting](#gaussian-splatting) | Static-scene or generalizable reconstruction whose primary representation is Gaussian splatting. | 48 |
+| [Dynamic & 4D Reconstruction](#dynamic--4d-reconstruction) | Time-varying scenes, motion-aware geometry, scene flow, and 4D rendering. | 26 |
+| [Object, Human & 3D Generation](#object-human--3d-generation) | Object-centric reconstruction, humans/avatars, and explicit 3D or scene generation. | 23 |
+| [Semantic 3D Reconstruction](#semantic-3d-reconstruction) | Joint geometry with semantic, instance, or panoptic understanding. | 9 |
+| [SLAM, Robotics & Mapping](#slam-robotics--mapping) | SLAM, odometry, robotic reconstruction, and local or large-scale mapping. | 21 |
 
 ## Venue coverage
 
@@ -91,10 +91,10 @@ Categories are mutually exclusive and follow each paper's primary task. Method p
 | IROS | 1 |
 | ICRA | 2 |
 | TRO | 2 |
-| RA-L | 2 |
+| RA-L | 3 |
 | ICLR | 15 |
 | 3DV | 4 |
-| arXiv | 84 |
+| arXiv | 112 |
 | CVPRF | 2 |
 | ICME | 1 |
 | ICML | 1 |
@@ -123,13 +123,17 @@ Verified paper awards and official highlight selections. Click an honor to open 
 - **DA-NBV: A Direction-Aware Next-Best-View Planner for Efficient 3D Reconstruction of Ships at Sea** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.08025) · [Code](https://github.com/Fo-OLLL/DA-NBV)
 - **DAGE: Dual-Stream Architecture for Efficient and Fine-Grained Geometry Estimation** — *CVPR 2026* · [Paper](https://arxiv.org/abs/2603.03744) · [Code](https://github.com/ngoductuanlhp/DAGE)
 - **Depth Anything 3: Recovering the Visual Space from Any Views** — *ICLR 2026* · [Paper](https://arxiv.org/abs/2511.10647) · [Code](https://depth-anything-3.github.io/)
+- **DICAROS: Diffeomorphic Ancestral Shape Reconstruction on Phylogenies** — *arXiv 2026* · [Paper](https://doi.org/10.64898/2026.08.21.746152) · **Code pending** ([search](https://github.com/search?q=%22DICAROS%3A%20Diffeomorphic%20Ancestral%20Shape%20Reconstruction%20on%20Phylogenies%22&type=repositories))
 - **Diversity-aware View Partitioning for Scalable VGGT** — *ECCV 2026* · [Paper](https://arxiv.org/abs/2607.01885) · [Code](https://github.com/jspark1213/DA-VGGT)
 - **Déjà View: Looping Transformers for Multi-View 3D Reconstruction** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2605.30215) · [Code](https://github.com/nv-tlabs/dvlt)
 - **Faster VGGT with Block-Sparse Global Attention** — *CVPR 2026* · [Paper](https://arxiv.org/abs/2509.07120) · [Code](https://github.com/brianwang00001/sparse-vggt)
 - **FastVGGT: Training-Free Acceleration of Visual Geometry Transformer** — *ICLR 2026* · [Paper](https://arxiv.org/abs/2509.02560) · [Code](https://github.com/mystorm16/FastVGGT)
 - **FF3R: Feedforward Feature 3D Reconstruction from Unconstrained views** — *CVPRF 2026* · [Paper](https://arxiv.org/abs/2604.09862) · [Code](https://github.com/ChaoyiZh/ff3r)
 - **From None to All: Self-Supervised 3D Reconstruction via Novel View Synthesis** — *CVPR 2026* · [Paper](https://arxiv.org/abs/2603.27455) · [Code](https://ranrhuang.github.io/nas3r/)
+- **Generating Multi-view Adversarial Examples for Visual Geometry Grounded Transformer** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.20748) · [Code](https://github.com/qsong2001/mvap-g)
+- **GenRec: Knowing Where to Reconstruct and Where to Generate** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.17832) · [Code](https://github.com/atcelen/GenRec)
 - **GenRecon: Bridging Generative Priors for Multi-View 3D Scene Reconstruction** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2605.23888) · [Code](https://kasothaphie.github.io/GenRecon/)
+- **GeoWeaver: Accurate Long-Sequence 3D Reconstruction via Hierarchical Geometric Assembly** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.17389) · **Code pending** ([search](https://github.com/search?q=%22GeoWeaver%3A%20Accurate%20Long-Sequence%203D%20Reconstruction%20via%20Hierarchical%20Geometric%20Assembly%22&type=repositories))
 - **HD-VGGT: High-Resolution Visual Geometry Transformer** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2603.27222) · **Code pending** ([search](https://github.com/search?q=%22HD-VGGT%3A%20High-Resolution%20Visual%20Geometry%20Transformer%22&type=repositories))
 - **HorizonStream: Long-Horizon Attention for Streaming 3D Reconstruction** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2605.23889) · [Code](https://github.com/3DAgentWorld/HorizonStream/)
 - **Latent Riemannian Flow Matching for Geometry-Grounded 3D Foundation Models** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2607.19120) · [Code](https://lisaweijler.github.io/geometry-grounded-rfm/)
@@ -141,6 +145,7 @@ Verified paper awards and official highlight selections. Click an honor to open 
 - **Offline Feed-Forward 3D Reconstruction at Scale** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2602.23361) · **Code pending** ([search](https://github.com/search?q=%22Offline%20Feed-Forward%203D%20Reconstruction%20at%20Scale%22&type=repositories))
 - **OmniVGGT: Omni-Modality Driven Visual Geometry Grounded Transformer** — *CVPR 2026* · [Paper](https://arxiv.org/abs/2511.10560) · [Code](https://livioni.github.io/OmniVGGT-official/)
 - **PE3R: Perception-Efficient 3D Reconstruction** — *CVPR 2026* · [Paper](https://arxiv.org/abs/2503.07507) · [Code](https://github.com/hujiecpp/pe3r)
+- **Point-Based 3D Reconstruction from Sparse Views under Known Illumination** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.20000) · **Code pending** ([search](https://github.com/search?q=%22Point-Based%203D%20Reconstruction%20from%20Sparse%20Views%20under%20Known%20Illumination%22&type=repositories))
 - **Quantized Visual Geometry Grounded Transformer** — *ICLR 2026* · [Paper](https://arxiv.org/abs/2509.21302) · [Code](https://github.com/wlfeng0509/QuantVGGT)
 - **Reliev3R: Relieving Feed-forward 3D Reconstruction from Multi-View Geometric Annotations** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2604.00548) · **Code pending** ([search](https://github.com/search?q=%22Reliev3R%3A%20Relieving%20Feed-forward%203D%20Reconstruction%20from%20Multi-View%20Geometric%20Annotations%22&type=repositories))
 - **S-VGGT: Structure-Aware Subscene Decomposition for Scalable 3D Foundation Models** — *ICME 2026* · [Paper](https://arxiv.org/abs/2603.17625) · [Code](https://github.com/Powertony102/S-VGGT)
@@ -209,9 +214,11 @@ Verified paper awards and official highlight selections. Click an honor to open 
 
 ## Gaussian Splatting
 
+- **3D Gaussian Accelerated Ray Tracing: Fast training through particle-based backward propagation** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.17298) · **Code pending** ([search](https://github.com/search?q=%223D%20Gaussian%20Accelerated%20Ray%20Tracing%3A%20Fast%20training%20through%20particle-based%20backward%20propagation%22&type=repositories))
 - **C3G: Learning Compact 3D Representations with 2K Gaussians** — *CVPR 2026* · [Paper](https://arxiv.org/abs/2512.04021) · [Code](https://github.com/cvlab-kaist/C3G)
 - **CasDeblurGS: Cascaded 2D-to-3D Multi-View Consistency for 3D Gaussian Splatting from Two Blurry Images** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.10345) · **Code pending** ([search](https://github.com/search?q=%22CasDeblurGS%3A%20Cascaded%202D-to-3D%20Multi-View%20Consistency%20for%203D%20Gaussian%20Splatting%20from%20Two%20Blurry%20Images%22&type=repositories))
 - **CLEAR: Conflict-aware Learning via Evidence-guided Adaptive Routing for Unified Sparse-View 3D Gaussian Super-Resolution** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.02206) · **Code pending** ([search](https://github.com/search?q=%22CLEAR%3A%20Conflict-aware%20Learning%20via%20Evidence-guided%20Adaptive%20Routing%20for%20Unified%20Sparse-View%203D%20Gaussian%20Super-Resolution%22&type=repositories))
+- **CoMVS-GS: Collaborative Multi-View Stereo and 3D Gaussian Splatting for Surface Reconstruction** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.18413) · **Code pending** ([search](https://github.com/search?q=%22CoMVS-GS%3A%20Collaborative%20Multi-View%20Stereo%20and%203D%20Gaussian%20Splatting%20for%20Surface%20Reconstruction%22&type=repositories))
 - **Confidence matters: Leveraging Multi-view Geometric Priors for GS-based Reconstruction** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.06117) · **Code pending** ([search](https://github.com/search?q=%22Confidence%20matters%3A%20Leveraging%20Multi-view%20Geometric%20Priors%20for%20GS-based%20Reconstruction%22&type=repositories))
 - **CORF-GS: Real-Time Wireless Radiance Field Reconstruction via Coupled Optical-RF Gaussian Splatting** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2607.25569) · **Code pending** ([search](https://github.com/search?q=%22CORF-GS%3A%20Real-Time%20Wireless%20Radiance%20Field%20Reconstruction%20via%20Coupled%20Optical-RF%20Gaussian%20Splatting%22&type=repositories))
 - **DerainSplat: Feed-Forward Clean 3D Gaussian Splatting from Sparse Rainy Views** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.02191) · **Code pending** ([search](https://github.com/search?q=%22DerainSplat%3A%20Feed-Forward%20Clean%203D%20Gaussian%20Splatting%20from%20Sparse%20Rainy%20Views%22&type=repositories))
@@ -219,23 +226,31 @@ Verified paper awards and official highlight selections. Click an honor to open 
 - **EcoSplat: Efficiency-controllable Feed-forward 3D Gaussian Splatting from Multi-view Images** — *CVPR 2026* · [Paper](https://arxiv.org/abs/2512.18692) · [Code](https://kaist-viclab.github.io/ecosplat-site/)
 - **EvTrajGS: Accurate and Efficient 3D Gaussian Splatting from Unposed Event Streams** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.08585) · **Code pending** ([search](https://github.com/search?q=%22EvTrajGS%3A%20Accurate%20and%20Efficient%203D%20Gaussian%20Splatting%20from%20Unposed%20Event%20Streams%22&type=repositories))
 - **FlexSplat: Flexible Feed-Forward 3D Gaussian Splatting without Point Cloud Correspondence** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.07937) · **Code pending** ([search](https://github.com/search?q=%22FlexSplat%3A%20Flexible%20Feed-Forward%203D%20Gaussian%20Splatting%20without%20Point%20Cloud%20Correspondence%22&type=repositories))
+- **Gaussian-JEPA: Joint-Embedding Predictive Learning for 3D Gaussian Splats** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.15651) · [Code](https://amazingren.github.io/Gaussian-JEPA/)
+- **GroupForward: Building Referable 3D Scenes via Instance-Grouped Feed-Forward Gaussian Splatting** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.17535) · **Code pending** ([search](https://github.com/search?q=%22GroupForward%3A%20Building%20Referable%203D%20Scenes%20via%20Instance-Grouped%20Feed-Forward%20Gaussian%20Splatting%22&type=repositories))
 - **GS$^{2}$CI: Robust Gaussian Splatting For Snapshot Compressive Imaging via Large Vision Model Priors** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.13502) · **Code pending** ([search](https://github.com/search?q=%22GS%24%5E%7B2%7D%24CI%3A%20Robust%20Gaussian%20Splatting%20For%20Snapshot%20Compressive%20Imaging%20via%20Large%20Vision%20Model%20Priors%22&type=repositories))
+- **GS-VLA: Plug-and-Play Viewpoint Canonicalization for Frozen VLA Policies via Gaussian Splatting** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.19066) · **Code pending** ([search](https://github.com/search?q=%22GS-VLA%3A%20Plug-and-Play%20Viewpoint%20Canonicalization%20for%20Frozen%20VLA%20Policies%20via%20Gaussian%20Splatting%22&type=repositories))
 - **HandSplatter: Automated Digital Goniometry from Neural Rendering** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.09735) · **Code pending** ([search](https://github.com/search?q=%22HandSplatter%3A%20Automated%20Digital%20Goniometry%20from%20Neural%20Rendering%22&type=repositories))
 - **HiCo-GS: Hierarchical Context Aggregation and Geometric Consistency for Octree Gaussian Splatting** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.14136) · [Code](https://github.com/WZ-CS/HiCo-GS)
 - **High-quality underwater 3D Gaussian splatting reconstruction with multiview consistency constraints** — *ICCV 2026* · [Paper](https://doi.org/10.1117/12.3120435) · **Code pending** ([search](https://github.com/search?q=%22High-quality%20underwater%203D%20Gaussian%20splatting%20reconstruction%20with%20multiview%20consistency%20constraints%22&type=repositories))
 - **JSGS: JPEG State-Guided Supervision for 3D Gaussian Splatting from Mixed-Quality Views** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.08659) · [Code](https://github.com/Jayden-Cui/JSGS)
+- **LaGSplat: Inferring Physics-Governed Interactive Simulation from Monocular Video Using Latent Lagrangian Gaussian Splatting** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.16324) · **Code pending** ([search](https://github.com/search?q=%22LaGSplat%3A%20Inferring%20Physics-Governed%20Interactive%20Simulation%20from%20Monocular%20Video%20Using%20Latent%20Lagrangian%20Gaussian%20Splatting%22&type=repositories))
 - **Less Gaussians, Texture More: 4K Feed-Forward Textured Splatting** — *ICLR 2026* · [Paper](https://arxiv.org/abs/2603.25745) · [Code](https://yxlao.github.io/lgtm)
 - **Leveling3D: Leveling Up 3D Reconstruction withFeed-Forward 3D Gaussian Splatting andGeometry-Aware Generation** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2603.16211) · **Code pending** ([search](https://github.com/search?q=%22Leveling3D%3A%20Leveling%20Up%203D%20Reconstruction%20withFeed-Forward%203D%20Gaussian%20Splatting%20andGeometry-Aware%20Generation%22&type=repositories))
 - **LocusGS: Spatially Grounded Tokens for Feed-Forward 3D Gaussian Splatting** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.12825) · [Code](https://leo-frank.github.io/LocusGS_viewer)
+- **NGS-Marker: Robust Native Watermarking for 3D Gaussian Splatting** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.17447) · **Code pending** ([search](https://github.com/search?q=%22NGS-Marker%3A%20Robust%20Native%20Watermarking%20for%203D%20Gaussian%20Splatting%22&type=repositories))
 - **Off The Grid: Detection of Primitives for Feed-Forward 3D Gaussian Splatting** — *CVPR 2026* · [Paper](https://arxiv.org/abs/2512.15508) · [Code](https://arthurmoreau.github.io/OffTheGrid/)
 - **PanoLess: Environment Reconstruction from Partial Reflective Views** — *arXiv 2026* · [Paper](https://doi.org/10.48550/arxiv.2607.25362) · **Code pending** ([search](https://github.com/search?q=%22PanoLess%3A%20Environment%20Reconstruction%20from%20Partial%20Reflective%20Views%22&type=repositories))
 - **Pose-Free Omnidirectional Gaussian Splatting for 360-Degree Videos with Consistent Depth Priors** — *CVPR 2026* · [Paper](https://arxiv.org/abs/2603.23324) · [Code](https://github.com/zcq15/PFGS360)
 - **ProbSplat: Efficient Probabilistic Hardware for Gaussian Splatting in 3D Scene Reconstruction** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.13143) · **Code pending** ([search](https://github.com/search?q=%22ProbSplat%3A%20Efficient%20Probabilistic%20Hardware%20for%20Gaussian%20Splatting%20in%203D%20Scene%20Reconstruction%22&type=repositories))
 - **PSCD-GS: Role-Aware Perception-Structure Collaborative Densification for 3D Gaussian Splatting** — *arXiv 2026* · [Paper](https://www.researchsquare.com/article/rs-10466466/latest.pdf) · **Code pending** ([search](https://github.com/search?q=%22PSCD-GS%3A%20Role-Aware%20Perception-Structure%20Collaborative%20Densification%20for%203D%20Gaussian%20Splatting%22&type=repositories))
 - **QuerySplat: Decoupling Geometry and Appearance Representations in 3DGS Prediction** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.01186) · [Code](https://github.com/inspatio/querysplat)
+- **RoofGS: Roofline-Guided End-to-End Acceleration of 3D Gaussian Splatting** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.15785) · **Code pending** ([search](https://github.com/search?q=%22RoofGS%3A%20Roofline-Guided%20End-to-End%20Acceleration%20of%203D%20Gaussian%20Splatting%22&type=repositories))
 - **Seed2GS: Camera-Free, Training-Free Object Extraction from 3D Gaussian Scenes via a Single Reference-View Grounding** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.11928) · **Code pending** ([search](https://github.com/search?q=%22Seed2GS%3A%20Camera-Free%2C%20Training-Free%20Object%20Extraction%20from%203D%20Gaussian%20Scenes%20via%20a%20Single%20Reference-View%20Grounding%22&type=repositories))
+- **SplatGuide: Geometric Priors from 3D Gaussians for Pose-Free Novel View Synthesis** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.16863) · **Code pending** ([search](https://github.com/search?q=%22SplatGuide%3A%20Geometric%20Priors%20from%203D%20Gaussians%20for%20Pose-Free%20Novel%20View%20Synthesis%22&type=repositories))
 - **Stipple: Real-Time Incremental Gaussian Splatting with Visual-Inertial Tracking** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.00931) · **Code pending** ([search](https://github.com/search?q=%22Stipple%3A%20Real-Time%20Incremental%20Gaussian%20Splatting%20with%20Visual-Inertial%20Tracking%22&type=repositories))
 - **Swimm3R: Splatting with Medium-aware SfM for Underwater 3D Reconstruction** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.00950) · **Code pending** ([search](https://github.com/search?q=%22Swimm3R%3A%20Splatting%20with%20Medium-aware%20SfM%20for%20Underwater%203D%20Reconstruction%22&type=repositories))
+- **TopoSurfel: Closing the Loop between Gaussian Surfels and Meshes for Surface Reconstruction** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.20687) · [Code](https://github.com/Fan-Treasure/TopoSurfel)
 - **Visual Geometry Foundation-Aware Gaussians for Single-Frame Surround-View Driving Reconstruction** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.10682) · **Code pending** ([search](https://github.com/search?q=%22Visual%20Geometry%20Foundation-Aware%20Gaussians%20for%20Single-Frame%20Surround-View%20Driving%20Reconstruction%22&type=repositories))
 - **YoNoSplat: You Only Need One Model for Feedforward 3D Gaussian Splatting** — *ICLR 2026* · [Paper](https://arxiv.org/abs/2511.07321) · [Code](https://botaoye.github.io/yonosplat/)
 - **ZipSplat: Fewer Gaussians, Better Splats** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2606.05102) · [Code](https://github.com/cvg/ZipSplat)
@@ -250,8 +265,10 @@ Verified paper awards and official highlight selections. Click an honor to open 
 
 ## Dynamic & 4D Reconstruction
 
+- **4DAnyone: Create Anyone in 4D from a Casual Monocular Video** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.20335) · [Code](https://4danyone.github.io)
 - **ACA-GS: Adaptive-Capacity Anchored Gaussian Splatting for Compact Dynamic Radiance Fields** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.04581) · **Code pending** ([search](https://github.com/search?q=%22ACA-GS%3A%20Adaptive-Capacity%20Anchored%20Gaussian%20Splatting%20for%20Compact%20Dynamic%20Radiance%20Fields%22&type=repositories))
 - **D^2-4DGS: Dual-Depth Guided Sparse-Camera 4D Gaussian Splatting** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.01588) · **Code pending** ([search](https://github.com/search?q=%22D%5E2-4DGS%3A%20Dual-Depth%20Guided%20Sparse-Camera%204D%20Gaussian%20Splatting%22&type=repositories))
+- **Depth Anything V4: Dynamic 4D Scene Reconstruction via Riemannian Flow Matching on 4D Gaussian Splatting** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.18388) · **Code pending** ([search](https://github.com/search?q=%22Depth%20Anything%20V4%3A%20Dynamic%204D%20Scene%20Reconstruction%20via%20Riemannian%20Flow%20Matching%20on%204D%20Gaussian%20Splatting%22&type=repositories))
 - **DynActiveGS: Active Gaussian Splatting for Dynamic Scene Reconstruction** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.01178) · **Code pending** ([search](https://github.com/search?q=%22DynActiveGS%3A%20Active%20Gaussian%20Splatting%20for%20Dynamic%20Scene%20Reconstruction%22&type=repositories))
 - **Efficient Dense Matching for Enhanced Gaussian Splatting Using AV1 Motion Vectors** — *arXiv 2026* · [Paper](https://doi.org/10.48550/arxiv.2605.14629) · **Code pending** ([search](https://github.com/search?q=%22Efficient%20Dense%20Matching%20for%20Enhanced%20Gaussian%20Splatting%20Using%20AV1%20Motion%20Vectors%22&type=repositories))
 - **Efficiently Reconstructing Dynamic Scenes One D4RT at a Time** — *CVPR 2026* · 🏆 [CVPR 2026 Best Paper](https://cvpr.thecvf.com/Conferences/2026/News/Best_Papers) · [Paper](https://arxiv.org/abs/2512.08924) · [Code](https://d4rt-paper.github.io/)
@@ -259,6 +276,9 @@ Verified paper awards and official highlight selections. Click an honor to open 
 - **FAST-GS: Frequency Aware Space-time Gaussian Splatting for Photorealistic Dynamic Novel View Synthesis** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.01958) · **Code pending** ([search](https://github.com/search?q=%22FAST-GS%3A%20Frequency%20Aware%20Space-time%20Gaussian%20Splatting%20for%20Photorealistic%20Dynamic%20Novel%20View%20Synthesis%22&type=repositories))
 - **GrainGS: Gradient-Decoupled Gaussian Splatting for Efficient Dynamic Novel View Synthesis** — *arXiv 2026* · [Paper](https://doi.org/10.48550/arxiv.2607.21448) · **Code pending** ([search](https://github.com/search?q=%22GrainGS%3A%20Gradient-Decoupled%20Gaussian%20Splatting%20for%20Efficient%20Dynamic%20Novel%20View%20Synthesis%22&type=repositories))
 - **Marrying Optimal Transport and ODEs for Unified Continuous-Time 4D Reconstruction and Tracking** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.09613) · **Code pending** ([search](https://github.com/search?q=%22Marrying%20Optimal%20Transport%20and%20ODEs%20for%20Unified%20Continuous-Time%204D%20Reconstruction%20and%20Tracking%22&type=repositories))
+- **QuARC-GS: Quantized Anchored Residual Coding for Compact Dynamic Scene Streaming with Gaussian Splatting** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.18285) · **Code pending** ([search](https://github.com/search?q=%22QuARC-GS%3A%20Quantized%20Anchored%20Residual%20Coding%20for%20Compact%20Dynamic%20Scene%20Streaming%20with%20Gaussian%20Splatting%22&type=repositories))
+- **Sparse Light Field Sampling Improves Casual 3D and 4D Reconstruction** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.20602) · **Code pending** ([search](https://github.com/search?q=%22Sparse%20Light%20Field%20Sampling%20Improves%20Casual%203D%20and%204D%20Reconstruction%22&type=repositories))
+- **Stream4D: 4D-Consistency for Streaming Autoregressive Diffusion Video Models** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.19556) · [Code](https://banyuanhao.github.io/Stream4D/)
 - **StreamVGGT: Streaming 4D Visual Geometry Transformer** — *ICLR 2026* · [Paper](https://arxiv.org/abs/2507.11539) · [Code](https://github.com/wzzheng/StreamVGGT)
 - **VidMap: Exploiting Temporal Structure for Video-Based Structure-from-Motion** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2607.27194) · **Code pending** ([search](https://github.com/search?q=%22VidMap%3A%20Exploiting%20Temporal%20Structure%20for%20Video-Based%20Structure-from-Motion%22&type=repositories))
 - **Geo4D: Leveraging Video Generators for Geometric 4D Scene Reconstruction** — *ICCV 2025* · 🏆 [ICCV 2025 Highlight](https://iccv.thecvf.com/virtual/2025/poster/2494) · [Paper](https://arxiv.org/abs/2504.07961) · [Code](https://github.com/jzr99/Geo4D)
@@ -275,15 +295,20 @@ Verified paper awards and official highlight selections. Click an honor to open 
 ## Object, Human & 3D Generation
 
 - **Cloth-HUGS: Cloth Aware Human Gaussian Splatting** — *arXiv 2026* · [Paper](https://doi.org/10.48550/arxiv.2604.15875) · **Code pending** ([search](https://github.com/search?q=%22Cloth-HUGS%3A%20Cloth%20Aware%20Human%20Gaussian%20Splatting%22&type=repositories))
+- **DiGS-Avatar: Single-Image Animatable 3D Human Reconstruction via UV-Space Diffusion** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.20759) · [Code](https://github.com/KLMAV-CUC/DiGS-Avatar)
 - **EgoGVAE: Ego-body Mesh Reconstruction via Guided Variational Autoencoder** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2607.27755) · **Code pending** ([search](https://github.com/search?q=%22EgoGVAE%3A%20Ego-body%20Mesh%20Reconstruction%20via%20Guided%20Variational%20Autoencoder%22&type=repositories))
+- **GS-Voxel: Fitting-Free Structured Latents for Large-Scale 3DGS Generation** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.17988) · **Code pending** ([search](https://github.com/search?q=%22GS-Voxel%3A%20Fitting-Free%20Structured%20Latents%20for%20Large-Scale%203DGS%20Generation%22&type=repositories))
 - **OmniMech: All-in-one Multimodal Mechanical Benchmark for 3D Reconstruction** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.05539) · **Code pending** ([search](https://github.com/search?q=%22OmniMech%3A%20All-in-one%20Multimodal%20Mechanical%20Benchmark%20for%203D%20Reconstruction%22&type=repositories))
 - **PixWorld: Unifying 3D Scene Generation and Reconstruction in Pixel Space** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2607.05373) · [Code](https://github.com/SensenGao/PixWorld)
 - **ReconViaGen: Towards Accurate Multi-view 3D Object Reconstruction via Generation** — *ICLR 2026* · [Paper](https://arxiv.org/abs/2510.23306) · [Code](https://github.com/GAP-LAB-CUHK-SZ/ReconViaGen)
 - **Repurposing Geometric Foundation Models for Multi-view Diffusion** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2603.22275) · [Code](https://github.com/cvlab-kaist/GLD)
+- **ReX-Shot: Single-Image Rephotography via Geometry- and Camera-Grounded Generation** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.18593) · **Code pending** ([search](https://github.com/search?q=%22ReX-Shot%3A%20Single-Image%20Rephotography%20via%20Geometry-%20and%20Camera-Grounded%20Generation%22&type=repositories))
 - **S-Avatar: Diffusion-Guided Gaussian Head Avatars from a Single Image** — *arXiv 2026* · [Paper](https://doi.org/10.48550/arxiv.2607.28164) · **Code pending** ([search](https://github.com/search?q=%22S-Avatar%3A%20Diffusion-Guided%20Gaussian%20Head%20Avatars%20from%20a%20Single%20Image%22&type=repositories))
+- **Scanline-Aware Animatable Gaussian Avatars from Rolling-Shutter Videos** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.17314) · **Code pending** ([search](https://github.com/search?q=%22Scanline-Aware%20Animatable%20Gaussian%20Avatars%20from%20Rolling-Shutter%20Videos%22&type=repositories))
 - **Stepper: Stepwise Immersive Scene Generation with Multiview Panorama** — *CVPRF 2026* · [Paper](https://arxiv.org/abs/2603.28980) · [Code](https://fwmb.github.io/stepper/)
 - **VGGRPO: Towards World-Consistent Video Generation with 4D Latent Reward** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2603.26599) · [Code](https://zhaochongan.github.io/projects/VGGRPO/)
 - **View-Adaptive Renderer for View-Consistent 2D-to-3D Generation** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.09110) · **Code pending** ([search](https://github.com/search?q=%22View-Adaptive%20Renderer%20for%20View-Consistent%202D-to-3D%20Generation%22&type=repositories))
+- **VisTa3D: A Dataset and Benchmark for Thin Object Reconstruction from Vision, Tactile, and 3D Point Clouds** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.20740) · [Code](https://huggingface.co/datasets/shaniaguo/VisTa3D)
 - **When Does An Extra View Help? Adapting Single-View 3D Reconstruction with Extra Imagery** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.08132) · [Code](https://github.com/YNhuHuynh/ASV3D/tree/main)
 - **Gamba: Marry Gaussian Splatting With Mamba for Single-View 3D Reconstruction** — *TPAMI 2025* · [Paper](https://arxiv.org/abs/2403.18795) · [Code](https://github.com/SkyworkAI/Gamba)
 - **UniRecGen: Unifying Multi-View 3D Reconstruction and Generation** — *arXiv 2025* · [Paper](https://arxiv.org/abs/2604.01479) · [Code](https://github.com/zsh523/UniRecGen)
@@ -299,6 +324,7 @@ Verified paper awards and official highlight selections. Click an honor to open 
 - **IGGT: Instance-Grounded Geometry Transformer for Semantic 3D Reconstruction** — *ICLR 2026* · [Paper](https://arxiv.org/abs/2510.22706) · [Code](https://github.com/lifuguan/IGGT_official)
 - **InstanceSplat: Instance-Aware Feed-Forward 3D Gaussian Splatting for Scene Understanding** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.07144) · [Code](https://github.com/JamChaos/InsSplat)
 - **SegVGGT: Joint 3D Reconstruction and InstanceSegmentation from Multi-View Images** — *ECCV 2026* · [Paper](https://arxiv.org/abs/2603.19926) · [Code](https://github.com/IDEA-Research/SegVGGT)
+- **SPVC: Structured and Panoptic Video Fixing for Cross-Dataset Driving Scene Rendering** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.17420) · **Code pending** ([search](https://github.com/search?q=%22SPVC%3A%20Structured%20and%20Panoptic%20Video%20Fixing%20for%20Cross-Dataset%20Driving%20Scene%20Rendering%22&type=repositories))
 - **Uni3R: Unified 3D Reconstruction and Semantic Understanding via Generalizable Gaussian Splatting from Unposed Multi-View Images** — *CVPR 2026* · [Paper](https://arxiv.org/abs/2508.03643) · [Code](https://github.com/HorizonRobotics/Uni3R)
 - **VGGT-Segmentor: Geometry-Enhanced Cross-View Segmentation** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2604.13596) · **Code pending** ([search](https://github.com/search?q=%22VGGT-Segmentor%3A%20Geometry-Enhanced%20Cross-View%20Segmentation%22&type=repositories))
 - **WildFireGS: Physics-Based Wildfire Simulation in Large-Scale Semantics-Enriched Gaussian Splatting Forest Scenes** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.11100) · **Code pending** ([search](https://github.com/search?q=%22WildFireGS%3A%20Physics-Based%20Wildfire%20Simulation%20in%20Large-Scale%20Semantics-Enriched%20Gaussian%20Splatting%20Forest%20Scenes%22&type=repositories))
@@ -307,10 +333,13 @@ Verified paper awards and official highlight selections. Click an honor to open 
 ## SLAM, Robotics & Mapping
 
 - **EndoMD-SLAM: Endoscopic Gaussian Splatting SLAM under Optical Degradation with Memory and Static-Transient Decomposition** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.08949) · [Code](https://github.com/phai-lab/EndoMD-SLAM)
+- **Geometry-Aware Online Mapping for 3D Gaussian Splatting SLAM** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.14902) · **Code pending** ([search](https://github.com/search?q=%22Geometry-Aware%20Online%20Mapping%20for%203D%20Gaussian%20Splatting%20SLAM%22&type=repositories))
+- **LatentAM: Real-Time, Large-Scale Latent Gaussian Attention Mapping via Online Dictionary Learning** — *RA-L 2026* · [Paper](https://doi.org/10.48550/arxiv.2602.12314) · **Code pending** ([search](https://github.com/search?q=%22LatentAM%3A%20Real-Time%2C%20Large-Scale%20Latent%20Gaussian%20Attention%20Mapping%20via%20Online%20Dictionary%20Learning%22&type=repositories))
 - **LingBot-Map: Geometric Context Transformer for Streaming 3D Reconstruction** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2604.14141) · [Code](https://github.com/robbyant/lingbot-map)
 - **Map-Det3D: Metric Feed-Forward 3D Reconstruction Prior for Multi-view 3D Object Detection from Streaming Inputs** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.12179) · [Code](https://royyang0714.github.io/Map-Det3D)
 - **Multi-Submap Implicit Neural SLAM with Local-to-Global Loop Closure for Large-Scale Scene Reconstruction** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.09146) · **Code pending** ([search](https://github.com/search?q=%22Multi-Submap%20Implicit%20Neural%20SLAM%20with%20Local-to-Global%20Loop%20Closure%20for%20Large-Scale%20Scene%20Reconstruction%22&type=repositories))
 - **SLAMFormer-$\infty$: Infinite SLAM Transformer for Unbounded Frontend and Backend Processing** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.03429) · [Code](https://github.com/Tsinghua-MARS-Lab/SLAMFormer-Infinity)
+- **SpotlessGS: Relightable 3D Gaussian Splatting under Dynamic Illumination for Robotic Perception** — *arXiv 2026* · [Paper](https://arxiv.org/abs/2608.14713) · **Code pending** ([search](https://github.com/search?q=%22SpotlessGS%3A%20Relightable%203D%20Gaussian%20Splatting%20under%20Dynamic%20Illumination%20for%20Robotic%20Perception%22&type=repositories))
 - **ZipMap: Linear-Time Stateful 3D Reconstruction via Test-Time Training** — *CVPR 2026* · [Paper](https://arxiv.org/abs/2603.04385) · [Code](https://github.com/Haian-Jin/ZipMap)
 - **SLAM3R: Real-Time Dense Scene Reconstruction from Monocular RGB Videos** — *CVPR 2025* · [Paper](https://arxiv.org/abs/2412.09401) · [Code](https://github.com/PKU-VCL-3DV/SLAM3R)
 - **Gaussian-SLAM: Photo-realistic Dense SLAM with Gaussian Splatting** — *CVPR 2024* · [Paper](https://arxiv.org/abs/2312.10070) · [Code](https://github.com/VladimirYugay/Gaussian-SLAM)
@@ -345,7 +374,7 @@ Corrections and missing papers are welcome. Please read [CONTRIBUTING.md](CONTRI
 
 ## Acknowledgements
 
-This repository mirrors 95 entries and their original categories from [End-to-End-3D-Reconstruction-Paper-List](https://github.com/chicleee/End-to-End-3D-Reconstruction-Paper-List). Metadata discovery for additional papers uses the [arXiv API](https://info.arxiv.org/help/api/) and [OpenAlex](https://openalex.org/).
+This repository mirrors 96 entries and their original categories from [End-to-End-3D-Reconstruction-Paper-List](https://github.com/chicleee/End-to-End-3D-Reconstruction-Paper-List). Metadata discovery for additional papers uses the [arXiv API](https://info.arxiv.org/help/api/) and [OpenAlex](https://openalex.org/).
 
 ## License
 

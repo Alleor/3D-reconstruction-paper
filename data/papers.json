@@ -1,5 +1,31 @@
 [
   {
+    "title": "3D Gaussian Accelerated Ray Tracing: Fast training through particle-based backward propagation",
+    "year": 2026,
+    "publication_date": "2026-08-18",
+    "venue": "arXiv",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2608.17298",
+    "code_url": null,
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.17298",
+    "discovery_source": "arXiv API"
+  },
+  {
+    "title": "4DAnyone: Create Anyone in 4D from a Casual Monocular Video",
+    "year": 2026,
+    "publication_date": "2026-08-20",
+    "venue": "arXiv",
+    "category": "Dynamic & 4D Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2608.20335",
+    "code_url": "https://4danyone.github.io",
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.20335",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "ACA-GS: Adaptive-Capacity Anchored Gaussian Splatting for Compact Dynamic Radiance Fields",
     "year": 2026,
     "publication_date": "2026-08-05",
@@ -86,6 +112,19 @@
     "openalex_id": "https://openalex.org/W7154941176"
   },
   {
+    "title": "CoMVS-GS: Collaborative Multi-View Stereo and 3D Gaussian Splatting for Surface Reconstruction",
+    "year": 2026,
+    "publication_date": "2026-08-19",
+    "venue": "arXiv",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2608.18413",
+    "code_url": null,
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.18413",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "Confidence matters: Leveraging Multi-view Geometric Priors for GS-based Reconstruction",
     "year": 2026,
     "publication_date": "2026-08-06",
@@ -159,6 +198,19 @@
     "reference_synced_at": "2026-08-03"
   },
   {
+    "title": "Depth Anything V4: Dynamic 4D Scene Reconstruction via Riemannian Flow Matching on 4D Gaussian Splatting",
+    "year": 2026,
+    "publication_date": "2026-08-18",
+    "venue": "arXiv",
+    "category": "Dynamic & 4D Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2608.18388",
+    "code_url": null,
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.18388",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "DerainSplat: Feed-Forward Clean 3D Gaussian Splatting from Sparse Rainy Views",
     "year": 2026,
     "publication_date": "2026-08-03",
@@ -171,6 +223,18 @@
     "openalex_id": "https://openalex.org/W7172559118"
   },
   {
+    "title": "DICAROS: Diffeomorphic Ancestral Shape Reconstruction on Phylogenies",
+    "year": 2026,
+    "publication_date": "2026-08-22",
+    "venue": "arXiv",
+    "category": "Feed-Forward Geometry & Foundation Models",
+    "paper_url": "https://doi.org/10.64898/2026.08.21.746152",
+    "code_url": null,
+    "added_at": "2026-08-24",
+    "curated": false,
+    "openalex_id": "https://openalex.org/W7203976459"
+  },
+  {
     "title": "Diff3R: Feed-forward 3D Gaussian Splatting with Uncertainty-aware Differentiable Optimization",
     "year": 2026,
     "venue": "arXiv",
@@ -181,6 +245,19 @@
     "source_repo": "chicleee/End-to-End-3D-Reconstruction-Paper-List",
     "source_category": "Novel View Synthesis",
     "reference_synced_at": "2026-08-03"
+  },
+  {
+    "title": "DiGS-Avatar: Single-Image Animatable 3D Human Reconstruction via UV-Space Diffusion",
+    "year": 2026,
+    "publication_date": "2026-08-21",
+    "venue": "arXiv",
+    "category": "Object, Human & 3D Generation",
+    "paper_url": "https://arxiv.org/abs/2608.20759",
+    "code_url": "https://github.com/KLMAV-CUC/DiGS-Avatar",
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.20759",
+    "discovery_source": "arXiv API"
   },
   {
     "title": "Diversity-aware View Partitioning for Scalable VGGT",
@@ -453,6 +530,44 @@
     "discovery_source": "arXiv API"
   },
   {
+    "title": "Gaussian-JEPA: Joint-Embedding Predictive Learning for 3D Gaussian Splats",
+    "year": 2026,
+    "publication_date": "2026-08-16",
+    "venue": "arXiv",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2608.15651",
+    "code_url": "https://amazingren.github.io/Gaussian-JEPA/",
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.15651",
+    "discovery_source": "arXiv API"
+  },
+  {
+    "title": "Generating Multi-view Adversarial Examples for Visual Geometry Grounded Transformer",
+    "year": 2026,
+    "publication_date": "2026-08-21",
+    "venue": "arXiv",
+    "category": "Feed-Forward Geometry & Foundation Models",
+    "paper_url": "https://arxiv.org/abs/2608.20748",
+    "code_url": "https://github.com/qsong2001/mvap-g",
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.20748",
+    "discovery_source": "arXiv API"
+  },
+  {
+    "title": "GenRec: Knowing Where to Reconstruct and Where to Generate",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "Feed-Forward Geometry & Foundation Models",
+    "paper_url": "https://arxiv.org/abs/2608.17832",
+    "code_url": "https://github.com/atcelen/GenRec",
+    "curated": true,
+    "source_repo": "chicleee/End-to-End-3D-Reconstruction-Paper-List",
+    "source_category": "Generation",
+    "reference_synced_at": "2026-08-24"
+  },
+  {
     "title": "GenRecon: Bridging Generative Priors for Multi-View 3D Scene Reconstruction",
     "year": 2026,
     "venue": "arXiv",
@@ -463,6 +578,31 @@
     "source_repo": "chicleee/End-to-End-3D-Reconstruction-Paper-List",
     "source_category": "3D Reconstruction",
     "reference_synced_at": "2026-08-03"
+  },
+  {
+    "title": "Geometry-Aware Online Mapping for 3D Gaussian Splatting SLAM",
+    "year": 2026,
+    "publication_date": "2026-08-14",
+    "venue": "arXiv",
+    "category": "SLAM, Robotics & Mapping",
+    "paper_url": "https://arxiv.org/abs/2608.14902",
+    "code_url": null,
+    "added_at": "2026-08-24",
+    "curated": false,
+    "openalex_id": "https://openalex.org/W7203680622"
+  },
+  {
+    "title": "GeoWeaver: Accurate Long-Sequence 3D Reconstruction via Hierarchical Geometric Assembly",
+    "year": 2026,
+    "publication_date": "2026-08-18",
+    "venue": "arXiv",
+    "category": "Feed-Forward Geometry & Foundation Models",
+    "paper_url": "https://arxiv.org/abs/2608.17389",
+    "code_url": null,
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.17389",
+    "discovery_source": "arXiv API"
   },
   {
     "title": "GrainGS: Gradient-Decoupled Gaussian Splatting for Efficient Dynamic Novel View Synthesis",
@@ -476,6 +616,19 @@
     "curated": false
   },
   {
+    "title": "GroupForward: Building Referable 3D Scenes via Instance-Grouped Feed-Forward Gaussian Splatting",
+    "year": 2026,
+    "publication_date": "2026-08-18",
+    "venue": "arXiv",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2608.17535",
+    "code_url": null,
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.17535",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "GS$^{2}$CI: Robust Gaussian Splatting For Snapshot Compressive Imaging via Large Vision Model Priors",
     "year": 2026,
     "publication_date": "2026-08-13",
@@ -486,6 +639,32 @@
     "added_at": "2026-08-17",
     "curated": false,
     "arxiv_id": "https://arxiv.org/abs/2608.13502",
+    "discovery_source": "arXiv API"
+  },
+  {
+    "title": "GS-VLA: Plug-and-Play Viewpoint Canonicalization for Frozen VLA Policies via Gaussian Splatting",
+    "year": 2026,
+    "publication_date": "2026-08-19",
+    "venue": "arXiv",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2608.19066",
+    "code_url": null,
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.19066",
+    "discovery_source": "arXiv API"
+  },
+  {
+    "title": "GS-Voxel: Fitting-Free Structured Latents for Large-Scale 3DGS Generation",
+    "year": 2026,
+    "publication_date": "2026-08-18",
+    "venue": "arXiv",
+    "category": "Object, Human & 3D Generation",
+    "paper_url": "https://arxiv.org/abs/2608.17988",
+    "code_url": null,
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.17988",
     "discovery_source": "arXiv API"
   },
   {
@@ -600,6 +779,19 @@
     "reference_synced_at": "2026-08-03"
   },
   {
+    "title": "LaGSplat: Inferring Physics-Governed Interactive Simulation from Monocular Video Using Latent Lagrangian Gaussian Splatting",
+    "year": 2026,
+    "publication_date": "2026-08-17",
+    "venue": "arXiv",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2608.16324",
+    "code_url": null,
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.16324",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "Latent Riemannian Flow Matching for Geometry-Grounded 3D Foundation Models",
     "year": 2026,
     "venue": "arXiv",
@@ -610,6 +802,18 @@
     "source_repo": "chicleee/End-to-End-3D-Reconstruction-Paper-List",
     "source_category": "Generation",
     "reference_synced_at": "2026-08-12"
+  },
+  {
+    "title": "LatentAM: Real-Time, Large-Scale Latent Gaussian Attention Mapping via Online Dictionary Learning",
+    "year": 2026,
+    "publication_date": "2026-08-12",
+    "venue": "RA-L",
+    "category": "SLAM, Robotics & Mapping",
+    "paper_url": "https://doi.org/10.48550/arxiv.2602.12314",
+    "code_url": null,
+    "added_at": "2026-08-24",
+    "curated": false,
+    "openalex_id": "https://openalex.org/W7129032298"
   },
   {
     "title": "Less Gaussians, Texture More: 4K Feed-Forward Textured Splatting",
@@ -758,6 +962,19 @@
     "discovery_source": "arXiv API"
   },
   {
+    "title": "NGS-Marker: Robust Native Watermarking for 3D Gaussian Splatting",
+    "year": 2026,
+    "publication_date": "2026-08-18",
+    "venue": "arXiv",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2608.17447",
+    "code_url": null,
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.17447",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "NOVA3R: Non-pixel-aligned Visual Transformer for Amodal 3D Reconstruction",
     "year": 2026,
     "venue": "ICLR",
@@ -866,6 +1083,19 @@
     "reference_synced_at": "2026-08-17"
   },
   {
+    "title": "Point-Based 3D Reconstruction from Sparse Views under Known Illumination",
+    "year": 2026,
+    "publication_date": "2026-08-20",
+    "venue": "arXiv",
+    "category": "Feed-Forward Geometry & Foundation Models",
+    "paper_url": "https://arxiv.org/abs/2608.20000",
+    "code_url": null,
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.20000",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "Pose-Free Omnidirectional Gaussian Splatting for 360-Degree Videos with Consistent Depth Priors",
     "year": 2026,
     "venue": "CVPR",
@@ -926,6 +1156,19 @@
     "openalex_id": "https://openalex.org/W4417449951"
   },
   {
+    "title": "QuARC-GS: Quantized Anchored Residual Coding for Compact Dynamic Scene Streaming with Gaussian Splatting",
+    "year": 2026,
+    "publication_date": "2026-08-18",
+    "venue": "arXiv",
+    "category": "Dynamic & 4D Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2608.18285",
+    "code_url": null,
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.18285",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "QuerySplat: Decoupling Geometry and Appearance Representations in 3DGS Prediction",
     "year": 2026,
     "publication_date": "2026-08-02",
@@ -975,6 +1218,32 @@
     "source_repo": "chicleee/End-to-End-3D-Reconstruction-Paper-List",
     "source_category": "Novel View Synthesis",
     "reference_synced_at": "2026-08-03"
+  },
+  {
+    "title": "ReX-Shot: Single-Image Rephotography via Geometry- and Camera-Grounded Generation",
+    "year": 2026,
+    "publication_date": "2026-08-19",
+    "venue": "arXiv",
+    "category": "Object, Human & 3D Generation",
+    "paper_url": "https://arxiv.org/abs/2608.18593",
+    "code_url": null,
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.18593",
+    "discovery_source": "arXiv API"
+  },
+  {
+    "title": "RoofGS: Roofline-Guided End-to-End Acceleration of 3D Gaussian Splatting",
+    "year": 2026,
+    "publication_date": "2026-08-16",
+    "venue": "arXiv",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2608.15785",
+    "code_url": null,
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.15785",
+    "discovery_source": "arXiv API"
   },
   {
     "title": "S-Avatar: Diffusion-Guided Gaussian Head Avatars from a Single Image",
@@ -1037,6 +1306,19 @@
     "discovery_source": "arXiv API"
   },
   {
+    "title": "Scanline-Aware Animatable Gaussian Avatars from Rolling-Shutter Videos",
+    "year": 2026,
+    "publication_date": "2026-08-18",
+    "venue": "arXiv",
+    "category": "Object, Human & 3D Generation",
+    "paper_url": "https://arxiv.org/abs/2608.17314",
+    "code_url": null,
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.17314",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "Seed2GS: Camera-Free, Training-Free Object Extraction from 3D Gaussian Scenes via a Single Reference-View Grounding",
     "year": 2026,
     "publication_date": "2026-08-12",
@@ -1087,6 +1369,57 @@
     "openalex_id": "https://openalex.org/W7197053171"
   },
   {
+    "title": "Sparse Light Field Sampling Improves Casual 3D and 4D Reconstruction",
+    "year": 2026,
+    "publication_date": "2026-08-20",
+    "venue": "arXiv",
+    "category": "Dynamic & 4D Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2608.20602",
+    "code_url": null,
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.20602",
+    "discovery_source": "arXiv API"
+  },
+  {
+    "title": "SplatGuide: Geometric Priors from 3D Gaussians for Pose-Free Novel View Synthesis",
+    "year": 2026,
+    "publication_date": "2026-08-17",
+    "venue": "arXiv",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2608.16863",
+    "code_url": null,
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.16863",
+    "discovery_source": "arXiv API"
+  },
+  {
+    "title": "SpotlessGS: Relightable 3D Gaussian Splatting under Dynamic Illumination for Robotic Perception",
+    "year": 2026,
+    "publication_date": "2026-08-11",
+    "venue": "arXiv",
+    "category": "SLAM, Robotics & Mapping",
+    "paper_url": "https://arxiv.org/abs/2608.14713",
+    "code_url": null,
+    "added_at": "2026-08-24",
+    "curated": false,
+    "openalex_id": "https://openalex.org/W7203672402"
+  },
+  {
+    "title": "SPVC: Structured and Panoptic Video Fixing for Cross-Dataset Driving Scene Rendering",
+    "year": 2026,
+    "publication_date": "2026-08-18",
+    "venue": "arXiv",
+    "category": "Semantic 3D Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2608.17420",
+    "code_url": null,
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.17420",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "Stepper: Stepwise Immersive Scene Generation with Multiview Panorama",
     "year": 2026,
     "venue": "CVPRF",
@@ -1123,6 +1456,19 @@
     "reference_synced_at": "2026-08-03"
   },
   {
+    "title": "Stream4D: 4D-Consistency for Streaming Autoregressive Diffusion Video Models",
+    "year": 2026,
+    "publication_date": "2026-08-20",
+    "venue": "arXiv",
+    "category": "Dynamic & 4D Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2608.19556",
+    "code_url": "https://banyuanhao.github.io/Stream4D/",
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.19556",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "StreamVGGT: Streaming 4D Visual Geometry Transformer",
     "year": 2026,
     "venue": "ICLR",
@@ -1157,6 +1503,19 @@
     "added_at": "2026-08-12",
     "curated": false,
     "openalex_id": "https://openalex.org/W7172431196"
+  },
+  {
+    "title": "TopoSurfel: Closing the Loop between Gaussian Surfels and Meshes for Surface Reconstruction",
+    "year": 2026,
+    "publication_date": "2026-08-21",
+    "venue": "arXiv",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2608.20687",
+    "code_url": "https://github.com/Fan-Treasure/TopoSurfel",
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.20687",
+    "discovery_source": "arXiv API"
   },
   {
     "title": "TRACE: Ergodic Trajectory Optimization for Active Scene Reconstruction",
@@ -1314,6 +1673,19 @@
     "added_at": "2026-08-12",
     "curated": false,
     "arxiv_id": "https://arxiv.org/abs/2608.09110",
+    "discovery_source": "arXiv API"
+  },
+  {
+    "title": "VisTa3D: A Dataset and Benchmark for Thin Object Reconstruction from Vision, Tactile, and 3D Point Clouds",
+    "year": 2026,
+    "publication_date": "2026-08-21",
+    "venue": "arXiv",
+    "category": "Object, Human & 3D Generation",
+    "paper_url": "https://arxiv.org/abs/2608.20740",
+    "code_url": "https://huggingface.co/datasets/shaniaguo/VisTa3D",
+    "added_at": "2026-08-24",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2608.20740",
     "discovery_source": "arXiv API"
   },
   {
