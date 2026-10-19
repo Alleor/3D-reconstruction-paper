@@ -25,6 +25,19 @@
     "discovery_source": "arXiv API"
   },
   {
+    "title": "3D Gaussian Splatting for Fine-grained Urban Scene Reconstruction via Semantic-guided Density Control and Loss Design",
+    "year": 2026,
+    "publication_date": "2026-10-12",
+    "venue": "arXiv",
+    "category": "Semantic 3D Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2610.16292",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.16292",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "3D-USE: From Image-Level to Scene-Level Underwater Enhancement",
     "year": 2026,
     "publication_date": "2026-08-28",
@@ -35,6 +48,19 @@
     "added_at": "2026-08-31",
     "curated": false,
     "arxiv_id": "https://arxiv.org/abs/2608.28020",
+    "discovery_source": "arXiv API"
+  },
+  {
+    "title": "3D-VITAL: Visibility-aware Identity Training from Artificial Liftings of 3D Reconstruction model for Cross-View Object Re-Identification",
+    "year": 2026,
+    "publication_date": "2026-10-12",
+    "venue": "arXiv",
+    "category": "Feed-Forward Geometry & Foundation Models",
+    "paper_url": "https://arxiv.org/abs/2610.16692",
+    "code_url": "https://github.com/TurtleSmoke/3D-VITAL",
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.16692",
     "discovery_source": "arXiv API"
   },
   {
@@ -61,6 +87,19 @@
     "added_at": "2026-08-31",
     "curated": false,
     "arxiv_id": "https://arxiv.org/abs/2608.25956",
+    "discovery_source": "arXiv API"
+  },
+  {
+    "title": "4LC: 4D Latent Cache for Efficient Conditioning in Dynamic World Modeling",
+    "year": 2026,
+    "publication_date": "2026-10-13",
+    "venue": "arXiv",
+    "category": "Dynamic & 4D Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2610.17625",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.17625",
     "discovery_source": "arXiv API"
   },
   {
@@ -113,6 +152,19 @@
     "source_repo": "chicleee/End-to-End-3D-Reconstruction-Paper-List",
     "source_category": "3D Reconstruction",
     "reference_synced_at": "2026-08-03"
+  },
+  {
+    "title": "Anchor3DGS: Feed-Forward 3D Gaussian Splatting with Compact Anchor-Based Representation",
+    "year": 2026,
+    "publication_date": "2026-10-15",
+    "venue": "arXiv",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2610.21634",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.21634",
+    "discovery_source": "arXiv API"
   },
   {
     "title": "AnyGS2Mesh: Feed-Forward Mesh Reconstruction from 3D Gaussian Splatting with Arbitrary-Resolution Views",
@@ -189,6 +241,31 @@
     "curated": false,
     "arxiv_id": "https://arxiv.org/abs/2609.01921",
     "discovery_source": "arXiv API"
+  },
+  {
+    "title": "BAT3R: Robust Online 3D Reconstruction with Bayesian Adaptive State Updates",
+    "year": 2026,
+    "publication_date": "2026-10-12",
+    "venue": "arXiv",
+    "category": "Feed-Forward Geometry & Foundation Models",
+    "paper_url": "https://arxiv.org/abs/2610.16330",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.16330",
+    "discovery_source": "arXiv API"
+  },
+  {
+    "title": "Benchmarking 3D Reconstruction for Under-Ice Robotic Perception in Arctic Environments",
+    "year": 2026,
+    "publication_date": "2026-10-13",
+    "venue": "arXiv",
+    "category": "SLAM, Robotics & Mapping",
+    "paper_url": "https://arxiv.org/abs/2610.19097",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "openalex_id": "https://openalex.org/W7221977957"
   },
   {
     "title": "BRF-GS: Hyperspectral Bidirectional Reflectance Factor Modeling and Image Generation Based on 3D Gaussian Splatting",
@@ -380,6 +457,19 @@
     "added_at": "2026-08-12",
     "curated": false,
     "openalex_id": "https://openalex.org/W7171902397"
+  },
+  {
+    "title": "CoTL: Compact Token Learning for 3D Scene Representation",
+    "year": 2026,
+    "publication_date": "2026-10-13",
+    "venue": "arXiv",
+    "category": "Feed-Forward Geometry & Foundation Models",
+    "paper_url": "https://arxiv.org/abs/2610.18446",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.18446",
+    "discovery_source": "arXiv API"
   },
   {
     "title": "Cross-Platform Benchmark of Neural 3D Reconstruction for Autonomous Laboratory Robots",
@@ -653,6 +743,19 @@
     "reference_synced_at": "2026-08-03"
   },
   {
+    "title": "Edit4D: Editable 4D Scene Generation with Textual Control",
+    "year": 2026,
+    "publication_date": "2026-10-15",
+    "venue": "arXiv",
+    "category": "Object, Human & 3D Generation",
+    "paper_url": "https://arxiv.org/abs/2610.21668",
+    "code_url": "https://chanwo0kim.github.io/Edit4D/",
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.21668",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "EffGS: Efficient and High-Fidelity Gaussian Splatting",
     "year": 2026,
     "publication_date": "2026-09-30",
@@ -749,6 +852,19 @@
     "added_at": "2026-08-12",
     "curated": false,
     "arxiv_id": "https://arxiv.org/abs/2608.08531",
+    "discovery_source": "arXiv API"
+  },
+  {
+    "title": "ESC: Escaping 2D Diffusion Ambiguity with Geometric Constraints for Consistent Novel View Synthesis",
+    "year": 2026,
+    "publication_date": "2026-10-14",
+    "venue": "arXiv",
+    "category": "NeRF & Novel View Synthesis",
+    "paper_url": "https://arxiv.org/abs/2610.23732",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.23732",
     "discovery_source": "arXiv API"
   },
   {
@@ -853,6 +969,19 @@
     "reference_synced_at": "2026-08-03"
   },
   {
+    "title": "Feed-Forward Multi-View Feature Coding for 3D Gaussian Splatting",
+    "year": 2026,
+    "publication_date": "2026-10-14",
+    "venue": "arXiv",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2610.20590",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.20590",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "Feedforward Novel View Synthesis for Heterogeneous Cameras",
     "year": 2026,
     "publication_date": "2026-10-02",
@@ -914,6 +1043,19 @@
     "added_at": "2026-10-12",
     "curated": false,
     "arxiv_id": "https://arxiv.org/abs/2610.11364",
+    "discovery_source": "arXiv API"
+  },
+  {
+    "title": "Frame-Consistent Feed-Forward 3D Gaussian Splatting from Sparse Unposed Images",
+    "year": 2026,
+    "publication_date": "2026-10-16",
+    "venue": "arXiv",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2610.23039",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.23039",
     "discovery_source": "arXiv API"
   },
   {
@@ -991,6 +1133,19 @@
     "discovery_source": "arXiv API"
   },
   {
+    "title": "Gaussian Splatting for Real-Time Scene Reconstruction: Methods, Systems, and Trade-offs",
+    "year": 2026,
+    "publication_date": "2026-10-13",
+    "venue": "arXiv",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2610.17513",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.17513",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "Gaussian Splatting Underwater: A Controlled Cross-Regime Study",
     "year": 2026,
     "publication_date": "2026-08-26",
@@ -1028,6 +1183,18 @@
     "curated": false,
     "arxiv_id": "https://arxiv.org/abs/2608.15651",
     "discovery_source": "arXiv API"
+  },
+  {
+    "title": "Gaussian-LIC2: LiDAR-Inertial-Camera Gaussian Splatting SLAM",
+    "year": 2026,
+    "publication_date": "2026-10-14",
+    "venue": "arXiv",
+    "category": "SLAM, Robotics & Mapping",
+    "paper_url": "https://arxiv.org/abs/2507.04004",
+    "code_url": "https://github.com/APRIL-ZJU/Gaussian-LIC",
+    "added_at": "2026-10-19",
+    "curated": false,
+    "openalex_id": "https://openalex.org/W4416101232"
   },
   {
     "title": "Generating Multi-view Adversarial Examples for Visual Geometry Grounded Transformer",
@@ -1077,6 +1244,19 @@
     "added_at": "2026-08-24",
     "curated": false,
     "openalex_id": "https://openalex.org/W7203680622"
+  },
+  {
+    "title": "GeoPano: Towards Geometrically Accurate 3D Reconstruction from a Single Panorama",
+    "year": 2026,
+    "publication_date": "2026-10-15",
+    "venue": "arXiv",
+    "category": "Feed-Forward Geometry & Foundation Models",
+    "paper_url": "https://arxiv.org/abs/2610.21297",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.21297",
+    "discovery_source": "arXiv API"
   },
   {
     "title": "GeoWeaver: Accurate Long-Sequence 3D Reconstruction via Hierarchical Geometric Assembly",
@@ -1254,6 +1434,19 @@
     "reference_synced_at": "2026-08-17"
   },
   {
+    "title": "HyperLoop: Hyperspectral-Assisted Loop Closure Detection in 3D-SLAM for Planetary Exploration",
+    "year": 2026,
+    "publication_date": "2026-10-14",
+    "venue": "arXiv",
+    "category": "SLAM, Robotics & Mapping",
+    "paper_url": "https://arxiv.org/abs/2610.19742",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.19742",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "IGGT: Instance-Grounded Geometry Transformer for Semantic 3D Reconstruction",
     "year": 2026,
     "venue": "ICLR",
@@ -1315,6 +1508,19 @@
     "added_at": "2026-08-12",
     "curated": false,
     "arxiv_id": "https://arxiv.org/abs/2608.08659",
+    "discovery_source": "arXiv API"
+  },
+  {
+    "title": "KFS$^4$LAM: Adaptive KeyFrame Selection with Structure-Aware Mapping for Endoscopic Gaussian Splatting SLAM",
+    "year": 2026,
+    "publication_date": "2026-10-15",
+    "venue": "arXiv",
+    "category": "SLAM, Robotics & Mapping",
+    "paper_url": "https://arxiv.org/abs/2610.22505",
+    "code_url": "https://xinweiju.github.io/KFSLAM/",
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.22505",
     "discovery_source": "arXiv API"
   },
   {
@@ -1517,6 +1723,19 @@
     "reference_synced_at": "2026-08-03"
   },
   {
+    "title": "LonGaussian: Tracking Foundation Priors for Long-Context Feedforward Gaussian Reconstruction",
+    "year": 2026,
+    "publication_date": "2026-10-16",
+    "venue": "arXiv",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2610.23250",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.23250",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "LVS: Local View Synthesis from Relative Camera Pose by Reusing Previous Views",
     "year": 2026,
     "publication_date": "2026-10-08",
@@ -1540,6 +1759,19 @@
     "added_at": "2026-10-12",
     "curated": false,
     "arxiv_id": "https://arxiv.org/abs/2610.10960",
+    "discovery_source": "arXiv API"
+  },
+  {
+    "title": "MagicGarment: Benchmarking Single-Image Standalone 3D Garment Reconstruction",
+    "year": 2026,
+    "publication_date": "2026-10-14",
+    "venue": "arXiv",
+    "category": "Feed-Forward Geometry & Foundation Models",
+    "paper_url": "https://arxiv.org/abs/2610.19623",
+    "code_url": "https://1019538157.github.io/MagicGarment/",
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.19623",
     "discovery_source": "arXiv API"
   },
   {
@@ -1665,6 +1897,44 @@
     "source_repo": "chicleee/End-to-End-3D-Reconstruction-Paper-List",
     "source_category": "Scalable",
     "reference_synced_at": "2026-08-03"
+  },
+  {
+    "title": "MicroSDF: Microfacet-Driven Hybrid Neural SDFs for Mixed-Reflectance Surface Reconstruction",
+    "year": 2026,
+    "publication_date": "2026-10-14",
+    "venue": "arXiv",
+    "category": "Dense Depth, Surface & Mesh Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2610.19681",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.19681",
+    "discovery_source": "arXiv API"
+  },
+  {
+    "title": "Monocular Panoramic Imaging for High-Precision 3D Shape Reconstruction",
+    "year": 2026,
+    "publication_date": "2026-10-15",
+    "venue": "arXiv",
+    "category": "Feed-Forward Geometry & Foundation Models",
+    "paper_url": "https://www.researchsquare.com/article/rs-8363056/latest.pdf",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "openalex_id": "https://openalex.org/W7222018695"
+  },
+  {
+    "title": "Motion- and Gravity-Aware Feedforward 3D Reconstruction",
+    "year": 2026,
+    "publication_date": "2026-10-15",
+    "venue": "arXiv",
+    "category": "Dynamic & 4D Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2610.22177",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.22177",
+    "discovery_source": "arXiv API"
   },
   {
     "title": "MRIo3DS-Net: a mutually reinforcing images to 3D surface RNN-like framework for model-adaptation indoor 3D reconstruction",
@@ -2157,6 +2427,19 @@
     "openalex_id": "https://openalex.org/W7203441983"
   },
   {
+    "title": "PUGS: Physics-Guided Uncertainty Modeling for Underwater Dynamic 3D Gaussian Splatting",
+    "year": 2026,
+    "publication_date": "2026-10-13",
+    "venue": "arXiv",
+    "category": "Dynamic & 4D Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2610.17936",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.17936",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "Quantized Visual Geometry Grounded Transformer",
     "year": 2026,
     "venue": "ICLR",
@@ -2284,6 +2567,19 @@
     "reference_synced_at": "2026-08-03"
   },
   {
+    "title": "Remember, Revisit, Revise: Scaffold Memory for Long-Horizon 3D Geometry",
+    "year": 2026,
+    "publication_date": "2026-10-14",
+    "venue": "arXiv",
+    "category": "Feed-Forward Geometry & Foundation Models",
+    "paper_url": "https://arxiv.org/abs/2610.19674",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.19674",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "Repurposing Geometric Foundation Models for Multi-view Diffusion",
     "year": 2026,
     "venue": "arXiv",
@@ -2306,6 +2602,19 @@
     "added_at": "2026-10-05",
     "curated": false,
     "openalex_id": "https://openalex.org/W7215787743"
+  },
+  {
+    "title": "ResStreamGS: Residual-Sensitive Dual-Stream Gaussian Splatting for Mobile Volumetric Video Streaming",
+    "year": 2026,
+    "publication_date": "2026-10-15",
+    "venue": "arXiv",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2610.21121",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.21121",
+    "discovery_source": "arXiv API"
   },
   {
     "title": "Rethinking 3D Noise: Learning 3D-Aware Video Priors via Optimization-Free Morphological Perturbations",
@@ -2817,6 +3126,19 @@
     "discovery_source": "arXiv API"
   },
   {
+    "title": "Surface Reconstruction from Range Scans Under Visibility Constraints",
+    "year": 2026,
+    "publication_date": "2026-10-13",
+    "venue": "arXiv",
+    "category": "Dense Depth, Surface & Mesh Reconstruction",
+    "paper_url": "https://arxiv.org/abs/2610.18005",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.18005",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "Surflo: Consistent 3D Surface Flow Model with Global State",
     "year": 2026,
     "venue": "arXiv",
@@ -2902,6 +3224,19 @@
     "added_at": "2026-08-12",
     "curated": false,
     "openalex_id": "https://openalex.org/W7172390578"
+  },
+  {
+    "title": "Training-Free Target-Aware Refinement of 3D Gaussian Language Map",
+    "year": 2026,
+    "publication_date": "2026-10-15",
+    "venue": "arXiv",
+    "category": "SLAM, Robotics & Mapping",
+    "paper_url": "https://arxiv.org/abs/2610.21619",
+    "code_url": "https://lab-of-ai-and-robotics.github.io/target-aware-langmap/",
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.21619",
+    "discovery_source": "arXiv API"
   },
   {
     "title": "TruncGradGS: Improved 3D Gaussian Splatting via Truncated Gradient Updates",
@@ -3101,6 +3436,19 @@
     "discovery_source": "arXiv API"
   },
   {
+    "title": "VisibilitySplat: Ray-Traced Occlusion for Relighting with 3D Gaussian Splatting",
+    "year": 2026,
+    "publication_date": "2026-10-14",
+    "venue": "arXiv",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2610.19847",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.19847",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "VISION-BASED DRY-MATERIAL INVENTORY ESTIMATION IN AUTONOMOUS LABORATORIES: RGB SEGMENTATION VERSUS RGB-D SURFACE RECONSTRUCTION",
     "year": 2026,
     "publication_date": "2026-10-09",
@@ -3203,6 +3551,32 @@
     "discovery_source": "arXiv API"
   },
   {
+    "title": "Where Should the Gaussians Go? Reusable Label-Aware Allocation for Budget-Constrained Gaussian Splatting of Cinematic CT",
+    "year": 2026,
+    "publication_date": "2026-10-14",
+    "venue": "arXiv",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2610.20397",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.20397",
+    "discovery_source": "arXiv API"
+  },
+  {
+    "title": "Why 3D Reconstruction Breaks Down on Under-Ice AUV Video, and How to Predict It",
+    "year": 2026,
+    "publication_date": "2026-10-14",
+    "venue": "arXiv",
+    "category": "Feed-Forward Geometry & Foundation Models",
+    "paper_url": "https://arxiv.org/abs/2610.19993",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.19993",
+    "discovery_source": "arXiv API"
+  },
+  {
     "title": "WildFireGS: Physics-Based Wildfire Simulation in Large-Scale Semantics-Enriched Gaussian Splatting Forest Scenes",
     "year": 2026,
     "publication_date": "2026-08-11",
@@ -3238,6 +3612,19 @@
     "added_at": "2026-10-05",
     "curated": false,
     "arxiv_id": "https://arxiv.org/abs/2609.37816",
+    "discovery_source": "arXiv API"
+  },
+  {
+    "title": "X-Splat: Unified Gaussian Splatting for Joint RGB and X-ray 3D Reconstruction",
+    "year": 2026,
+    "publication_date": "2026-10-16",
+    "venue": "arXiv",
+    "category": "Gaussian Splatting",
+    "paper_url": "https://arxiv.org/abs/2610.23237",
+    "code_url": null,
+    "added_at": "2026-10-19",
+    "curated": false,
+    "arxiv_id": "https://arxiv.org/abs/2610.23237",
     "discovery_source": "arXiv API"
   },
   {
