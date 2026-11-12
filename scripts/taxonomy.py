@@ -68,6 +68,7 @@ TITLE_OVERRIDES = {
     "diffusionsfm predicting structure and motion via ray origin and endpoint diffusion": "Feed-Forward Geometry & Foundation Models",
     "egogvae ego body mesh reconstruction via guided variational autoencoder": "Object, Human & 3D Generation",
     "fast3r towards 3d reconstruction of 1000 images in one forward pass": "Feed-Forward Geometry & Foundation Models",
+    "lagsplat inferring physics governed interactive simulation from monocular video using latent lagrangian gaussian splatting": "Dynamic & 4D Reconstruction",
     "flowr flowing from sparse to dense 3d reconstructions": "NeRF & Novel View Synthesis",
     "floating radiance networks": "NeRF & Novel View Synthesis",
     "from none to all self supervised 3d reconstruction via novel view synthesis": "Feed-Forward Geometry & Foundation Models",

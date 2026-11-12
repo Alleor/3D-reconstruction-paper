@@ -19,8 +19,8 @@ The counts below make changes in research activity easier to compare across year
 | 前馈几何与基础模型<br>Feed-Forward Geometry & Foundation Models | 0 | 0 | 0 | 2 | 10 | 98 | 110 |
 | 稠密深度、表面与网格重建<br>Dense Depth, Surface & Mesh Reconstruction | 2 | 1 | 3 | 1 | 1 | 8 | 16 |
 | NeRF 与新视角合成<br>NeRF & Novel View Synthesis | 3 | 2 | 0 | 0 | 5 | 29 | 39 |
-| Gaussian Splatting<br>Gaussian Splatting | 0 | 0 | 1 | 4 | 3 | 118 | 126 |
-| 动态与 4D 重建<br>Dynamic & 4D Reconstruction | 2 | 0 | 1 | 2 | 5 | 35 | 45 |
+| Gaussian Splatting<br>Gaussian Splatting | 0 | 0 | 1 | 4 | 3 | 117 | 125 |
+| 动态与 4D 重建<br>Dynamic & 4D Reconstruction | 2 | 0 | 1 | 2 | 5 | 36 | 46 |
 | 对象、人体与 3D 生成<br>Object, Human & 3D Generation | 0 | 1 | 4 | 0 | 2 | 29 | 36 |
 | 语义三维重建<br>Semantic 3D Reconstruction | 0 | 0 | 0 | 0 | 1 | 15 | 16 |
 | SLAM、机器人与建图<br>SLAM, Robotics & Mapping | 1 | 1 | 4 | 5 | 1 | 24 | 36 |
