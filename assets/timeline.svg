@@ -2715,18 +2715,18 @@ text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSyst
 </g>
 <g class="paper" data-title="LaGSplat: Inferring Physics-Governed Interactive Simulation from Monocular Video Using Latent Lagrangian Gaussian Splatting">
 <line x1="1030" y1="29096.0" x2="900" y2="29096.0" class="connector"/>
-<circle cx="900" cy="29096.0" r="9" fill="#F472B6" class="node"/>
-<rect x="1030" y="29022" width="700" height="148" rx="18" class="card" stroke="#F472B6"/>
-<rect x="1030" y="29022" width="8" height="148" rx="4" fill="#F472B6"/>
-<text x="1058" y="29049" class="meta" fill="#F472B6">arXiv 2026</text>
-<text x="1706" y="29049" class="category" text-anchor="end">Gaussian Splatting</text>
+<circle cx="900" cy="29096.0" r="9" fill="#FB923C" class="node"/>
+<rect x="1030" y="29022" width="700" height="148" rx="18" class="card" stroke="#FB923C"/>
+<rect x="1030" y="29022" width="8" height="148" rx="4" fill="#FB923C"/>
+<text x="1058" y="29049" class="meta" fill="#FB923C">arXiv 2026</text>
+<text x="1706" y="29049" class="category" text-anchor="end">Dynamic &amp; 4D</text>
 <a href="https://arxiv.org/abs/2608.16324" target="_blank">
 <text x="1058" y="29078" class="title">LaGSplat: Inferring Physics-Governed Interactive</text>
 <text x="1058" y="29100" class="title">Simulation from Monocular Video Using Latent</text>
 <text x="1058" y="29122" class="title">Lagrangian Gaussian Splatting</text>
 </a>
 <a href="https://arxiv.org/abs/2608.16324" target="_blank"><text x="1058" y="29145" class="link">PAPER ↗</text></a>
-<text x="1152" y="29145" class="muted">CODE PENDING</text>
+<a href="https://github.com/LouenPottier/LaGSplat" target="_blank"><text x="1152" y="29145" class="link">CODE ↗</text></a>
 </g>
 <g class="paper" data-title="SplatGuide: Geometric Priors from 3D Gaussians for Pose-Free Novel View Synthesis">
 <line x1="770" y1="29255.0" x2="900" y2="29255.0" class="connector"/>
