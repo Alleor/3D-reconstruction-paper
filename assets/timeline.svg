@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1800" height="64232" viewBox="0 0 1800 64232" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1800" height="68672" viewBox="0 0 1800 68672" role="img" aria-labelledby="title description">
 <title id="title">3D Reconstruction Paper Development Timeline</title>
-<desc id="description">424 papers from 2021 to 2026, arranged around a central timeline and colored by research category.</desc>
+<desc id="description">454 papers from 2021 to 2026, arranged around a central timeline and colored by research category.</desc>
 <style>
 text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 .background { fill: #0B1020; }
@@ -21,9 +21,9 @@ text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSyst
 .subheading { fill: #94A3B8; font-size: 18px; }
 .legend { fill: #CBD5E1; font-size: 15px; }
 </style>
-<rect width="1800" height="64232" class="background"/>
+<rect width="1800" height="68672" class="background"/>
 <text x="900" y="70" class="heading" text-anchor="middle">3D Reconstruction · Development Timeline</text>
-<text x="900" y="105" class="subheading" text-anchor="middle">424 papers · 2021–Present · oldest to newest · click PAPER or CODE</text>
+<text x="900" y="105" class="subheading" text-anchor="middle">454 papers · 2021–Present · oldest to newest · click PAPER or CODE</text>
 <circle cx="110" cy="181" r="7" fill="#60A5FA"/>
 <text x="128" y="186" class="legend">Feed-Forward Geometry</text>
 <circle cx="530" cy="181" r="7" fill="#2DD4BF"/>
@@ -40,7 +40,7 @@ text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSyst
 <text x="968" y="220" class="legend">Semantic Reconstruction</text>
 <circle cx="1370" cy="215" r="7" fill="#F87171"/>
 <text x="1388" y="220" class="legend">SLAM &amp; Mapping</text>
-<line x1="900" y1="260" x2="900" y2="64177" class="main-line"/>
+<line x1="900" y1="260" x2="900" y2="68617" class="main-line"/>
 <rect x="836" y="300" width="128" height="52" rx="26" class="year"/>
 <text x="900" y="335" class="year-text" text-anchor="middle">2021</text>
 <g class="paper" data-title="D-NeRF: Neural Radiance Fields for Dynamic Scenes">
@@ -5999,7 +5999,427 @@ text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSyst
 <text x="1058" y="64008" class="title">Reconstruction From Monocular Videos</text>
 </a>
 <a href="https://doi.org/10.1145/3767308.3835475" target="_blank"><text x="1058" y="64031" class="link">PAPER ↗</text></a>
-<text x="1152" y="64031" class="muted">CODE PENDING</text>
+<a href="https://github.com/Nimsi123/tt4d" target="_blank"><text x="1152" y="64031" class="link">CODE ↗</text></a>
 </g>
-<path d="M 887 64160 L 900 64184 L 913 64160" fill="#94A3B8"/>
+<g class="paper" data-title="Pointillist Maize: 3D Reconstruction of Field-Grown Maize Using RGB UAV Imagery">
+<line x1="770" y1="64141.0" x2="900" y2="64141.0" class="connector"/>
+<circle cx="900" cy="64141.0" r="9" fill="#60A5FA" class="node"/>
+<rect x="70" y="64078" width="700" height="126" rx="18" class="card" stroke="#60A5FA"/>
+<rect x="70" y="64078" width="8" height="126" rx="4" fill="#60A5FA"/>
+<text x="98" y="64105" class="meta" fill="#60A5FA">arXiv 2026</text>
+<text x="746" y="64105" class="category" text-anchor="end">Feed-Forward Geometry</text>
+<a href="https://arxiv.org/abs/2611.20502" target="_blank">
+<text x="98" y="64134" class="title">Pointillist Maize: 3D Reconstruction of Field-Grown</text>
+<text x="98" y="64156" class="title">Maize Using RGB UAV Imagery</text>
+</a>
+<a href="https://arxiv.org/abs/2611.20502" target="_blank"><text x="98" y="64179" class="link">PAPER ↗</text></a>
+<text x="192" y="64179" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="QuantileGS: Quantile-Based Conformal Bounds on RGB Rendering Errors for Novel View Synthesis with 3D Gaussian Splatting">
+<line x1="1030" y1="64300.0" x2="900" y2="64300.0" class="connector"/>
+<circle cx="900" cy="64300.0" r="9" fill="#F472B6" class="node"/>
+<rect x="1030" y="64226" width="700" height="148" rx="18" class="card" stroke="#F472B6"/>
+<rect x="1030" y="64226" width="8" height="148" rx="4" fill="#F472B6"/>
+<text x="1058" y="64253" class="meta" fill="#F472B6">arXiv 2026</text>
+<text x="1706" y="64253" class="category" text-anchor="end">Gaussian Splatting</text>
+<a href="https://arxiv.org/abs/2611.21253" target="_blank">
+<text x="1058" y="64282" class="title">QuantileGS: Quantile-Based Conformal Bounds on RGB</text>
+<text x="1058" y="64304" class="title">Rendering Errors for Novel View Synthesis with 3D</text>
+<text x="1058" y="64326" class="title">Gaussian Splatting</text>
+</a>
+<a href="https://arxiv.org/abs/2611.21253" target="_blank"><text x="1058" y="64349" class="link">PAPER ↗</text></a>
+<a href="https://github.com/Lab-PANbin/QuantileGS" target="_blank"><text x="1152" y="64349" class="link">CODE ↗</text></a>
+</g>
+<g class="paper" data-title="VA-Assembly: View-Aligned Score Guidance for Training-Free 3D Part Assembly">
+<line x1="770" y1="64459.0" x2="900" y2="64459.0" class="connector"/>
+<circle cx="900" cy="64459.0" r="9" fill="#60A5FA" class="node"/>
+<rect x="70" y="64396" width="700" height="126" rx="18" class="card" stroke="#60A5FA"/>
+<rect x="70" y="64396" width="8" height="126" rx="4" fill="#60A5FA"/>
+<text x="98" y="64423" class="meta" fill="#60A5FA">arXiv 2026</text>
+<text x="746" y="64423" class="category" text-anchor="end">Feed-Forward Geometry</text>
+<a href="https://arxiv.org/abs/2611.20788" target="_blank">
+<text x="98" y="64452" class="title">VA-Assembly: View-Aligned Score Guidance for</text>
+<text x="98" y="64474" class="title">Training-Free 3D Part Assembly</text>
+</a>
+<a href="https://arxiv.org/abs/2611.20788" target="_blank"><text x="98" y="64497" class="link">PAPER ↗</text></a>
+<text x="192" y="64497" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="Accelerating 3D Gaussian Splatting Training through Selective Freezing and Computation Caching">
+<line x1="1030" y1="64607.0" x2="900" y2="64607.0" class="connector"/>
+<circle cx="900" cy="64607.0" r="9" fill="#F472B6" class="node"/>
+<rect x="1030" y="64544" width="700" height="126" rx="18" class="card" stroke="#F472B6"/>
+<rect x="1030" y="64544" width="8" height="126" rx="4" fill="#F472B6"/>
+<text x="1058" y="64571" class="meta" fill="#F472B6">arXiv 2026</text>
+<text x="1706" y="64571" class="category" text-anchor="end">Gaussian Splatting</text>
+<a href="https://arxiv.org/abs/2611.22059" target="_blank">
+<text x="1058" y="64600" class="title">Accelerating 3D Gaussian Splatting Training through</text>
+<text x="1058" y="64622" class="title">Selective Freezing and Computation Caching</text>
+</a>
+<a href="https://arxiv.org/abs/2611.22059" target="_blank"><text x="1058" y="64645" class="link">PAPER ↗</text></a>
+<text x="1152" y="64645" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="CoSphere-SLAM: Multi-Agent Panoramic Gaussian Splatting SLAM with Spherical Loop Closure">
+<line x1="770" y1="64755.0" x2="900" y2="64755.0" class="connector"/>
+<circle cx="900" cy="64755.0" r="9" fill="#F87171" class="node"/>
+<rect x="70" y="64692" width="700" height="126" rx="18" class="card" stroke="#F87171"/>
+<rect x="70" y="64692" width="8" height="126" rx="4" fill="#F87171"/>
+<text x="98" y="64719" class="meta" fill="#F87171">arXiv 2026</text>
+<text x="746" y="64719" class="category" text-anchor="end">SLAM &amp; Mapping</text>
+<a href="https://arxiv.org/abs/2611.22235" target="_blank">
+<text x="98" y="64748" class="title">CoSphere-SLAM: Multi-Agent Panoramic Gaussian</text>
+<text x="98" y="64770" class="title">Splatting SLAM with Spherical Loop Closure</text>
+</a>
+<a href="https://arxiv.org/abs/2611.22235" target="_blank"><text x="98" y="64793" class="link">PAPER ↗</text></a>
+<a href="https://cosphere-slam.github.io" target="_blank"><text x="192" y="64793" class="link">CODE ↗</text></a>
+</g>
+<g class="paper" data-title="Cross3DGS: Unified Vulkan-Based 3D Gaussian Splatting Training from Workstations to Mobile Devices">
+<line x1="1030" y1="64903.0" x2="900" y2="64903.0" class="connector"/>
+<circle cx="900" cy="64903.0" r="9" fill="#F472B6" class="node"/>
+<rect x="1030" y="64840" width="700" height="126" rx="18" class="card" stroke="#F472B6"/>
+<rect x="1030" y="64840" width="8" height="126" rx="4" fill="#F472B6"/>
+<text x="1058" y="64867" class="meta" fill="#F472B6">arXiv 2026</text>
+<text x="1706" y="64867" class="category" text-anchor="end">Gaussian Splatting</text>
+<a href="https://arxiv.org/abs/2611.22240" target="_blank">
+<text x="1058" y="64896" class="title">Cross3DGS: Unified Vulkan-Based 3D Gaussian Splatting</text>
+<text x="1058" y="64918" class="title">Training from Workstations to Mobile Devices</text>
+</a>
+<a href="https://arxiv.org/abs/2611.22240" target="_blank"><text x="1058" y="64941" class="link">PAPER ↗</text></a>
+<text x="1152" y="64941" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="CueSplat: Learning to Schedule Sparse Deformation for Dynamic Gaussian Splatting on Edge Devices">
+<line x1="770" y1="65051.0" x2="900" y2="65051.0" class="connector"/>
+<circle cx="900" cy="65051.0" r="9" fill="#FB923C" class="node"/>
+<rect x="70" y="64988" width="700" height="126" rx="18" class="card" stroke="#FB923C"/>
+<rect x="70" y="64988" width="8" height="126" rx="4" fill="#FB923C"/>
+<text x="98" y="65015" class="meta" fill="#FB923C">arXiv 2026</text>
+<text x="746" y="65015" class="category" text-anchor="end">Dynamic &amp; 4D</text>
+<a href="https://arxiv.org/abs/2611.22095" target="_blank">
+<text x="98" y="65044" class="title">CueSplat: Learning to Schedule Sparse Deformation for</text>
+<text x="98" y="65066" class="title">Dynamic Gaussian Splatting on Edge Devices</text>
+</a>
+<a href="https://arxiv.org/abs/2611.22095" target="_blank"><text x="98" y="65089" class="link">PAPER ↗</text></a>
+<text x="192" y="65089" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="DOOM-GS: Dynamic Out-of-core Optimization for Massive Gaussian Splatting">
+<line x1="1030" y1="65199.0" x2="900" y2="65199.0" class="connector"/>
+<circle cx="900" cy="65199.0" r="9" fill="#FB923C" class="node"/>
+<rect x="1030" y="65136" width="700" height="126" rx="18" class="card" stroke="#FB923C"/>
+<rect x="1030" y="65136" width="8" height="126" rx="4" fill="#FB923C"/>
+<text x="1058" y="65163" class="meta" fill="#FB923C">arXiv 2026</text>
+<text x="1706" y="65163" class="category" text-anchor="end">Dynamic &amp; 4D</text>
+<a href="https://arxiv.org/abs/2611.22805" target="_blank">
+<text x="1058" y="65192" class="title">DOOM-GS: Dynamic Out-of-core Optimization for Massive</text>
+<text x="1058" y="65214" class="title">Gaussian Splatting</text>
+</a>
+<a href="https://arxiv.org/abs/2611.22805" target="_blank"><text x="1058" y="65237" class="link">PAPER ↗</text></a>
+<text x="1152" y="65237" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="Layer-Matched Sparse Attention for Low-Redundancy 3D Reconstruction">
+<line x1="770" y1="65347.0" x2="900" y2="65347.0" class="connector"/>
+<circle cx="900" cy="65347.0" r="9" fill="#60A5FA" class="node"/>
+<rect x="70" y="65284" width="700" height="126" rx="18" class="card" stroke="#60A5FA"/>
+<rect x="70" y="65284" width="8" height="126" rx="4" fill="#60A5FA"/>
+<text x="98" y="65311" class="meta" fill="#60A5FA">arXiv 2026</text>
+<text x="746" y="65311" class="category" text-anchor="end">Feed-Forward Geometry</text>
+<a href="https://arxiv.org/abs/2611.23554" target="_blank">
+<text x="98" y="65340" class="title">Layer-Matched Sparse Attention for Low-Redundancy 3D</text>
+<text x="98" y="65362" class="title">Reconstruction</text>
+</a>
+<a href="https://arxiv.org/abs/2611.23554" target="_blank"><text x="98" y="65385" class="link">PAPER ↗</text></a>
+<text x="192" y="65385" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="NIRJALA: Draining the Sea out of Gaussian Splatting with Three-Path Optics and Reversible Physics">
+<line x1="1030" y1="65495.0" x2="900" y2="65495.0" class="connector"/>
+<circle cx="900" cy="65495.0" r="9" fill="#F472B6" class="node"/>
+<rect x="1030" y="65432" width="700" height="126" rx="18" class="card" stroke="#F472B6"/>
+<rect x="1030" y="65432" width="8" height="126" rx="4" fill="#F472B6"/>
+<text x="1058" y="65459" class="meta" fill="#F472B6">arXiv 2026</text>
+<text x="1706" y="65459" class="category" text-anchor="end">Gaussian Splatting</text>
+<a href="https://arxiv.org/abs/2611.23450" target="_blank">
+<text x="1058" y="65488" class="title">NIRJALA: Draining the Sea out of Gaussian Splatting</text>
+<text x="1058" y="65510" class="title">with Three-Path Optics and Reversible Physics</text>
+</a>
+<a href="https://arxiv.org/abs/2611.23450" target="_blank"><text x="1058" y="65533" class="link">PAPER ↗</text></a>
+<text x="1152" y="65533" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="OCLDA-GS: Object-Centric Local Deformation-Aware Gaussian Streaming">
+<line x1="770" y1="65643.0" x2="900" y2="65643.0" class="connector"/>
+<circle cx="900" cy="65643.0" r="9" fill="#F472B6" class="node"/>
+<rect x="70" y="65580" width="700" height="126" rx="18" class="card" stroke="#F472B6"/>
+<rect x="70" y="65580" width="8" height="126" rx="4" fill="#F472B6"/>
+<text x="98" y="65607" class="meta" fill="#F472B6">arXiv 2026</text>
+<text x="746" y="65607" class="category" text-anchor="end">Gaussian Splatting</text>
+<a href="https://arxiv.org/abs/2611.23416" target="_blank">
+<text x="98" y="65636" class="title">OCLDA-GS: Object-Centric Local Deformation-Aware</text>
+<text x="98" y="65658" class="title">Gaussian Streaming</text>
+</a>
+<a href="https://arxiv.org/abs/2611.23416" target="_blank"><text x="98" y="65681" class="link">PAPER ↗</text></a>
+<text x="192" y="65681" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="Refin3R: Geometry-Guided Refinement for Feed-Forward 3D Reconstruction">
+<line x1="1030" y1="65791.0" x2="900" y2="65791.0" class="connector"/>
+<circle cx="900" cy="65791.0" r="9" fill="#60A5FA" class="node"/>
+<rect x="1030" y="65728" width="700" height="126" rx="18" class="card" stroke="#60A5FA"/>
+<rect x="1030" y="65728" width="8" height="126" rx="4" fill="#60A5FA"/>
+<text x="1058" y="65755" class="meta" fill="#60A5FA">arXiv 2026</text>
+<text x="1706" y="65755" class="category" text-anchor="end">Feed-Forward Geometry</text>
+<a href="https://arxiv.org/abs/2611.23051" target="_blank">
+<text x="1058" y="65784" class="title">Refin3R: Geometry-Guided Refinement for Feed-Forward</text>
+<text x="1058" y="65806" class="title">3D Reconstruction</text>
+</a>
+<a href="https://arxiv.org/abs/2611.23051" target="_blank"><text x="1058" y="65829" class="link">PAPER ↗</text></a>
+<text x="1152" y="65829" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="ReTouchGS: Ultralight Render-free Aesthetic Color Enhancement and Transfer for 3D Gaussian Splatting">
+<line x1="770" y1="65939.0" x2="900" y2="65939.0" class="connector"/>
+<circle cx="900" cy="65939.0" r="9" fill="#F472B6" class="node"/>
+<rect x="70" y="65876" width="700" height="126" rx="18" class="card" stroke="#F472B6"/>
+<rect x="70" y="65876" width="8" height="126" rx="4" fill="#F472B6"/>
+<text x="98" y="65903" class="meta" fill="#F472B6">arXiv 2026</text>
+<text x="746" y="65903" class="category" text-anchor="end">Gaussian Splatting</text>
+<a href="https://arxiv.org/abs/2611.23054" target="_blank">
+<text x="98" y="65932" class="title">ReTouchGS: Ultralight Render-free Aesthetic Color</text>
+<text x="98" y="65954" class="title">Enhancement and Transfer for 3D Gaussian Splatting</text>
+</a>
+<a href="https://arxiv.org/abs/2611.23054" target="_blank"><text x="98" y="65977" class="link">PAPER ↗</text></a>
+<text x="192" y="65977" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="You Only Encode Once: Sub-Pixel-Shifted Frames for Arbitrary-Scale Remote Sensing Super-Resolution with 2D Gaussian Splatting">
+<line x1="1030" y1="66098.0" x2="900" y2="66098.0" class="connector"/>
+<circle cx="900" cy="66098.0" r="9" fill="#F472B6" class="node"/>
+<rect x="1030" y="66024" width="700" height="148" rx="18" class="card" stroke="#F472B6"/>
+<rect x="1030" y="66024" width="8" height="148" rx="4" fill="#F472B6"/>
+<text x="1058" y="66051" class="meta" fill="#F472B6">arXiv 2026</text>
+<text x="1706" y="66051" class="category" text-anchor="end">Gaussian Splatting</text>
+<a href="https://arxiv.org/abs/2611.22898" target="_blank">
+<text x="1058" y="66080" class="title">You Only Encode Once: Sub-Pixel-Shifted Frames for</text>
+<text x="1058" y="66102" class="title">Arbitrary-Scale Remote Sensing Super-Resolution with</text>
+<text x="1058" y="66124" class="title">2D Gaussian Splatting</text>
+</a>
+<a href="https://arxiv.org/abs/2611.22898" target="_blank"><text x="1058" y="66147" class="link">PAPER ↗</text></a>
+<text x="1152" y="66147" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="Facet-SLAM: Real-Time Triangle Splatting SLAM">
+<line x1="770" y1="66246.0" x2="900" y2="66246.0" class="connector"/>
+<circle cx="900" cy="66246.0" r="9" fill="#F87171" class="node"/>
+<rect x="70" y="66194" width="700" height="104" rx="18" class="card" stroke="#F87171"/>
+<rect x="70" y="66194" width="8" height="104" rx="4" fill="#F87171"/>
+<text x="98" y="66221" class="meta" fill="#F87171">arXiv 2026</text>
+<text x="746" y="66221" class="category" text-anchor="end">SLAM &amp; Mapping</text>
+<a href="https://arxiv.org/abs/2611.23935" target="_blank">
+<text x="98" y="66250" class="title">Facet-SLAM: Real-Time Triangle Splatting SLAM</text>
+</a>
+<a href="https://arxiv.org/abs/2611.23935" target="_blank"><text x="98" y="66273" class="link">PAPER ↗</text></a>
+<a href="https://github.com/edward62740/Facet-SLAM" target="_blank"><text x="192" y="66273" class="link">CODE ↗</text></a>
+</g>
+<g class="paper" data-title="Freeforward4d: Annotation-free feed-forward 4d reconstruction of driving scenes">
+<line x1="1030" y1="66383.0" x2="900" y2="66383.0" class="connector"/>
+<circle cx="900" cy="66383.0" r="9" fill="#FB923C" class="node"/>
+<rect x="1030" y="66320" width="700" height="126" rx="18" class="card" stroke="#FB923C"/>
+<rect x="1030" y="66320" width="8" height="126" rx="4" fill="#FB923C"/>
+<text x="1058" y="66347" class="meta" fill="#FB923C">arXiv 2026</text>
+<text x="1706" y="66347" class="category" text-anchor="end">Dynamic &amp; 4D</text>
+<a href="https://arxiv.org/abs/2611.24007" target="_blank">
+<text x="1058" y="66376" class="title">Freeforward4d: Annotation-free feed-forward 4d</text>
+<text x="1058" y="66398" class="title">reconstruction of driving scenes</text>
+</a>
+<a href="https://arxiv.org/abs/2611.24007" target="_blank"><text x="1058" y="66421" class="link">PAPER ↗</text></a>
+<a href="https://github.com/Max-luo-song/FreeForward4D" target="_blank"><text x="1152" y="66421" class="link">CODE ↗</text></a>
+</g>
+<g class="paper" data-title="Infer3D: Inverse Generative Modeling Enables Robust 3D Reconstruction">
+<line x1="770" y1="66531.0" x2="900" y2="66531.0" class="connector"/>
+<circle cx="900" cy="66531.0" r="9" fill="#60A5FA" class="node"/>
+<rect x="70" y="66468" width="700" height="126" rx="18" class="card" stroke="#60A5FA"/>
+<rect x="70" y="66468" width="8" height="126" rx="4" fill="#60A5FA"/>
+<text x="98" y="66495" class="meta" fill="#60A5FA">arXiv 2026</text>
+<text x="746" y="66495" class="category" text-anchor="end">Feed-Forward Geometry</text>
+<a href="https://arxiv.org/abs/2611.25061" target="_blank">
+<text x="98" y="66524" class="title">Infer3D: Inverse Generative Modeling Enables Robust 3D</text>
+<text x="98" y="66546" class="title">Reconstruction</text>
+</a>
+<a href="https://arxiv.org/abs/2611.25061" target="_blank"><text x="98" y="66569" class="link">PAPER ↗</text></a>
+<a href="https://amanikiruga.github.io/infer3d-site/" target="_blank"><text x="192" y="66569" class="link">CODE ↗</text></a>
+</g>
+<g class="paper" data-title="Multi-Band Galaxy Novel-View Synthesis with Radiative Gaussian Fields">
+<line x1="1030" y1="66679.0" x2="900" y2="66679.0" class="connector"/>
+<circle cx="900" cy="66679.0" r="9" fill="#F472B6" class="node"/>
+<rect x="1030" y="66616" width="700" height="126" rx="18" class="card" stroke="#F472B6"/>
+<rect x="1030" y="66616" width="8" height="126" rx="4" fill="#F472B6"/>
+<text x="1058" y="66643" class="meta" fill="#F472B6">arXiv 2026</text>
+<text x="1706" y="66643" class="category" text-anchor="end">Gaussian Splatting</text>
+<a href="https://arxiv.org/abs/2611.24723" target="_blank">
+<text x="1058" y="66672" class="title">Multi-Band Galaxy Novel-View Synthesis with Radiative</text>
+<text x="1058" y="66694" class="title">Gaussian Fields</text>
+</a>
+<a href="https://arxiv.org/abs/2611.24723" target="_blank"><text x="1058" y="66717" class="link">PAPER ↗</text></a>
+<text x="1152" y="66717" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="RAPID: Reconstruction Accelerated by Polarization-Informed Depth for 2D Gaussian Splatting">
+<line x1="770" y1="66827.0" x2="900" y2="66827.0" class="connector"/>
+<circle cx="900" cy="66827.0" r="9" fill="#F472B6" class="node"/>
+<rect x="70" y="66764" width="700" height="126" rx="18" class="card" stroke="#F472B6"/>
+<rect x="70" y="66764" width="8" height="126" rx="4" fill="#F472B6"/>
+<text x="98" y="66791" class="meta" fill="#F472B6">arXiv 2026</text>
+<text x="746" y="66791" class="category" text-anchor="end">Gaussian Splatting</text>
+<a href="https://arxiv.org/abs/2611.24404" target="_blank">
+<text x="98" y="66820" class="title">RAPID: Reconstruction Accelerated by</text>
+<text x="98" y="66842" class="title">Polarization-Informed Depth for 2D Gaussian Splatting</text>
+</a>
+<a href="https://arxiv.org/abs/2611.24404" target="_blank"><text x="98" y="66865" class="link">PAPER ↗</text></a>
+<text x="192" y="66865" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="Spatial relationships guide semantic component extraction from Gaussian splatting of traditional Chinese timber architecture">
+<line x1="1030" y1="66986.0" x2="900" y2="66986.0" class="connector"/>
+<circle cx="900" cy="66986.0" r="9" fill="#4ADE80" class="node"/>
+<rect x="1030" y="66912" width="700" height="148" rx="18" class="card" stroke="#4ADE80"/>
+<rect x="1030" y="66912" width="8" height="148" rx="4" fill="#4ADE80"/>
+<text x="1058" y="66939" class="meta" fill="#4ADE80">arXiv 2026</text>
+<text x="1706" y="66939" class="category" text-anchor="end">Semantic Reconstruction</text>
+<a href="https://www.researchsquare.com/article/rs-11518276/latest.pdf" target="_blank">
+<text x="1058" y="66968" class="title">Spatial relationships guide semantic component</text>
+<text x="1058" y="66990" class="title">extraction from Gaussian splatting of traditional</text>
+<text x="1058" y="67012" class="title">Chinese timber architecture</text>
+</a>
+<a href="https://www.researchsquare.com/article/rs-11518276/latest.pdf" target="_blank"><text x="1058" y="67035" class="link">PAPER ↗</text></a>
+<text x="1152" y="67035" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="WaveView: The Novel View Is in the Noise">
+<line x1="770" y1="67134.0" x2="900" y2="67134.0" class="connector"/>
+<circle cx="900" cy="67134.0" r="9" fill="#A78BFA" class="node"/>
+<rect x="70" y="67082" width="700" height="104" rx="18" class="card" stroke="#A78BFA"/>
+<rect x="70" y="67082" width="8" height="104" rx="4" fill="#A78BFA"/>
+<text x="98" y="67109" class="meta" fill="#A78BFA">arXiv 2026</text>
+<text x="746" y="67109" class="category" text-anchor="end">NeRF &amp; NVS</text>
+<a href="https://arxiv.org/abs/2611.23994" target="_blank">
+<text x="98" y="67138" class="title">WaveView: The Novel View Is in the Noise</text>
+</a>
+<a href="https://arxiv.org/abs/2611.23994" target="_blank"><text x="98" y="67161" class="link">PAPER ↗</text></a>
+<text x="192" y="67161" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="AGSR: Aperture-Guided Super-Resolution for Gaussian Splatting">
+<line x1="1030" y1="67271.0" x2="900" y2="67271.0" class="connector"/>
+<circle cx="900" cy="67271.0" r="9" fill="#F472B6" class="node"/>
+<rect x="1030" y="67208" width="700" height="126" rx="18" class="card" stroke="#F472B6"/>
+<rect x="1030" y="67208" width="8" height="126" rx="4" fill="#F472B6"/>
+<text x="1058" y="67235" class="meta" fill="#F472B6">arXiv 2026</text>
+<text x="1706" y="67235" class="category" text-anchor="end">Gaussian Splatting</text>
+<a href="https://arxiv.org/abs/2611.25934" target="_blank">
+<text x="1058" y="67264" class="title">AGSR: Aperture-Guided Super-Resolution for Gaussian</text>
+<text x="1058" y="67286" class="title">Splatting</text>
+</a>
+<a href="https://arxiv.org/abs/2611.25934" target="_blank"><text x="1058" y="67309" class="link">PAPER ↗</text></a>
+<text x="1152" y="67309" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="DfD-GS: Defocus Image Prior for Metric-Scale Single-View Depth Estimation and View Synthesis">
+<line x1="770" y1="67419.0" x2="900" y2="67419.0" class="connector"/>
+<circle cx="900" cy="67419.0" r="9" fill="#A78BFA" class="node"/>
+<rect x="70" y="67356" width="700" height="126" rx="18" class="card" stroke="#A78BFA"/>
+<rect x="70" y="67356" width="8" height="126" rx="4" fill="#A78BFA"/>
+<text x="98" y="67383" class="meta" fill="#A78BFA">arXiv 2026</text>
+<text x="746" y="67383" class="category" text-anchor="end">NeRF &amp; NVS</text>
+<a href="https://arxiv.org/abs/2611.26072" target="_blank">
+<text x="98" y="67412" class="title">DfD-GS: Defocus Image Prior for Metric-Scale</text>
+<text x="98" y="67434" class="title">Single-View Depth Estimation and View Synthesis</text>
+</a>
+<a href="https://arxiv.org/abs/2611.26072" target="_blank"><text x="98" y="67457" class="link">PAPER ↗</text></a>
+<text x="192" y="67457" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="FirstCross: Convex Single-Photon 3D Reconstruction from Sparse Views">
+<line x1="1030" y1="67567.0" x2="900" y2="67567.0" class="connector"/>
+<circle cx="900" cy="67567.0" r="9" fill="#60A5FA" class="node"/>
+<rect x="1030" y="67504" width="700" height="126" rx="18" class="card" stroke="#60A5FA"/>
+<rect x="1030" y="67504" width="8" height="126" rx="4" fill="#60A5FA"/>
+<text x="1058" y="67531" class="meta" fill="#60A5FA">arXiv 2026</text>
+<text x="1706" y="67531" class="category" text-anchor="end">Feed-Forward Geometry</text>
+<a href="https://arxiv.org/abs/2611.26321" target="_blank">
+<text x="1058" y="67560" class="title">FirstCross: Convex Single-Photon 3D Reconstruction</text>
+<text x="1058" y="67582" class="title">from Sparse Views</text>
+</a>
+<a href="https://arxiv.org/abs/2611.26321" target="_blank"><text x="1058" y="67605" class="link">PAPER ↗</text></a>
+<a href="https://github.com/Arthur031221/firstcross" target="_blank"><text x="1152" y="67605" class="link">CODE ↗</text></a>
+</g>
+<g class="paper" data-title="Multi-View Relighting with Mergeable Radiance Fields">
+<line x1="770" y1="67704.0" x2="900" y2="67704.0" class="connector"/>
+<circle cx="900" cy="67704.0" r="9" fill="#A78BFA" class="node"/>
+<rect x="70" y="67652" width="700" height="104" rx="18" class="card" stroke="#A78BFA"/>
+<rect x="70" y="67652" width="8" height="104" rx="4" fill="#A78BFA"/>
+<text x="98" y="67679" class="meta" fill="#A78BFA">arXiv 2026</text>
+<text x="746" y="67679" class="category" text-anchor="end">NeRF &amp; NVS</text>
+<a href="https://arxiv.org/abs/2611.25523" target="_blank">
+<text x="98" y="67708" class="title">Multi-View Relighting with Mergeable Radiance Fields</text>
+</a>
+<a href="https://arxiv.org/abs/2611.25523" target="_blank"><text x="98" y="67731" class="link">PAPER ↗</text></a>
+<text x="192" y="67731" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="Multi-View Transformer with Geometry-Guided Multi-Modal ControlNet for 3D Virtual Try-On">
+<line x1="1030" y1="67841.0" x2="900" y2="67841.0" class="connector"/>
+<circle cx="900" cy="67841.0" r="9" fill="#60A5FA" class="node"/>
+<rect x="1030" y="67778" width="700" height="126" rx="18" class="card" stroke="#60A5FA"/>
+<rect x="1030" y="67778" width="8" height="126" rx="4" fill="#60A5FA"/>
+<text x="1058" y="67805" class="meta" fill="#60A5FA">arXiv 2026</text>
+<text x="1706" y="67805" class="category" text-anchor="end">Feed-Forward Geometry</text>
+<a href="https://arxiv.org/abs/2611.25979" target="_blank">
+<text x="1058" y="67834" class="title">Multi-View Transformer with Geometry-Guided</text>
+<text x="1058" y="67856" class="title">Multi-Modal ControlNet for 3D Virtual Try-On</text>
+</a>
+<a href="https://arxiv.org/abs/2611.25979" target="_blank"><text x="1058" y="67879" class="link">PAPER ↗</text></a>
+<text x="1152" y="67879" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="PaveSplat: Resolution-Robust Feed-Forward Gaussian Splatting with Residually Corrected Surface-Aligned Covariances">
+<line x1="770" y1="68000.0" x2="900" y2="68000.0" class="connector"/>
+<circle cx="900" cy="68000.0" r="9" fill="#F472B6" class="node"/>
+<rect x="70" y="67926" width="700" height="148" rx="18" class="card" stroke="#F472B6"/>
+<rect x="70" y="67926" width="8" height="148" rx="4" fill="#F472B6"/>
+<text x="98" y="67953" class="meta" fill="#F472B6">arXiv 2026</text>
+<text x="746" y="67953" class="category" text-anchor="end">Gaussian Splatting</text>
+<a href="https://arxiv.org/abs/2611.26045" target="_blank">
+<text x="98" y="67982" class="title">PaveSplat: Resolution-Robust Feed-Forward Gaussian</text>
+<text x="98" y="68004" class="title">Splatting with Residually Corrected Surface-Aligned</text>
+<text x="98" y="68026" class="title">Covariances</text>
+</a>
+<a href="https://arxiv.org/abs/2611.26045" target="_blank"><text x="98" y="68049" class="link">PAPER ↗</text></a>
+<a href="https://github.com/janghunn/pavesplat" target="_blank"><text x="192" y="68049" class="link">CODE ↗</text></a>
+</g>
+<g class="paper" data-title="SGAR: Feed-Forward 3D Reconstruction via Sparse Geometry-Guided Attention">
+<line x1="1030" y1="68159.0" x2="900" y2="68159.0" class="connector"/>
+<circle cx="900" cy="68159.0" r="9" fill="#60A5FA" class="node"/>
+<rect x="1030" y="68096" width="700" height="126" rx="18" class="card" stroke="#60A5FA"/>
+<rect x="1030" y="68096" width="8" height="126" rx="4" fill="#60A5FA"/>
+<text x="1058" y="68123" class="meta" fill="#60A5FA">arXiv 2026</text>
+<text x="1706" y="68123" class="category" text-anchor="end">Feed-Forward Geometry</text>
+<a href="https://arxiv.org/abs/2611.26493" target="_blank">
+<text x="1058" y="68152" class="title">SGAR: Feed-Forward 3D Reconstruction via Sparse</text>
+<text x="1058" y="68174" class="title">Geometry-Guided Attention</text>
+</a>
+<a href="https://arxiv.org/abs/2611.26493" target="_blank"><text x="1058" y="68197" class="link">PAPER ↗</text></a>
+<text x="1152" y="68197" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="Watertight Mesh Optimization of Textured Objects">
+<line x1="770" y1="68296.0" x2="900" y2="68296.0" class="connector"/>
+<circle cx="900" cy="68296.0" r="9" fill="#60A5FA" class="node"/>
+<rect x="70" y="68244" width="700" height="104" rx="18" class="card" stroke="#60A5FA"/>
+<rect x="70" y="68244" width="8" height="104" rx="4" fill="#60A5FA"/>
+<text x="98" y="68271" class="meta" fill="#60A5FA">arXiv 2026</text>
+<text x="746" y="68271" class="category" text-anchor="end">Feed-Forward Geometry</text>
+<a href="https://arxiv.org/abs/2611.25414" target="_blank">
+<text x="98" y="68300" class="title">Watertight Mesh Optimization of Textured Objects</text>
+</a>
+<a href="https://arxiv.org/abs/2611.25414" target="_blank"><text x="98" y="68323" class="link">PAPER ↗</text></a>
+<text x="192" y="68323" class="muted">CODE PENDING</text>
+</g>
+<g class="paper" data-title="BladeR: Scalable, Shape-Guided 3D Reconstruction of Wind Turbine Blades from UAV Imagery">
+<line x1="1030" y1="68433.0" x2="900" y2="68433.0" class="connector"/>
+<circle cx="900" cy="68433.0" r="9" fill="#60A5FA" class="node"/>
+<rect x="1030" y="68370" width="700" height="126" rx="18" class="card" stroke="#60A5FA"/>
+<rect x="1030" y="68370" width="8" height="126" rx="4" fill="#60A5FA"/>
+<text x="1058" y="68397" class="meta" fill="#60A5FA">arXiv 2026</text>
+<text x="1706" y="68397" class="category" text-anchor="end">Feed-Forward Geometry</text>
+<a href="https://arxiv.org/abs/2611.27407" target="_blank">
+<text x="1058" y="68426" class="title">BladeR: Scalable, Shape-Guided 3D Reconstruction of</text>
+<text x="1058" y="68448" class="title">Wind Turbine Blades from UAV Imagery</text>
+</a>
+<a href="https://arxiv.org/abs/2611.27407" target="_blank"><text x="1058" y="68471" class="link">PAPER ↗</text></a>
+<text x="1152" y="68471" class="muted">CODE PENDING</text>
+</g>
+<path d="M 887 68600 L 900 68624 L 913 68600" fill="#94A3B8"/>
 </svg>
